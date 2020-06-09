@@ -1,0 +1,45 @@
+<resources>
+    <dimen name="header_footer_left_right_padding">24dp</dimen>
+    <dimen name="header_footer_top_bottom_padding">12dp</dimen>
+    <dimen name="text_size_16">16sp</dimen>
+    <dimen name="text_size_12">12sp</dimen>
+    <dimen name="space_20">20.0dip</dimen>
+    <dimen name="space_30">30.0dip</dimen>
+    <dimen name="space_15">15.0dip</dimen>
+    <dimen name="space_6">6.0dip</dimen>
+    <dimen name="space_5">5.0dip</dimen>
+    <dimen name="margin_left_right">20dp</dimen>
+    <dimen name="line_height">0.4dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="ValueCardMake_height">44dp</dimen>
+    <dimen name="height_10">10dp</dimen>
+    <dimen name="height40">40dp</dimen>
+    <!--toolBar 的高度-->
+
+    <!--toolBar 返回按钮的宽高-->
+    <!--取值区间-->
+    <dimen name="space_40">40dp</dimen>
+    <dimen name="space_16">16dp</dimen>
+    <dimen name="space_2">2dp</dimen>
+    <dimen name="space_1">1dp</dimen>
+    <dimen name="space_8">8dp</dimen>
+    <dimen name="space_10">10dp</dimen>
+
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="text_size_18">18sp</dimen>
+    <dimen name="text16">16sp</dimen>
+    // payment
+    <dimen name="buttonHeight">48dp</dimen>
+    <!--字体大小-->
+    <dimen name="text_level_1">14sp</dimen>
+    <dimen name="text_level_2">13sp</dimen>
+
+    <!--pull -->
+    <dimen name="text_size_15">15sp</dimen>
+    <dimen name="text_size_13">13sp</dimen>
+
+    <dimen name="space10">10dp</dimen>
+    <dimen name="space15">15dp</dimen><![CDATA[
+    >
+]]>
+</resources>

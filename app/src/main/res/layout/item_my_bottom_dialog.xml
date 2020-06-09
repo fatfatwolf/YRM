@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_item_my_bottom_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="50px"
+        app:layout_auto_basewidth="height"
+        android:text="身份证"
+        android:textSize="15px"
+        android:textColor="@color/blue_color2"
+        android:gravity="center"
+        android:background="#fff"
+        />
+
+
+</LinearLayout>

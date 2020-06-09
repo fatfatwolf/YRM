@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_popup_bg"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_image"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_close_window"
+            android:layout_width="@dimen/space_20"
+            android:layout_height="@dimen/space_20"
+            android:layout_alignParentRight="true"
+
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/close2" />
+    </RelativeLayout>
+    <TextView
+        android:layout_below="@+id/rl_image"
+        android:id="@+id/tv_invoice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15px"
+        android:gravity="center"
+        android:text="可结算金额"
+        android:textColor="@color/textColor_2"
+        android:textStyle="bold"
+        android:textSize="20px"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_invoice"
+        android:orientation="horizontal"
+        android:text="可结算金额 = 实际收款金额 (1-1%服务费)"
+        android:textSize="14px"
+        android:gravity="center"
+        android:layout_marginBottom="35px"
+        android:layout_marginTop="35px">
+
+
+
+
+    </TextView>
+
+
+
+</RelativeLayout>

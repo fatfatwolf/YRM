@@ -1,0 +1,409 @@
+apply plugin: 'com.android.application'
+android {
+    dexOptions {
+        jumboMode = true
+        javaMaxHeapSize "2g"
+//        增量编译
+        incremental true
+    }
+    lintOptions {
+        abortOnError false
+
+    }
+    lintOptions {
+        checkReleaseBuilds false
+
+        abortOnError false
+    }
+
+    signingConfigs {
+        mConfig {
+            storeFile file("../keystore")
+            storePassword "hrtvaluecard"
+            keyAlias "hrt"
+            keyPassword "hrtvaluecard"
+        }
+        debug {
+            storeFile file("../keystore")
+            storePassword "hrtvaluecard"
+            keyAlias "hrt"
+            keyPassword "hrtvaluecard"
+        }
+    }
+
+    compileSdkVersion 26
+
+    buildToolsVersion '27.0.3'
+
+    aaptOptions {
+        cruncherEnabled = false
+        useNewCruncher = false
+    }
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 26
+        multiDexEnabled true
+        ndk {
+            moduleName "jniaes"
+            ldLibs "log", "z", "m"
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'armeabi-x86', 'armeabi-x86_64', 'armeabi-mips', 'armeabi-mips64'
+        }
+//        manifestPlaceholders = [
+//                JPUSH_PKGNAME: "com.hybunion.lmfsh",
+//                JPUSH_APPKEY : "be7b6fd5270e03d4921c8a0b", //JPush 上注册的包名对应的 Appkey.
+//                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+//        ]
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+
+    }
+
+    packagingOptions {
+        //    exclude 'lib/armeabi/libjnitest.so'
+    }
+
+    // 修改打包名称
+    android.applicationVariants.all {variant ->
+        variant.outputs.all{output ->
+            def createTime = new Date().format("yyyyMMdd-HHmm");
+            if (variant.buildType.name == "debug"){
+                output.outputFileName = "yirongma_debug_v${android.productFlavors.yrm.versionName}.apk"
+            }else if (variant.buildType.name == "debug_jenkins"){
+                output.outputFileName = "yirongma_debug_v${android.productFlavors.yrm.versionName}_${createTime}.apk"
+            }else if (variant.buildType.name == "uat"){
+                output.outputFileName = "yirongma_uat_v${android.productFlavors.yrm.versionName}_${createTime}.apk"
+            }else if (variant.buildType.name == "release"){
+                output.outputFileName = "yirongma_release_v${android.productFlavors.yrm.versionName}_${createTime}.apk"
+            }
+        }
+    }
+
+    buildTypes {
+        debug {
+            /**
+             * 易融码生产域名
+             */
+//            buildConfigField "String", "TYPE", "\"3\""   // 生产 是 3
+//            buildConfigField "boolean", "LOG_DEBUG", "true" // 是否输出LOG信息
+//            buildConfigField "String", "HTTP_PROTOCOL", "\"https://mobile.yrmpay.com/\""//主域名
+//            buildConfigField "String", "VALUE_CARD_URL", "\"https://mobile.yrmpay.com/JHAdminConsole\""
+////老接口部分使用
+//            buildConfigField "String", "UNION_PAY", "\"https://trade.hybunion.cn/\"" // 银联支付域名
+//            buildConfigField "String", "LOAN_URL", "\"https://wechat.hrtfin.com/weChat/\"" // 贷款地址
+//            buildConfigField "String", "REFUND_PAY_URL", "\"https://xpay.yrmpay.com/\"" // 交易地址
+//            buildConfigField "String", "XPAY_URL", "\"https://xpay.yrmpay.com/YRMComboPayment/\""
+//            buildConfigField "String", "YUFUKA", "\"https://merchant.okall.com.cn/\""   // 预付卡相关接口的生产域名
+//            // 交易地址
+//            // 移除无用的resource文件（如果代码没有设置混淆，此处不可设置为 true）
+//            minifyEnabled false
+//            shrinkResources false
+//            signingConfig signingConfigs.mConfig
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            /**
+             * 立码富测试域名
+             */
+//            buildConfigField "String", "TYPE", "\"1\""   // 测试 是 1
+//            buildConfigField "boolean", "LOG_DEBUG", "true" // 是否输出LOG信息
+//            buildConfigField "String", "HTTP_PROTOCOL", "\"https://test.hybunion.com/\""
+//            buildConfigField "String", "VALUE_CARD_URL", "\"https://test.hybunion.com/JHAdminConsole\""
+//            buildConfigField "String", "UNION_PAY", "\"https://testtrade.hybunion.cn/\"" // 银联支付域名
+//            buildConfigField "String", "REFUND_PAY_URL", "\"https://xpay.hybunion.cn/\"" // 交易地址
+//            buildConfigField "String", "XPAY_URL", "\"https://xpay.hybunion.cn/LMFComboPaymentTest\"" // 交易地址+项目名
+//            buildConfigField "String", "LOAN_URL", "\"https://wechattest.hrtfin.com/weChat/\""//贷款
+//            // 移除无用的resource文件（如果代码没有设置混淆，此处不可设置为 true）
+//            minifyEnabled false
+//            shrinkResources false
+//            signingConfig signingConfigs.mConfig
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            /**
+             * 易融码测试域名
+             */
+            buildConfigField "String", "TYPE", "\"1\""   // 测试 是 1
+            buildConfigField "boolean", "LOG_DEBUG", "true" // 是否输出LOG信息
+            buildConfigField "String", "HTTP_PROTOCOL", "\"https://testecash.hybunion.cn/\""
+            buildConfigField "String", "VALUE_CARD_URL", "\"https://testecash.hybunion.cn/JHAdminConsole\""
+            buildConfigField "String", "UNION_PAY", "\"https://testtrade.hybunion.cn/\"" // 银联支付域名
+            buildConfigField "String", "REFUND_PAY_URL", "\"https://xpay.yrmpay.com/\"" // 交易地址
+            buildConfigField "String", "XPAY_URL", "\"https://testecash.hybunion.cn/YRMComboPayment/\""
+            buildConfigField "String", "LOAN_URL", "\"https://wechattest.hrtfin.com/weChat/\""//贷款
+            buildConfigField "String", "YUFUKA", "\"http://test.okall.com.cn:9090/\""   // 预付卡相关接口的测试域名
+//
+//            // 移除无用的resource文件（如果代码没有设置混淆，此处不可设置为 true）
+            minifyEnabled false
+            shrinkResources false
+            signingConfig signingConfigs.mConfig
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            //众维码UAT域名
+//            buildConfigField "String", "TYPE", "\"2\""   // uat 是 2
+//            buildConfigField "boolean", "LOG_DEBUG", "true" // 是否输出LOG信息
+//            buildConfigField "String", "VALUE_CARD_URL", "\"https://uatvcreport.hybunion.cn/\""
+//            buildConfigField "String", "HTTP_PROTOCOL", "\"https://uatzwm.hybunion.cn/\""
+//            buildConfigField "String", "UNION_PAY", "\"https://trade.hybunion.cn/\"" // UAT 银联支付域名
+//            buildConfigField "String", "LOAN_URL", "\"https://wechattest.hrtfin.com/weChat/\""
+//            buildConfigField "String", "REFUND_PAY_URL", "\"https://xpay.yrmpay.com/\"" // 交易地址
+//            buildConfigField "String", "XPAY_URL", "\"https://xpay.yrmpay.com/YRMComboPaymentTest/\""//交易地址+项目名
+//            buildConfigField "String", "YUFUKA", "\"https://merchant.okall.com.cn/\""   // 预付卡相关接口的生产域名
+//            // 移除无用的resource文件（如果代码没有设置混淆，此处不可设置为 true）
+//            minifyEnabled false
+//            shrinkResources false
+//            signingConfig signingConfigs.mConfig
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            /**
+             * 立码富UAT域名
+             */
+//            buildConfigField "String", "TYPE", "\"2\""   // uat 是 2
+//            buildConfigField "boolean", "LOG_DEBUG", "true" // 是否输出LOG信息
+//            buildConfigField "String", "VALUE_CARD_URL", "\"https://uatvcreport.hybunion.cn/\""
+//            buildConfigField "String", "HTTP_PROTOCOL", "\"https://uat.hybunion.cn/\""
+//            buildConfigField "String", "UNION_PAY", "\"https://trade.hybunion.cn/\"" // UAT 银联支付域名
+//            buildConfigField "String", "LOAN_URL", "\"https://wechattest.hrtfin.com/weChat/\""
+//            buildConfigField "String", "REFUND_PAY_URL", "\"https://xpay.hybunion.cn/\"" // 交易地址
+//            buildConfigField "String", "XPAY_URL", "\"https://xpay.hybunion.cn/LMFComboPaymentTest\"" // 交易地址+项目名
+//            // 移除无用的resource文件（如果代码没有设置混淆，此处不可设置为 true）
+//            minifyEnabled false
+//            shrinkResources false
+//            signingConfig signingConfigs.mConfig
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            /**
+             * 立码富生产域名
+             */
+//            buildConfigField "String", "TYPE", "\"3\""   // 生产 是 3
+//            buildConfigField "boolean", "LOG_DEBUG", "false" // 是否输出LOG信息
+//            buildConfigField "String", "HTTP_PROTOCOL", "\"https://lmfmobile.hybunion.cn/\""
+//            buildConfigField "String", "VALUE_CARD_URL", "\"https://lmfmobile.hybunion.cn/JHAdminConsole\""
+//            buildConfigField "String", "UNION_PAY", "\"https://trade.hybunion.cn/\"" // 银联支付域名
+//            buildConfigField "String", "REFUND_PAY_URL", "\"https://xpay.hybunion.cn/\"" // 退款地址
+//            buildConfigField "String", "REFUND_PAY_URL", "\"https://xpay.hybunion.cn/LMFComboPayment\"" // 交易地址+项目名
+//            buildConfigField "String", "LOAN_URL", "\"https://wechat.hrtfin.com/weChat/\"" // 贷款地址
+//            // 移除无用的resource文件（如果代码没有设置混淆，此处不可设置为 true）
+//            minifyEnabled false
+//            shrinkResources false
+//            signingConfig signingConfigs.mConfig
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        // jenkins 打包测试用
+        debug_jenkins{
+            buildConfigField "String", "TYPE", "\"1\""   // 测试 是 1
+            buildConfigField "boolean", "LOG_DEBUG", "true" // 是否输出LOG信息
+            buildConfigField "String", "HTTP_PROTOCOL", "\"https://testecash.hybunion.cn/\""
+            buildConfigField "String", "VALUE_CARD_URL", "\"https://testecash.hybunion.cn/JHAdminConsole\""
+            buildConfigField "String", "UNION_PAY", "\"https://testtrade.hybunion.cn/\"" // 银联支付域名
+            buildConfigField "String", "REFUND_PAY_URL", "\"https://xpay.yrmpay.com/\"" // 交易地址
+            buildConfigField "String", "XPAY_URL", "\"https://testecash.hybunion.cn/YRMComboPayment/\""
+            buildConfigField "String", "LOAN_URL", "\"https://wechattest.hrtfin.com/weChat/\""//贷款
+            buildConfigField "String", "YUFUKA", "\"http://test.okall.com.cn:9090/\""   // 预付卡相关接口的测试域名
+
+            // 移除无用的resource文件（如果代码没有设置混淆，此处不可设置为 true）
+            minifyEnabled false
+            shrinkResources false
+            signingConfig signingConfigs.mConfig
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        uat {
+            //众维码UAT域名
+            buildConfigField "String", "TYPE", "\"2\""   // uat 是 2
+            buildConfigField "boolean", "LOG_DEBUG", "true" // 是否输出LOG信息
+            buildConfigField "String", "VALUE_CARD_URL", "\"https://uatvcreport.hybunion.cn/\""
+            buildConfigField "String", "HTTP_PROTOCOL", "\"https://uatzwm.hybunion.cn/\""
+            buildConfigField "String", "UNION_PAY", "\"https://trade.hybunion.cn/\"" // UAT 银联支付域名
+            buildConfigField "String", "LOAN_URL", "\"https://wechattest.hrtfin.com/weChat/\""
+            buildConfigField "String", "REFUND_PAY_URL", "\"https://xpay.yrmpay.com/\"" // 交易地址
+            buildConfigField "String", "XPAY_URL", "\"https://xpay.yrmpay.com/YRMComboPaymentTest/\""
+            buildConfigField "String", "YUFUKA", "\"https://merchant.okall.com.cn/\""   // 预付卡相关接口的生产域名
+
+            // 移除无用的resource文件（如果代码没有设置混淆，此处不可设置为 true）
+            minifyEnabled false
+            shrinkResources false
+            signingConfig signingConfigs.mConfig
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            matchingFallbacks = ['release', 'debug']
+
+            //立码富UAT域名
+//            buildConfigField "String", "TYPE", "\"2\""   // uat 是 2
+//            buildConfigField "boolean", "LOG_DEBUG", "true" // 是否输出LOG信息
+//            buildConfigField "String", "VALUE_CARD_URL", "\"https://uatvcreport.hybunion.cn/\""
+//            buildConfigField "String", "HTTP_PROTOCOL", "\"https://uat.hybunion.cn/\""
+//            buildConfigField "String", "UNION_PAY", "\"https://trade.hybunion.cn/\"" // UAT 银联支付域名
+//            buildConfigField "String", "LOAN_URL", "\"https://wechattest.hrtfin.com/weChat/\""
+//            buildConfigField "String", "REFUND_PAY_URL", "\"https://xpay.hybunion.cn/\"" // 交易地址
+//            buildConfigField "String", "XPAY_URL", "\"https://xpay.hybunion.cn/LMFComboPaymentTest\"" // 交易地址+项目名
+//            // 移除无用的resource文件（如果代码没有设置混淆，此处不可设置为 true）
+//            minifyEnabled false
+//            shrinkResources false
+//            signingConfig signingConfigs.mConfig
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            matchingFallbacks = ['release', 'debug']
+        }
+        release {
+//            众维码生产域名
+            buildConfigField "String", "TYPE", "\"3\""   // release 是 3
+            buildConfigField "boolean", "LOG_DEBUG", "false" // 是否输出LOG信息
+            buildConfigField "String", "HTTP_PROTOCOL", "\"https://mobile.yrmpay.com/\""//主域名
+            buildConfigField "String", "VALUE_CARD_URL", "\"https://mobile.yrmpay.com/JHAdminConsole\""
+//老接口部分使用
+            buildConfigField "String", "UNION_PAY", "\"https://trade.hybunion.cn/\"" // 银联支付域名
+            buildConfigField "String", "LOAN_URL", "\"https://wechat.hrtfin.com/weChat/\"" // 贷款地址
+            buildConfigField "String", "REFUND_PAY_URL", "\"https://xpay.yrmpay.com/\"" // 交易地址
+            buildConfigField "String", "XPAY_URL", "\"https://xpay.yrmpay.com/YRMComboPayment/\""
+            buildConfigField "String", "YUFUKA", "\"https://merchant.okall.com.cn/\""
+            // 交易地址
+            // 移除无用的resource文件（如果代码没有设置混淆，此处不可设置为 true）
+            minifyEnabled false
+            shrinkResources false
+            signingConfig signingConfigs.mConfig
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+//            //立码富生产域名
+//            buildConfigField "boolean", "LOG_DEBUG", "false" // 是否输出LOG信息
+//            buildConfigField "String", "HTTP_PROTOCOL", "\"https://lmfmobile.hybunion.cn/\""
+//            buildConfigField "String", "VALUE_CARD_URL", "\"https://lmfmobile.hybunion.cn/JHAdminConsole\""
+//            buildConfigField "String", "UNION_PAY", "\"https://trade.hybunion.cn/\"" // 银联支付域名
+//            buildConfigField "String", "REFUND_PAY_URL", "\"https://xpay.hybunion.cn/\"" // 退款地址
+//            buildConfigField "String", "REFUND_PAY_URL", "\"https://xpay.hybunion.cn/LMFComboPayment\"" // 交易地址+项目名
+//            buildConfigField "String", "LOAN_URL", "\"https://wechat.hrtfin.com/weChat/\"" // 贷款地址
+//            // 移除无用的resource文件（如果代码没有设置混淆，此处不可设置为 true）
+//            minifyEnabled false
+//            shrinkResources false
+//            signingConfig signingConfigs.mConfig
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    useLibrary 'org.apache.http.legacy'
+//这里需要设置资源文件，否则会报错，文件找不到
+    sourceSets.main {
+        jni.srcDirs = []
+    }
+
+    android {
+        packagingOptions {
+
+            exclude 'META-INF/LICENSE.txt'
+            exclude 'META-INF/NOTICE.txt'
+        }
+
+    }
+
+    // 配置不同的渠道包
+    productFlavors {
+        // 众维码
+        yrm {
+            applicationId "com.hybunion.yirongma"
+            versionCode 132
+            versionName "1.3.2"  // 版本号必须 3 位数。 例如：1.0.3 或者 1.2.0，否则要更改 更新接口判断是否有新版本 的逻辑
+            manifestPlaceholders = [gaodeKey     : "847e0ec27a0a65e93c4ea61551e16969", jiguangKey: "be7b6fd5270e03d4921c8a0b", youmengKey: "5b7f5df98f4a9d6ff20000ab",
+                                    huaweiKey    : "100435015",
+
+                                    JPUSH_PKGNAME: "com.hybunion.yirongma",
+                                    JPUSH_APPKEY : "be7b6fd5270e03d4921c8a0b", //JPush 上注册的包名对应的 Appkey.
+                                    JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可
+//									XIAOMI_APPKEY:"MI-5271787397116",
+//									XIAOMI_APPID:"MI-2882303761517873116"
+
+            ]
+            flavorDimensions "versionCode"
+        }
+        // 立码富商户
+        lmfsh {
+            applicationId "com.hybunion.lmfsh"
+            versionCode 113
+            versionName "1.1.3"   // 版本号必须 3 位数。 例如：1.0.3 或者 1.2.0，否则要更改 更新接口判断是否有新版本 的逻辑
+            manifestPlaceholders = [gaodeKey     : "5e3d3e515e65c7feecd63fca716e271e", jiguangKey: "2ede12285d5381a5e6e9c3b4", youmengKey: "5baa023db465f500a7000073",
+                                    huaweiKey    : "100599949",
+                                    JPUSH_PKGNAME: "com.hybunion.lmfsh",
+                                    JPUSH_APPKEY : "2ede12285d5381a5e6e9c3b4", //JPush 上注册的包名对应的 Appkey.
+                                    JPUSH_CHANNEL: "developer-default"//暂时填写默认值即可.
+            ]
+            flavorDimensions "versionCode"
+        }
+    }
+
+
+    android {
+        packagingOptions {
+            exclude 'META-INF/NOTICE' // will not include NOTICE file
+            exclude 'META-INF/LICENSE' // will not include LICENSE file
+            // as noted by @Vishnuvathsan you may also need to include
+            // variations on the file name. It depends on your dependencies.
+            // Some other common variations on notice and license file names
+            exclude 'META-INF/notice'
+            exclude 'META-INF/notice.txt'
+            exclude 'META-INF/license'
+            exclude 'META-INF/license.txt'
+            // 解决友盟推送和 okio 包冲突
+            exclude 'META-INF/maven/com.squareup.okio/okio/pom.xml'
+            exclude 'META-INF/maven/com.squareup.okio/okio/pom.properties'
+        }
+
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+
+    repositories {
+        jcenter()
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:multidex:1.0.0'
+    implementation 'com.nineoldandroids:library:2.4.0'
+    //   compile 'com.android.support:support-v4:22.2.1'
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.mcxiaoke.volley:library:1.0.19'
+    compile files('libs/AMap_2DMap_V2.8.1_20160202.jar')
+    compile files('libs/AMap_Location_V4.7.0_20190708.jar')
+    compile files('libs/AMap_Search_V3.2.1_20160308.jar')
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+//    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
+//    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+//    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+    implementation 'com.android.support:design:26.1.0'
+    implementation 'com.contrarywind:Android-PickerView:3.2.5'
+    // 时间选择和选项选择(用于省市区三级联动)
+    // 聚合支付移植过来的依赖
+    implementation 'com.jakewharton:butterknife:7.0.1'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'me.codeboy.android:align-text-view:2.3.0'
+    //TextView的分散对齐
+    implementation 'com.zhy:autolayout:1.4.5'
+    implementation 'com.journeyapps:zxing-android-embedded:3.4.0'
+    implementation 'pub.devrel:easypermissions:0.1.9'
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.android.support:support-v4:26.1.0'
+    implementation 'com.daimajia.swipelayout:library:1.2.0@aar'
+    implementation 'cn.jiguang.sdk:jpush:3.1.6'
+    implementation 'cn.jiguang.sdk:janalytics:2.0.0'
+    // 此处以JAnalytics 2.0.0 版本为例。
+    // 极光推送
+    implementation 'cn.jiguang.sdk:jcore:1.2.5'
+    implementation 'com.huawei.android.hms:push:2.6.1.301'
+    //    compile 'cn.jiguang.sdk.plugin:huawei:3.1.6'
+    //    compile 'cn.jiguang.sdk.plugin:xiaomi:3.1.6'
+    implementation 'com.tencent.bugly:crashreport:latest.release'
+    implementation 'com.qiyukf.unicorn:unicorn:4.8.0'
+    // 七鱼客服
+    compile(name: 'bigwasp_v2.0.5_20190722', ext: 'aar')
+    implementation 'com.youth.picker:pickerview:0.1.4@aar'
+    implementation 'com.google.code.gson:gson:2.8.0'
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0'
+    implementation 'com.huawei.android.hms:base:2.6.1.301'
+    compile project(':net')
+    compile project(':utilslibrary')
+}

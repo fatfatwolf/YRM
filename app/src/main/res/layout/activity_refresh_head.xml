@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/ll_head"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    >
+
+
+    <LinearLayout
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/loadingImg"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/loadinganim"/>
+
+        <!--<com.hybunion.yirongma.member.view.GifMovieView-->
+        <!--android:id="@+id/loading"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--custom:gif="@drawable/gif_loading"/>-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/iv1"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:src="@drawable/isloading1" />-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/iv2"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:src="@drawable/isloading2" />-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/iv3"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:src="@drawable/isloading3" />-->
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dip"
+        android:text="奋力加载中..."
+        android:textColor="@android:color/black"
+        android:textSize="8sp"/>
+
+
+</LinearLayout>

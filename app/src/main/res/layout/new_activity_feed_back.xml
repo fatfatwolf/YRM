@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rel_cerifi"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="#fff"
+    android:orientation="vertical">
+    <com.hybunion.yirongma.payment.view.TitleBar
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titlebar_back_title="意见反馈"
+        ></com.hybunion.yirongma.payment.view.TitleBar>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"></View>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                android:background="@drawable/img_banner" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="反馈问题类型"
+                android:textSize="20px" />
+
+            <TextView
+                android:id="@+id/rb_su"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:background="@drawable/img_pitch_on"
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                android:text="风控申诉"
+                android:textColor="@color/gray_text_color"
+                android:textSize="13dp"
+                android:visibility="gone"
+                />
+
+            <LinearLayout
+                android:id="@+id/ll_rediobutton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                >
+
+                <RadioGroup
+                    android:id="@+id/mrbChoice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:orientation="horizontal">
+
+
+                    <RadioButton
+                        android:id="@+id/rb_gnyc"
+                        android:layout_width="0dp"
+                        android:layout_height="28dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/feed_back"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="功能异常"
+                        android:textColor="@color/gray_text_color"
+                        android:textSize="13dp" />
+
+                    <RadioButton
+                        android:id="@+id/rb_tywt"
+                        android:layout_width="0dp"
+                        android:layout_height="28dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/feed_back"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="体验问题"
+                        android:textColor="@color/gray_text_color"
+                        android:textSize="13dp" />
+
+                    <RadioButton
+                        android:id="@+id/rb_xgnjy"
+                        android:layout_width="0dp"
+                        android:layout_height="28dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/feed_back"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="新功能建议"
+                        android:textColor="@color/gray_text_color"
+                        android:textSize="13dp" />
+
+                    <RadioButton
+                        android:id="@+id/rb_qt"
+                        android:layout_width="0dp"
+                        android:layout_height="28dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/feed_back"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="其他"
+                        android:textColor="@color/gray_text_color"
+                        android:textSize="13dp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/sharp_fangkuang"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/et_feedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:maxLength="500"
+                    android:hint="@string/feedback_content_hint"
+                    android:lines="7" />
+            </LinearLayout>
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10px"
+                android:layout_marginTop="10px">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_pic1"
+                    android:layout_width="80px"
+                    android:layout_height="80px"
+                    android:scaleType="centerCrop"
+                    app:layout_auto_basewidth="height"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:src="@drawable/img_add3" />
+
+                <ImageView
+                    android:id="@+id/iv_pic2"
+                    android:layout_width="80px"
+                    android:layout_height="80px"
+                    android:scaleType="centerCrop"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:visibility="gone"
+                    android:src="@drawable/img_add3" />
+
+                <ImageView
+                    android:id="@+id/iv_pic3"
+                    android:layout_width="80px"
+                    android:layout_height="80px"
+                    android:scaleType="centerCrop"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:visibility="gone"
+                    android:src="@drawable/img_add3" />
+            </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+    </ScrollView>
+        <Button
+            android:id="@+id/bt_save"
+            android:layout_width="match_parent"
+            android:layout_height="45px"
+            app:layout_auto_basewidth="height"
+            android:layout_marginTop="20px"
+            android:layout_marginLeft="15px"
+            android:layout_marginRight="15px"
+            android:background="@drawable/loging_button"
+            android:text="提交"
+            android:textColor="@android:color/white"
+            />
+
+</LinearLayout>
+

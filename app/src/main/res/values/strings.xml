@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- mpos -->
+
+    <!-- <string name="mpos_service_address">http://10.51.31.209:7001/CubeCoreConsole</string> -->
+    <!-- mpos -->
+
+    <string name="tips">提示</string>
+
+    <!-- 对账东西 -->
+    <!-- <string name="service_address">http://b.hecard.com.cn/HrtApp/phone</string>-->
+    <!--  众维码對賬ip -->
+    <!--<string name="service_address">http://merch.hrtpayment.com/HrtApp/phone</string>-->
+    <!-- 99生产对账地址-->
+    <!-- <string name="service_address">http://99pay.hybunion.org/JiuJiuApp/phone</string>-->
+    <!-- 笑笑久玖ip -->
+    <!--<string name="service_address">http://10.51.30.129:8080/JiuJiuApp/phone/</string>-->
+    <!-- 笑笑众维码对账ip -->
+    <!--<string name="service_address">http://10.51.30.129:8080/HrtApp/phone</string>-->
+    <!-- 譚众维码ip -->
+    <!-- <string name="service_address">http://10.51.30.124:8080/HrtApp/phone</string> -->
+
+    <string name="divider_cn_zhi">至</string>
+    <string name="dateError">开始日期不能晚于结束日期</string>
+
+    <!-- 对账东西 -->
+
+    <string name="app_name">众维码</string>
+    <string name="activity_setting_name_and_head_take_pic_ablum">从手机相册选择</string>
+    <string name="activity_setting_name_and_head_take_pic_camera">拍照</string>
+    <string name="activity_setting_name_and_head_take_pic_cancel">取消</string>
+
+    <!-- 已下线优惠券界面文字说明 -->
+    <string name="image">图片</string>
+    <!-- 积分兑换-->
+    <string name="tel_numeber">400-109-7876</string>
+    <!-- 储值卡-->
+    <string name="value_card_time_consume_table">时段消费率表</string>
+    <string name="value_card_week_consume_table">星期消费率表</string>
+    <string name="ok">确定</string>
+    <string name="go_changer">去修改</string>
+    <string name="btn_dialog_ok">确认</string>
+    <string name="cancel">取消</string>
+    <string name="btn_dialog_cancel">再看看</string>
+    <string name="no_data">暂无任何数据</string>
+    <string name="all_data_loaded">以上是全部数据</string>
+    <string name="loading">努力加载中&#8230;</string>
+    <!-- 主页activity-->
+    <string name="member">会员管理</string>
+    <string name="prepaid_card">储值卡</string>
+    <string name="update_notification">更新提示</string>
+    <string name="update_notification_title">检测到新版本，是否更新?</string>
+    <string name="press_again_to_quit">再按一次退出程序</string>
+    <string name="fail_to_download">下载失败</string>
+    <string name="unable_to_download_without_sdcard">没有sdcard，无法下载</string>
+    <string name="refreshing">刷新中…</string>
+    <!-- MPOS fragment-->
+
+
+    <!-- HYBMainFragment-->
+    <string name="initializing">初始化中。。。</string>
+
+    <!-- CouponFragment-->
+
+    <!-- ValueCardFragment-->
+
+    <!-- 登录注册-->
+    <string name="forgot_pwd">忘记密码?</string>
+    <string name="login">登录</string>
+    <string name="slogan">专注服务 共同成长</string>
+    <string name="login_footer2">众维码联盟</string>
+    <string name="login_footer3">众维码联盟:专注服务 共同成长</string>
+    <string name="hyb_copyright">Copyright 2009&#8211;2019</string>
+    <string name="null_phone_number">手机号码不能为空</string>
+    <string name="null_pwd">密码不能为空</string>
+    <string name="pwd_len_limit">密码必须是6到18位</string>
+    <string name="logging_in">正在登录&#8230;</string>
+    <string name="poor_network">网络连接不佳</string>
+
+    <string name="send_code_hint">验证码短信已发送，请查收！</string>
+    <string name="an_exception_occurred">网络连接不佳</string>
+    <string name="send_msg_hint1">短信发送频繁，请</string>
+    <string name="send_msg_hint2">分钟后再发送</string>
+    <string name="send_msg_hint3">短信发送频繁，请30分钟后再发送</string>
+    <!-- 找回密码-->
+    <!-- 重置密码-->
+
+    <!-- 关于我们-->
+    <string name="about_us">关于我们</string>
+
+    <!--通用设置-->
+
+    <!-- 储值卡fragment-->
+    <string name="balance_report_detail">储值卡消费明细</string>
+    <!-- 会员 消费/积分-->
+    <!-- 消费-->
+
+    <!--报单-->
+
+
+    <!-- 搜索会员-->
+
+    <!-- 查看会员-->
+
+    <!-- 查找会员-->
+    <!-- 增加会员-->
+    <string name="returned_information_failed">解析返回信息失败</string>
+
+
+    <!-- 增减积分-->
+
+    <!-- 推送消息-->
+    <string name="delete">删除</string>
+    <!-- 设置-->
+    <string name="sure_to_exit">确定要退出登录吗？</string>
+    <string name="set_feedback">意见反馈</string>
+
+    <!-- 我的商铺-->
+    <string name="image_src">图片来源</string>
+    <string name="take_photos">拍照</string>
+    <string name="album">相册</string>
+
+    <!-- 积分规则-->
+    <!-- 品牌形象-->
+    <!-- 意见反馈-->
+    <string name="feedback_content_hint">请输入详细反馈信息</string>
+
+
+    <!-- 日期 至-->
+
+    <!-- 发放优惠券-->
+    <!-- 已售:xx张-->
+    <!-- 制作优惠券-->
+    <string name="yes">是</string>
+    <string name="no">否</string>
+
+
+    <!-- 优惠券-->
+    <string name="contact_customer_service_cell"></string>
+    <!-- 储值卡-->
+    <!-- 消费-->
+    <!-- 充值-->
+    <!--报表-->
+    <string name="unit">星期方形图</string>
+    <string name="monday">周一</string>
+    <string name="tuesday">周二</string>
+    <string name="wednesday">周三</string>
+    <string name="thursday">周四</string>
+    <string name="friday">周五</string>
+    <string name="saturday">周六</string>
+    <string name="sunday">周日</string>
+    <string name="data_query_failed">数据查询失败</string>
+    <string name="not_null">信息不正确或不完整,请重新填写</string>
+    <string name="illegal_input">非法输入,请重新输入</string>
+
+    <string name="week_value_form">星期充值率表</string>
+    <string name="money_unit">金额(单位:元)</string>
+    <string name="time_value_form">时段充值率表</string>
+    <string name="time_section">按时间点分段:(设置值默认为0点)</string>
+    <string name="reset">重置</string>
+
+    <!-- 查询统计-->
+
+    <!-- MPOS-->
+    <!-- 消费-->
+    <string name="please_input_amount">请输入金额</string>
+
+    <!-- 撤销-->
+    <!-- 设置-->
+    <!-- 设备激活-->
+
+    <!-- 对账-->
+    <!-- 当日交易-->
+    <!-- 历史交易-->
+    <!-- 小票上传-->
+
+    <string name="about_us_url">http://www.hybunion.com/aboutus/hybYRM.html</string>
+
+
+    <!--mpos设备-->
+    <string name="save_photo">保存到相册</string>
+    <!--电商支付 -->
+    <!--便民服务-->
+
+    <!--惠买单对账及分析图-->
+    <string name="chart_no">我是标志图标</string>
+    <!--fragment_hui_order-->
+
+    <!--惠买单-开启点餐-->
+
+    <!--惠买单-报表-->
+
+    <!--下拉刷新的文字提示-->
+    <string name="network_err_info">无法获取数据</string>
+
+    <!--商户未加入惠买单时的文字提示-->
+
+    <!--折线图标题-->
+
+    <!--vip-->
+    <string name="what">什么是VIP会员</string>
+    <string name="how">在店内消费达到5次可直接晋升为店内VIP会员</string>
+    <string name="x">关&#160;闭</string>
+    <string name="data_is_all">以上是全部数据</string>
+
+    <!--推送历史-->
+
+    <!--储值卡管理-->
+    <string name="card_manage_help">帮助提示</string>
+    <string name="delete_card_title">下线储值卡</string>
+    <string name="delete_card_content">您确定下线该储值卡吗？</string>
+    <string name="delete_card_cancel">取消</string>
+    <string name="delete_card_sure">确定</string>
+    <string name="delete_card_disabled">已下线</string>
+    <string name="delete_card_info">此处展示您所有的储值卡，点击每张卡可以查看详情，长按每张卡可以进行下线操作。</string>
+
+    <!--储值卡汇总信息-->
+    <string name="value_card_summary_buy_card_title">购卡/充值</string>
+    <string name="value_card_summary_consume_amount">交易金额：</string>
+    <string name="value_card_summary_consume_count">交易数量：</string>
+    <string name="value_card_summary_consume_count_2">交易次数：</string>
+    <string name="value_card_summary_consume">储值卡消费</string>
+    <string name="value_card_summary_all">所有储值卡余额总计：</string>
+    <string name="value_card_summary_should_pay">应付金额：</string>
+    <string name="value_card_summary_pay">实付金额：</string>
+    <string name="value_card_summary_re_count">所有储值卡剩余次数总计：</string>
+
+    <!--储值卡交易流水-->
+
+    <!--储值卡制卡-->
+    <string name="value_card_make_card_any">提示：任意金额卡不可预设金额，顾客购买时可输入充值金额购买</string>
+
+    // payment
+
+    <string name="btn_text_retry">retry</string>
+
+    <!--授权结算-->
+    <string name="input_digits">0123456789abcdefjhigklmnopqrstuvwxyzABCDEFJHIGKLMNOPQRSTUVWXYZ</string>
+
+
+    <!-- pull loadingLayout text -->
+    <string name="pull_to_refresh_pull_label">拖拉可以刷新</string>
+    <string name="pull_to_refresh_release_label">松开即可刷新</string>
+    <string name="pull_to_refresh_refreshing_label">正在加载中&#8230;</string>
+
+    <!--我的账户相关-->
+    <string name="collection_code_manager">收款码管理</string>
+    <string name="collection_code_detail">收款码详情</string>
+    <string name="bind_new_collection_code">绑定新收款码</string>
+
+
+
+    <string name="bank_card_change_record">银行卡变更记录</string>
+    <string name="input_code_hint">请输入收款码名称</string>
+    <string name="scan_code_open">扫码绑定</string>
+
+    <string name="null_hint_1">银行名称不能为空</string>
+    <string name="null_hint_22">身份证号有误</string>
+    <string name="null_hint_6">请先填写用户信息</string>
+    <string name="null_hint_7">银行卡号有误</string>
+    <string name="null_hint_12">银行卡正面不能为空</string>
+    <!--6.0权限-->
+    <string name="camera_ask_again">您已取消权限，将无法拍照，为保证您可以进行实名认证操作，请点击“确定”开启权限</string>
+
+    <!--聚合支付账单流水-->
+
+    <!--提示语-->
+
+
+    <!-- 提现-->
+    <string name="my_balance">我的余额</string>
+    <string name="withdraw_cash_balance">您可提现的金额：</string>
+    <string name="input_withdraw_hint_with_quote">请输入提现金额:</string>
+    <string name="mpos_cash">提现</string>
+    <string name="all_withdraw_cash_balance">全部提现</string>
+    <string name="input_withdraw_hint">输入金额有误,请重新输入</string>
+
+
+    <!--我的收款-->
+    <string name="refund_description">\t\t\t\t为了保障退款快速、准确的提交处理，请确认您的待结算账款大于退款金额，以便进行账务冲抵；否则会造成退款申请失败，谢谢！</string>
+
+</resources>

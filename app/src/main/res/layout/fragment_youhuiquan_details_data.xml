@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#fff"
+        android:layout_marginTop="9px">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40px"
+            app:layout_auto_basewidth="height"
+            >
+
+            <ImageView
+                android:layout_width="4px"
+                android:layout_height="22px"
+                app:layout_auto_basewidth="height"
+                android:src="@drawable/img_youhuiquan_line"
+                android:layout_marginLeft="16px"
+                android:layout_gravity="center_vertical"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="今日"
+                android:textSize="15px"
+                android:textColor="@color/text_color2"
+                android:layout_marginLeft="6px"
+                android:layout_gravity="center_vertical"
+                />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            app:layout_auto_basewidth="height"
+            android:layout_marginLeft="15px"
+            android:layout_marginRight="15px"
+            android:background="@color/background"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15px"
+            android:layout_marginRight="15px"
+            android:layout_marginTop="14px"
+            android:layout_marginBottom="8px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="优惠券名称"
+                android:textSize="14px"
+                android:textColor="@color/text_color"
+                />
+
+            <TextView
+                android:id="@+id/tv_name_youhuiquan_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="春日乐翻天"
+                android:textSize="14px"
+                android:textColor="@color/text_color2"
+                android:layout_alignParentRight="true"
+                android:singleLine="true"
+                android:maxEms="14"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15px"
+            android:layout_marginRight="15px"
+            android:layout_marginBottom="8px"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="领取数量"
+                android:textSize="14px"
+                android:textColor="@color/text_color"
+                />
+
+            <TextView
+                android:id="@+id/tv_lingqu_num_youhuiquan_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 张"
+                android:textSize="14px"
+                android:textColor="@color/text_color2"
+                android:layout_alignParentRight="true"
+                android:singleLine="true"
+                android:maxEms="14"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15px"
+            android:layout_marginRight="15px"
+            android:layout_marginBottom="8px"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="核销数量"
+                android:textSize="14px"
+                android:textColor="@color/text_color"
+                />
+
+            <TextView
+                android:id="@+id/tv_hexiao_num_youhuiquan_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 张"
+                android:textSize="14px"
+                android:textColor="@color/text_color2"
+                android:layout_alignParentRight="true"
+                android:singleLine="true"
+                android:maxEms="14"
+                />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15px"
+            android:layout_marginRight="15px"
+            android:layout_marginBottom="18px"
+            >
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="核销率"
+                android:textSize="14px"
+                android:textColor="@color/text_color"
+                />
+
+            <TextView
+                android:id="@+id/tv_hexiaolv_youhuiquan_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="75%"
+                android:textSize="14px"
+                android:textColor="@color/text_color2"
+                android:layout_alignParentRight="true"
+                android:singleLine="true"
+                android:maxEms="14"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#fff"
+        android:layout_marginTop="10px">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40px"
+            app:layout_auto_basewidth="height"
+            >
+
+            <ImageView
+                android:layout_width="4px"
+                android:layout_height="22px"
+                app:layout_auto_basewidth="height"
+                android:src="@drawable/img_youhuiquan_line"
+                android:layout_marginLeft="16px"
+                android:layout_gravity="center_vertical"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="累计"
+                android:textSize="15px"
+                android:textColor="@color/text_color2"
+                android:layout_marginLeft="6px"
+                android:layout_gravity="center_vertical"
+                />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            app:layout_auto_basewidth="height"
+            android:layout_marginLeft="15px"
+            android:layout_marginRight="15px"
+            android:background="@color/background"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15px"
+            android:layout_marginRight="15px"
+            android:layout_marginTop="14px"
+            android:layout_marginBottom="8px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="优惠券名称"
+                android:textSize="14px"
+                android:textColor="@color/text_color"
+                />
+
+            <TextView
+                android:id="@+id/tv_name1_youhuiquan_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="春日乐翻天"
+                android:textSize="14px"
+                android:textColor="@color/text_color2"
+                android:layout_alignParentRight="true"
+                android:singleLine="true"
+                android:maxEms="14"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15px"
+            android:layout_marginRight="15px"
+            android:layout_marginBottom="8px"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="总领取数量"
+                android:textSize="14px"
+                android:textColor="@color/text_color"
+                />
+
+            <TextView
+                android:id="@+id/tv_lingqu1_num_youhuiquan_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 张"
+                android:textSize="14px"
+                android:textColor="@color/text_color2"
+                android:layout_alignParentRight="true"
+                android:singleLine="true"
+                android:maxEms="14"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15px"
+            android:layout_marginRight="15px"
+            android:layout_marginBottom="8px"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="总核销数量"
+                android:textSize="14px"
+                android:textColor="@color/text_color"
+                />
+
+            <TextView
+                android:id="@+id/tv_hexiao1_num_youhuiquan_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 张"
+                android:textSize="14px"
+                android:textColor="@color/text_color2"
+                android:layout_alignParentRight="true"
+                android:singleLine="true"
+                android:maxEms="14"
+                />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15px"
+            android:layout_marginRight="15px"
+            android:layout_marginBottom="18px"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="总核销率"
+                android:textSize="14px"
+                android:textColor="@color/text_color"
+                />
+
+            <TextView
+                android:id="@+id/tv_hexiaolv1_youhuiquan_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="75%"
+                android:textSize="14px"
+                android:textColor="@color/text_color2"
+                android:layout_alignParentRight="true"
+                android:singleLine="true"
+                android:maxEms="14"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

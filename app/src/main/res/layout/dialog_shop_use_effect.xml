@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="适用门店描述"
+        android:gravity="center"
+        android:layout_marginTop="20px"
+        android:textColor="@color/text_color2"
+        android:textStyle="bold"
+        />
+
+        <TextView
+            android:id="@+id/tv_shop"
+            android:layout_below="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26px"
+            android:layout_marginRight="24px"
+            android:layout_marginLeft="25px"
+            android:text="适用门店:"
+            android:textSize="14px"
+            android:textColor="@color/text_color2"
+            />
+
+
+
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/tv_shop"
+        android:layout_height="44px"
+        android:layout_marginTop="26px"
+        android:layout_marginLeft="35px"
+        android:layout_marginRight="35px"
+        android:layout_marginBottom="28px"
+        android:background="@drawable/radius22_button"
+        android:text="知道了"
+        android:textColor="#FFFFFF"
+        android:textSize="15px" />
+
+</RelativeLayout>

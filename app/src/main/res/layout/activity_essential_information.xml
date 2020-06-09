@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="商户编号"
+                android:textColor="@color/text_level_one"
+                android:textSize="@dimen/text_level_1" />
+
+            <TextView
+                android:id="@+id/info_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textIsSelectable="true"
+                android:textColor="@color/text_level_two"
+                android:textSize="@dimen/text_level_2" />
+
+        </RelativeLayout>
+
+        <View style="@style/view_divider" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:text="门店名称"
+                android:textColor="@color/text_level_one"
+                android:textSize="@dimen/text_level_1" />
+            <TextView
+                android:id="@+id/info_2"
+                android:clickable="false"
+                style="@style/cert_et"
+                />
+        </RelativeLayout>
+
+        <View style="@style/view_divider" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="注册地址"
+                android:textColor="@color/text_level_one"
+                android:textSize="@dimen/text_level_1" />
+
+            <TextView
+                android:id="@+id/info_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:ellipsize="end"
+                android:maxEms="12"
+                android:singleLine="true"
+                android:textColor="@color/text_level_two"
+                android:textSize="@dimen/text_level_2" />
+
+        </RelativeLayout>
+
+        <View style="@style/view_divider" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="营业执照号"
+                android:textColor="@color/text_level_one"
+                android:textSize="@dimen/text_level_1" />
+
+            <TextView
+                android:id="@+id/info_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/text_level_two"
+                android:textSize="@dimen/text_level_2" />
+
+        </RelativeLayout>
+
+        <View style="@style/view_divider" />
+
+        <!--<RelativeLayout-->
+            <!--android:id="@+id/rv_head_office"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:gravity="center_vertical">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="关联总店"-->
+                <!--android:textColor="@color/text_level_one"-->
+                <!--android:textSize="@dimen/text_level_1" />-->
+
+            <!--<ImageView-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--style="@style/imgv_arrow_merchant_info" />-->
+
+        <!--</RelativeLayout>-->
+
+        <!--<View style="@style/view_divider" />-->
+
+
+        <View style="@style/view_line10" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="账户名称"
+                android:textColor="@color/text_level_one"
+                android:textSize="@dimen/text_level_1" />
+
+            <TextView
+                android:id="@+id/info_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/text_level_two"
+                android:textSize="@dimen/text_level_2" />
+
+        </RelativeLayout>
+
+        <View style="@style/view_divider" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="结算账户"
+                android:textColor="@color/text_level_one"
+                android:textSize="@dimen/text_level_1" />
+
+            <TextView
+                android:id="@+id/info_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/text_level_two"
+                android:textSize="@dimen/text_level_2" />
+
+        </RelativeLayout>
+
+        <View style="@style/view_divider" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="结算账户银行"
+                android:textColor="@color/text_level_one"
+                android:textSize="@dimen/text_level_1" />
+
+            <TextView
+                android:id="@+id/info_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/text_level_two"
+                android:textSize="@dimen/text_level_2" />
+
+        </RelativeLayout>
+
+        <View style="@style/view_divider" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="注册身份证号"
+                android:textColor="@color/text_level_one"
+                android:textSize="@dimen/text_level_1" />
+
+            <TextView
+                android:id="@+id/info_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/text_level_two"
+                android:textSize="@dimen/text_level_2" />
+
+        </RelativeLayout>
+
+        <View style="@style/view_line10" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="联系人"
+                android:textColor="@color/text_level_one"
+                android:textSize="@dimen/text_level_1" />
+
+            <TextView
+                android:id="@+id/info_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/text_level_two"
+                android:textSize="@dimen/text_level_2" />
+        </RelativeLayout>
+        <View style="@style/view_divider" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="联系手机号"
+                android:textColor="@color/text_level_one"
+                android:textSize="@dimen/text_level_1" />
+
+            <TextView
+                android:id="@+id/info_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/text_level_two"
+                android:textSize="@dimen/text_level_2" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

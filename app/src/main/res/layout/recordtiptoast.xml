@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/lm_background_voice_record_toast"
+    android:paddingBottom="25dp"
+    android:paddingLeft="40dp"
+    android:paddingRight="40dp"
+    android:paddingTop="32dp" >
+    <ImageView
+        android:id="@+id/iv_toast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/lm_ico_prompt_pop_success" />
+    <TextView
+        android:id="@+id/tv_toast_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_toast"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:maxEms="8"
+        android:maxLines="4"
+        android:shadowColor="#bf000000"
+        android:shadowDx="0"
+        android:shadowDy="-1"
+        android:shadowRadius="1"
+        android:text="@string/app_name"
+        android:textColor="#ffe3e3e3"
+        android:textSize="16.6666665sp" />
+</RelativeLayout>

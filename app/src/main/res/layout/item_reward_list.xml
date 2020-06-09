@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#fff">
+
+    <TextView
+        android:id="@+id/tv_remark_item_reward_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="奖励转入"
+        android:textColor="@color/text_color2"
+        android:textSize="13px"
+        android:layout_marginTop="15px"
+        android:layout_marginLeft="16px"
+
+        />
+
+
+    <TextView
+        android:id="@+id/tv_create_date_item_reward_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4px"
+        android:layout_marginLeft="16px"
+        android:layout_marginBottom="15px"
+        android:layout_below="@+id/tv_remark_item_reward_list"
+        android:text="2018-12-04 12:25:36"
+        android:textColor="@color/gray_text"
+        android:textSize="11px"
+        />
+
+    <TextView
+        android:id="@+id/tv_rewardAmt_item_reward_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+123"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15px"
+        android:layout_centerVertical="true"/>
+
+
+</RelativeLayout>

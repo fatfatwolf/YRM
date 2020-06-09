@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--储值卡汇总界面时间选择框背景形状-->
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="@dimen/space_6"/>
+    <solid android:color="@color/date_picker_bg"/>
+    <stroke
+        android:width="@dimen/space_1"
+        android:color="@color/date_picker_frame_color"/>
+
+
+</shape>

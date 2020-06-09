@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+     <include layout="@layout/titlebar"/>
+     <TextView
+         android:id="@+id/tv_title"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="20dp"
+         android:gravity="center"
+         android:textSize="14sp"
+         android:textColor="@color/black"
+         />
+     <TextView
+         android:id="@+id/tv_time"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="13dp"
+         android:gravity="center"
+         android:textSize="13sp"
+         android:textColor="@color/text_gray"
+         />
+     <!--<TextView-->
+         <!--android:id="@+id/tv_content"-->
+         <!--android:layout_width="match_parent"-->
+         <!--android:layout_height="wrap_content"-->
+         <!--android:layout_margin="30dp"-->
+         <!--android:textSize="14sp"-->
+         <!--/>-->
+
+     <WebView
+         android:id="@+id/webView_notice_details_activity"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_margin="20px"
+         app:layout_auto_basewidth="height"
+         >
+
+
+
+     </WebView>
+
+</LinearLayout>

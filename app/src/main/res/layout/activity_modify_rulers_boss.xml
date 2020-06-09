@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_f8"
+    tools:context=".payment.activity.ModifyRulersBossActivity">
+
+
+    <com.hybunion.yirongma.payment.view.TitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titlebar_back_title="充值规则设置"
+        ></com.hybunion.yirongma.payment.view.TitleBar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="83px"
+                app:layout_auto_basewidth="height"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_hui_youhui"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50px"
+                android:layout_marginTop="7px"
+                android:gravity="center"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="2px"
+                    android:layout_height="15px"
+                    app:layout_auto_basewidth = "height"
+                    android:layout_marginLeft="15px"
+                    android:background="@drawable/background_corner"
+                    android:textSize="@dimen/text_level_1"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="6px"
+                    android:text="惠储值"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:textColor="@color/text_313131"
+                    android:textSize="22px"
+                    />
+
+                <Switch
+                    android:id="@+id/switchButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:layout_marginRight="8px"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_close_hui"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+
+                android:background="@color/white"
+                >
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="15px"
+                    android:layout_marginRight="15px"
+                    android:background="#e1e1e1"
+                    />
+                <TextView
+                    android:id="@+id/tv_close"
+                    android:layout_marginTop="15px"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12px"
+                    android:layout_marginLeft="15px"
+                    android:layout_marginRight="15px"
+                    android:textColor="#313131"
+                    android:text="业务状态: 关闭"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12px"
+                    android:layout_marginLeft="15px"
+                    android:layout_marginRight="15px"
+                    android:textColor="@color/gray_898989"
+                    android:layout_marginBottom="16px"
+                    android:text="顾客不能在半径生活小程序进行充值服务已充值顾客可继续使用余额消费"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_hui_open"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:layout_marginTop="10px"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="50px"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="2px"
+                        android:layout_height="15px"
+                        app:layout_auto_basewidth = "height"
+                        android:layout_marginLeft="15px"
+                        android:background="@drawable/background_corner"
+                        android:textSize="@dimen/text_level_1"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="6px"
+                        android:text="充值规则"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_313131"
+                        android:textSize="22px"
+                        />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    app:layout_auto_basewidth = "height"
+                    android:background="@color/gray_e1e1e1"
+                    android:layout_marginTop="5px"
+                    android:layout_marginLeft="15px"
+                    android:layout_marginRight="15px"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15px"
+                    android:layout_marginRight="15px"
+                    android:layout_marginTop="15px"
+                    android:textColor="@color/text_313131"
+                    android:textSize="12px"
+                    android:text="储值卡最低充值门槛≥2倍客单价能有效拉动下次消费，通过设置多阶梯规则覆盖不同消费能力的客群及不同消费人数的场景。"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12px"
+                    android:textColor="@color/gray_898989" android:layout_marginLeft="15px"
+                    android:layout_marginRight="15px"
+                    android:layout_marginBottom="20px"
+                    android:text="折扣=充值金额/（充值金额+赠送金额）"
+                    />
+                <com.hybunion.yirongma.payment.view.NoScrollLlistView
+                    android:id="@+id/lv_ruler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@null"
+                    android:layout_marginLeft="15px"
+                    android:layout_marginRight="15px"
+                    ></com.hybunion.yirongma.payment.view.NoScrollLlistView>
+
+                <ImageView
+                    android:id="@+id/iv_add_ruler"
+                    android:layout_width="match_parent"
+                    android:layout_height="45px"
+                    android:layout_marginLeft="15px"
+                    android:layout_marginRight="15px"
+                    android:layout_marginTop="10px"
+                    android:background="@color/gray_f5f5f5"
+                    android:src="@drawable/img_hui_add"
+                    android:paddingBottom="13px"
+                    android:paddingTop="13px"
+                    app:layout_auto_basewidth = "height"
+                    android:layout_marginBottom="20px"
+                    />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10px"
+                    app:layout_auto_basewidth = "height"
+                    android:background="@color/green_white"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="50px"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="2px"
+                        android:layout_height="15px"
+                        app:layout_auto_basewidth = "height"
+                        android:layout_marginLeft="15px"
+                        android:background="@drawable/background_corner"
+                        android:textSize="@dimen/text_level_1"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="6px"
+                        android:text="其它设置"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_313131"
+                        android:textSize="22px"
+                        />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    app:layout_auto_basewidth = "height"
+                    android:background="@color/gray_e1e1e1"
+                    android:layout_marginTop="5px"
+                    android:layout_marginLeft="15px"
+                    android:layout_marginRight="15px"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50px"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="适用门店"
+                        android:gravity="center"
+                        android:layout_marginLeft="15px"
+                        android:textSize="16px"
+                        android:textColor="@color/text_313131"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_shop_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12px"
+                        android:gravity="right"
+                        android:hint="请选择适用门店"
+                        android:layout_weight="1"
+                        android:layout_marginRight="9px"
+                        android:textColor="@color/text_313131"
+                        />
+                    <ImageView
+                        android:layout_width="7px"
+                        android:layout_height="10px"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="18px"
+                        android:background="@drawable/right_arrow"
+                        />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    app:layout_auto_basewidth = "height"
+                    android:background="@color/gray_e1e1e1"
+                    android:layout_marginLeft="15px"
+                    android:layout_marginRight="15px"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50px"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="配置收款码充值弹窗"
+                        android:gravity="center"
+                        android:layout_marginLeft="15px"
+                        android:textSize="16px"
+                        android:textColor="@color/text_313131"
+                        />
+                    <TextView
+                        android:id="@+id/tv_customer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12px"
+                        android:layout_marginLeft="10px"
+                        android:gravity="right"
+                        android:ellipsize="end"
+                        android:maxEms="10"
+                        android:singleLine="true"
+                        android:text="所有顾客弹窗引导"
+                        android:layout_weight="1"
+                        android:layout_marginRight="9px"
+                        android:textColor="@color/text_313131"
+                        />
+                    <ImageView
+                        android:layout_width="7px"
+                        android:layout_height="10px"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="18px"
+                        android:background="@drawable/right_arrow"
+                        />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    app:layout_auto_basewidth = "height"
+                    android:background="@color/gray_e1e1e1"
+                    android:layout_marginLeft="15px"
+                    android:layout_marginRight="15px"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50px"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="允许他人借用"
+                        android:gravity="center"
+                        android:layout_marginLeft="15px"
+                        android:textSize="15px"
+                        android:textColor="@color/text_313131"
+                        />
+                    <RelativeLayout
+                        android:id="@+id/rv_others_bollow"
+                        android:layout_width="20px"
+                        android:layout_height="20px"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginLeft="8px"
+                        >
+                        <ImageView
+                            android:layout_width="14px"
+                            android:layout_height="14px"
+                            android:src="@drawable/img_hui_zhushi"
+                            />
+                    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/tv_count_limit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12px"
+                        android:gravity="right"
+                        android:text="每张卡可借用十次"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:maxEms="10"
+                        android:singleLine="true"
+                        android:layout_marginRight="9px"
+                        android:textColor="@color/text_313131"
+                        />
+                    <ImageView
+                        android:layout_width="7px"
+                        android:layout_height="10px"
+                        android:layout_gravity="center"
+                        android:visibility="invisible"
+                        android:layout_marginRight="18px"
+                        android:background="@drawable/right_arrow"
+                        />
+                    <Switch
+                        android:id="@+id/switchBollowButton"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:visibility="gone"
+                        android:layout_marginRight="15px"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:visibility="gone"
+                    app:layout_auto_basewidth = "height"
+                    android:background="@color/gray_e1e1e1"
+                    android:layout_marginLeft="15px"
+                    android:layout_marginRight="15px"
+                    />
+                <LinearLayout
+                    android:id="@+id/ll_count_limit"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="50px"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="借用次数限制"
+                        android:gravity="center"
+                        android:layout_marginLeft="15px"
+                        android:textSize="15px"
+                        android:textColor="@color/text_313131"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12px"
+                        android:gravity="right"
+                        android:text="每张卡可借用十次"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:maxEms="10"
+                        android:singleLine="true"
+                        android:layout_marginRight="9px"
+                        android:textColor="@color/text_313131"
+                        />
+                    <ImageView
+                        android:layout_width="7px"
+                        android:layout_height="10px"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="18px"
+                        android:visibility="gone"
+                        android:background="@drawable/right_arrow"
+                        />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    app:layout_auto_basewidth = "height"
+                    android:background="@color/gray_e1e1e1"
+                    android:layout_marginLeft="15px"
+                    android:layout_marginRight="15px"
+                    />
+
+                <Button
+                    android:id="@+id/bt_save"
+                    android:layout_width="match_parent"
+                    android:layout_height="45px"
+                    app:layout_auto_basewidth = "height"
+                    android:layout_marginLeft="15px"
+                    android:layout_marginRight="15px"
+                    android:background="@color/red_F84B33"
+                    android:layout_marginTop="26px"
+                    android:layout_marginBottom="15px"
+                    android:text="保存"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="18px"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

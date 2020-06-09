@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--储值卡汇总界面-->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_main_bg_gray">
+
+    <include
+        android:id="@+id/app_header"
+        layout="@layout/activity_title"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/app_header"
+        android:background="@color/app_white"
+        android:padding="@dimen/space_6">
+
+        <!--起始时间-->
+        <LinearLayout
+            android:id="@+id/layout_start_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space_10"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/start_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/space_6"
+                android:layout_weight="3"
+                android:background="@drawable/shape_value_card_summary_time_picker"
+                android:gravity="center"
+                android:padding="@dimen/space_6"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/divider_cn_zhi"/>
+
+            <TextView
+                android:id="@+id/end_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/space_6"
+                android:layout_weight="3"
+                android:background="@drawable/shape_value_card_summary_time_picker"
+                android:gravity="center"
+                android:padding="@dimen/space_6"/>
+        </LinearLayout>
+
+
+        <!--购卡/充值-->
+        <TextView
+            android:id="@+id/layout_consume_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_start_time"
+            android:background="@color/app_main_bg_gray"
+            android:padding="@dimen/space_8"
+            android:text="@string/value_card_summary_buy_card_title"/>
+
+        <!--交易金额-->
+        <LinearLayout
+            android:id="@+id/layout_consume_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_consume_title"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:padding="@dimen/space_6"
+                android:text="@string/value_card_summary_consume_amount"/>
+
+            <TextView
+                android:id="@+id/buy_consume_amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:padding="@dimen/space_6"/>
+        </LinearLayout>
+
+        <!--交易数量-->
+        <LinearLayout
+            android:id="@+id/layout_consume_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_consume_amount"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:padding="@dimen/space_6"
+                android:text="@string/value_card_summary_consume_count"/>
+
+            <TextView
+                android:id="@+id/buy_consume_count"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:padding="@dimen/space_6"
+                />
+        </LinearLayout>
+
+        <!--储值卡消费-->
+        <TextView
+            android:id="@+id/layout_consume_card_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_consume_count"
+            android:layout_marginTop="@dimen/space_10"
+            android:background="@color/app_main_bg_gray"
+            android:padding="@dimen/space_8"
+            android:text="@string/value_card_summary_consume"/>
+
+        <!--应付金额-->
+        <LinearLayout
+            android:id="@+id/layout_consume_amount_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_consume_card_title"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:padding="@dimen/space_6"
+                android:text="@string/value_card_summary_should_pay"/>
+
+            <TextView
+                android:id="@+id/buy_consume_amount_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:padding="@dimen/space_6"
+                />
+        </LinearLayout>
+
+        <!--实付金额-->
+        <LinearLayout
+            android:id="@+id/layout_consume_amount_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_consume_amount_2"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:padding="@dimen/space_6"
+                android:text="@string/value_card_summary_pay"/>
+
+            <TextView
+                android:id="@+id/buy_consume_amount_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:padding="@dimen/space_6"
+                />
+        </LinearLayout>
+
+        <!--交易数量-->
+        <LinearLayout
+            android:id="@+id/layout_consume_count_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_consume_amount_3"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:padding="@dimen/space_6"
+                android:text="@string/value_card_summary_consume_count"/>
+
+            <TextView
+                android:id="@+id/buy_consume_count_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:padding="@dimen/space_6"
+                />
+        </LinearLayout>
+
+        <!--交易次数-->
+        <LinearLayout
+            android:id="@+id/layout_consume_count_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_consume_count_2"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:padding="@dimen/space_6"
+                android:text="@string/value_card_summary_consume_count_2"/>
+
+            <TextView
+                android:id="@+id/buy_consume_count_5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:padding="@dimen/space_6"
+                />
+        </LinearLayout>
+
+        <!--所有储值卡-->
+        <LinearLayout
+            android:id="@+id/layout_consume_count_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_consume_count_5"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:padding="@dimen/space_6"
+                android:text="@string/value_card_summary_all"/>
+
+            <TextView
+                android:id="@+id/buy_consume_count_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:padding="@dimen/space_6"
+                />
+        </LinearLayout>
+
+        <!--所有储值卡剩余次数总计-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_consume_count_3"
+            android:layout_marginBottom="@dimen/space_10"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:padding="@dimen/space_6"
+                android:text="@string/value_card_summary_re_count"/>
+
+            <TextView
+                android:id="@+id/buy_consume_count_4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:padding="@dimen/space_6"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

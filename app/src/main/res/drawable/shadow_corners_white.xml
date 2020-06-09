@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 阴影部分 -->
+    <!-- 个人觉得更形象的表达：top代表下边的阴影高度，left代表右边的阴影宽度。其实也就是相对应的offset，solid中的颜色是阴影的颜色，也可以设置角度等等 -->
+        <item>
+        <shape android:shape="rectangle" >
+            <solid android:color="#FFFCFCFC"/>
+            <padding android:bottom="3dp"
+                android:top="3dp"
+                android:left="3dp"
+                android:right="3dp"/>
+            <corners
+                android:bottomLeftRadius="3dip"
+                android:bottomRightRadius="3dip"
+                android:topLeftRadius="3dip"
+                android:topRightRadius="3dip" />
+        </shape>
+        </item>
+
+    <item>
+    <shape android:shape="rectangle" >
+        <solid android:color="#FFF9F9F9"/>
+        <padding android:bottom="1dp"
+            android:top="1dp"
+            android:left="1dp"
+            android:right="1dp"/>
+        <corners
+            android:bottomLeftRadius="3dip"
+            android:bottomRightRadius="3dip"
+            android:topLeftRadius="3dip"
+            android:topRightRadius="3dip" />
+    </shape>
+    </item>
+
+
+
+    <item>
+        <shape android:shape="rectangle" >
+            <solid android:color="#FFF3F3F3"/>
+            <padding android:bottom="0.2dp"
+                android:top="0.2dp"
+                android:left="0.2dp"
+                android:right="0.2dp"/>
+            <corners
+                android:bottomLeftRadius="6dip"
+                android:bottomRightRadius="6dip"
+                android:topLeftRadius="6dip"
+                android:topRightRadius="6dip" />
+        </shape>
+    </item>
+
+
+
+
+
+    <item>
+        <shape android:shape="rectangle" >
+            <solid android:color="#ffffff"/>
+
+            <corners
+                android:bottomLeftRadius="3dip"
+                android:bottomRightRadius="3dip"
+                android:topLeftRadius="3dip"
+                android:topRightRadius="3dip" />
+        </shape>
+    </item>
+
+</layer-list>

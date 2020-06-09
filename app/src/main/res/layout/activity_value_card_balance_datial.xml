@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+    >
+    <include layout="@layout/activity_lmf_head"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.hybunion.yirongma.common.view.MySwipe
+            android:id="@+id/lv_query_vc_balance_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ListView
+                android:id="@+id/lv_va_balance_flow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:headerDividersEnabled="true" />
+
+        </com.hybunion.yirongma.common.view.MySwipe>
+        <TextView
+            android:id="@+id/tv_consume_record_nodata"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/no_data"
+            android:textColor="#DCDCDC"
+            android:visibility="gone" />
+    </RelativeLayout>
+</LinearLayout>

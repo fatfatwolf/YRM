@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:layout_height="64px">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:background="@color/bg_f8"
+        android:layout_margin="7px"
+        app:layout_auto_basewidth="height"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/iv_yunCloud_type"
+            android:padding="9px"
+            app:layout_auto_basewidth="height"
+            android:src="@drawable/img_yun_cloud"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:padding="10px"
+            android:layout_weight="1"
+            app:layout_auto_basewidth="height"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_cloud_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12px"
+                android:textSize="14px"
+                android:textColor="@color/text_color2"
+                />
+            <TextView
+                android:id="@+id/tv_cloud_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="设备编号:YRM9874343543"
+                android:textSize="12px"
+                android:layout_marginTop="3px"
+                android:textColor="@color/text_color"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

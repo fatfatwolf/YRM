@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/ll_explain"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/radius12_white_linear"
+            app:layout_auto_basewidth="height"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40px"
+                app:layout_auto_basewidth="height"
+                android:gravity="center"
+                android:text="名词解释"
+                android:textColor="#313131"
+                android:textSize="18px"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="15px"
+                android:layout_marginRight="15px"
+                android:background="#e1e1e1"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="30px"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="优质会员:"
+                    android:textColor="#313131"
+                    android:textStyle="bold"
+                    android:textSize="13px"
+                    android:layout_marginLeft="15px"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="   用户授权手机号"
+                    android:textColor="#313131"
+                    android:textSize="13px"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="25px"
+                android:layout_marginBottom="30px"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="粉丝:"
+                    android:textColor="#313131"
+                    android:textStyle="bold"
+                    android:textSize="13px"
+                    android:layout_marginLeft="15px"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="   到店消费,用户并未获取手机号"
+                    android:textColor="#313131"
+                    android:textSize="13px"
+
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+        <View
+            android:id="@+id/tv_line"
+            android:layout_width="1px"
+            android:layout_height="40px"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            app:layout_auto_basewidth="height"
+            android:layout_below="@+id/ll_explain"
+            android:background="@color/bg_f8"
+            />
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="22px"
+            android:layout_height="22px"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tv_line"
+            app:layout_auto_basewidth="height"
+            android:src="@drawable/img_member_close"
+            />
+    </LinearLayout>
+
+
+
+
+
+
+</RelativeLayout>

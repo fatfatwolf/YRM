@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".payment.Fragment.LMFAccountFragment">
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/smartRefresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/main_color2"
+                    app:layout_auto_basewidth="height"
+                    >
+                    <LinearLayout
+                        android:id="@+id/ll_setting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        app:layout_auto_basewidth="height"
+                        android:paddingTop="17px"
+                        android:paddingLeft="20px">
+
+                        <ImageView
+                            android:layout_width="19dp"
+                            android:layout_height="19dp"
+                            android:src="@drawable/img_setting_white" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="10dp"
+                            android:text="设置"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/main_color2"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_identify"
+                        android:layout_width="46px"
+                        android:layout_height="46px"
+                        app:layout_auto_basewidth="height"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="8px"
+                        tools:src="@drawable/check_click_img"/>
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="13px"
+                        tools:text="是多"
+                        android:textColor="@color/white"
+                        android:textSize="14px" />
+
+                    <TextView
+                        android:id="@+id/tv_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="24px"
+                        tools:text="小豆面馆  (新中关村店)"
+                        android:layout_marginTop="5px"
+                        android:paddingLeft="10px"
+                        android:paddingRight="10px"
+                        android:textColor="@color/white"
+                        android:textSize="12px" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/ll_clerk_account"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="45px"
+                            android:layout_marginLeft="16px"
+                            android:gravity="center_vertical"
+                            android:text="我的班结"
+                            android:textColor="@color/text_color2"
+                            android:textSize="15px"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_clerk_record"
+                            android:layout_width="match_parent"
+                            android:layout_height="45px"
+                            android:orientation="horizontal"
+                            android:padding="10dp"
+                            app:layout_auto_basewidth="height">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10px"
+                                android:layout_weight="1"
+                                android:text="班结记录"
+                                android:textColor="@color/text_color"
+                                android:textSize="14px" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="@dimen/space10"
+                                android:src="@drawable/right_arrow" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/background" />
+
+                        <Button
+                            android:id="@+id/bt_clerk_end"
+                            android:layout_width="283px"
+                            android:layout_height="44px"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="37px"
+                            android:layout_marginTop="48px"
+                            android:background="@drawable/background_corner3"
+                            android:text="去班结"
+                            android:textColor="@color/white"
+                            android:textSize="17px" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_my_account"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12px"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:paddingLeft="16px"
+                        android:paddingRight="16px">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16px"
+                            android:layout_marginTop="16px"
+                            android:text="我的店铺"
+                            android:textColor="@color/text_color2"
+                            android:textSize="15px"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/background" />
+
+                        <RelativeLayout
+                            android:id="@+id/newWalletParent_lmfaccount_fragment2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            >
+                            <ImageView
+                                android:id="@+id/img_wallet"
+                                android:layout_width="24px"
+                                android:layout_height="24px"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/img_wallet_icon"
+                                app:layout_auto_basewidth="height" />
+
+                            <TextView
+                                android:id="@+id/balance"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12px"
+                                android:layout_marginTop="15px"
+                                android:layout_toRightOf="@+id/img_wallet"
+                                android:text="钱包余额(元)"
+                                android:textColor="@color/text_color"
+                                android:textSize="11px" />
+
+                            <TextView
+                                android:id="@+id/walletBalance_lmfaccount_fragment2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/balance"
+                                android:layout_marginBottom="15px"
+                                android:layout_marginLeft="12px"
+                                android:layout_marginTop="3px"
+                                android:layout_toRightOf="@+id/img_wallet"
+                                android:text="0.00"
+                                android:textColor="@color/text_color2"
+                                android:textSize="20px" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/right_arrow" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/line_lmfaccount_fragment2"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:background="@color/background"
+                        android:visibility="gone"/>
+
+                    <LinearLayout
+                        android:id="@+id/ll_lmf_merchant_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="12px"
+                        android:paddingTop="12px"
+                        android:paddingRight="16px"
+                        android:paddingLeft="16px"
+                        android:background="#fff"
+                        app:layout_auto_basewidth="height">
+
+                        <ImageView
+                            android:layout_width="18px"
+                            android:layout_height="18px"
+                            app:layout_auto_basewidth="height"
+                            android:src="@drawable/img_information_buss" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16px"
+                            android:layout_weight="1"
+                            android:text="商户信息"
+                            android:textColor="@color/text_color"
+                            android:textSize="14px" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/right_arrow" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/view1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/background"
+                        android:layout_marginLeft="16px"
+                        android:layout_marginRight="16px"/>
+
+                    <LinearLayout
+                        android:id="@+id/ll_store_manage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="12px"
+                        android:paddingTop="12px"
+                        android:paddingLeft="16px"
+                        android:paddingRight="16px"
+                        android:background="#fff"
+                        app:layout_auto_basewidth="height">
+
+                        <ImageView
+                            android:layout_width="18px"
+                            android:layout_height="18px"
+                            app:layout_auto_basewidth="height"
+                            android:src="@drawable/img_manage_store" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16px"
+                            android:layout_weight="1"
+                            android:text="门店管理"
+                            android:textColor="@color/text_color"
+                            android:textSize="14px" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/right_arrow" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/background"
+                        android:layout_marginLeft="16px"
+                        android:layout_marginRight="16px"/>
+
+                    <LinearLayout
+                        android:id="@+id/ll_staff_manage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="12px"
+                        android:paddingTop="12px"
+                        android:paddingLeft="16px"
+                        android:paddingRight="16px"
+                        android:background="#fff"
+                        app:layout_auto_basewidth="height">
+
+                        <ImageView
+                            android:layout_width="18px"
+                            android:layout_height="18px"
+                            app:layout_auto_basewidth="height"
+                            android:src="@drawable/img_manage_staff" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16px"
+                            android:layout_weight="1"
+                            android:text="员工管理"
+                            android:textColor="@color/text_color"
+                            android:textSize="14px" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/right_arrow" />
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:id="@+id/agent_lmfaccount_fragment2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal"
+                        android:paddingBottom="12px"
+                        android:layout_marginTop="10px"
+                        android:paddingLeft="16px"
+                        android:paddingRight="16px"
+                        android:paddingTop="12px"
+                        android:visibility="visible"
+                        app:layout_auto_basewidth="height">
+
+                        <ImageView
+                            android:layout_width="18px"
+                            android:layout_height="18px"
+                            app:layout_auto_basewidth="height"
+                            android:src="@drawable/img_agent_card" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16px"
+                            android:layout_weight="1"
+                            android:text="代理“商”计划"
+                            android:textColor="@color/text_color"
+                            android:textSize="14px" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/right_arrow" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/background"
+                        android:layout_marginLeft="16px"
+                        android:layout_marginRight="16px"/>
+                        android:layout_marginRight="16px"/>
+                    <View
+                        android:id="@+id/view5"
+                        android:layout_width="match_parent"
+                        android:layout_height="15px"
+                        android:visibility="gone"
+                        android:background="@color/background"
+                        android:layout_marginLeft="16px"
+                        android:layout_marginRight="16px"/>
+                    <LinearLayout
+                        android:id="@+id/voice_lmfaccount_fragment2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal"
+                        android:paddingBottom="12px"
+                        android:paddingLeft="16px"
+                        android:paddingRight="16px"
+                        android:paddingTop="12px"
+                        android:visibility="visible"
+                        app:layout_auto_basewidth="height">
+
+                        <ImageView
+                            android:layout_width="18px"
+                            android:layout_height="18px"
+                            app:layout_auto_basewidth="height"
+                            android:src="@drawable/img_voice" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16px"
+                            android:layout_weight="1"
+                            android:text="收款语音设置"
+                            android:textColor="@color/text_color"
+                            android:textSize="14px" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/right_arrow" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

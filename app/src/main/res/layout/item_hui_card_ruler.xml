@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="horizontal"
+
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50px"
+        android:background="@drawable/shadow_shape"
+        app:layout_auto_basewidth="height"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="充值"
+        android:layout_marginLeft="15px"
+        android:textColor="@color/text_313131"
+        android:textSize="16px"
+        />
+
+    <EditText
+        android:id="@+id/et_recharg_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5px"
+        android:background="@null"
+        android:inputType="number"
+        android:gravity="center"
+        android:hint="请输入"
+        android:maxLength="4"
+        android:textSize="14px"
+        android:textColor="@color/text_313131"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="元，赠送"
+        android:layout_marginLeft="5px"
+        android:textColor="@color/text_313131"
+        android:textSize="16px"
+        />
+    <EditText
+        android:id="@+id/et_given_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5px"
+        android:background="@null"
+        android:inputType="number"
+        android:hint="请输入"
+        android:gravity="center"
+        android:maxLength="4"
+        android:textSize="14px"
+        android:textColor="@color/text_313131"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="元"
+        android:layout_marginLeft="5px"
+        android:textColor="@color/text_313131"
+        android:textSize="16px"
+        />
+
+
+        <TextView
+            android:id="@+id/tv_discount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10px"
+            android:background="@drawable/radius0_red_button"
+            android:textColor="#E55940"
+            android:textSize="10px"
+            android:visibility="invisible"
+            app:layout_auto_basewidth="height" />
+
+        
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="25px"
+            android:layout_height="25px"
+            android:layout_weight="1"
+            android:src="@drawable/img_hui_delete"
+            android:layout_marginRight="5px"
+            />
+
+    </LinearLayout>
+</LinearLayout>

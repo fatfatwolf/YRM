@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".payment.activity.OpenNewStoreActivity">
+
+    <include layout="@layout/head"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:padding="@dimen/space15"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/cert_pic_tv"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="门店名称  "
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            />
+        <EditText
+            android:id="@+id/et_shop_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="right"
+            android:hint="请输入门店名称"
+            android:textColor="@color/text_color2"
+            android:textSize="14sp"
+            />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/bg_f8"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="1dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:padding="@dimen/space15"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/cert_pic_tv"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="门店地址  "
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            />
+        <EditText
+            android:id="@+id/et_shop_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:hint="请输入门店地址"
+            android:background="@null"
+            android:textColor="@color/text_color2"
+            android:textSize="14sp"
+            />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/bg_f8"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="1dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:padding="@dimen/space15"
+        android:layout_height="wrap_content">
+        <TextView
+            android:visibility="invisible"
+            style="@style/cert_pic_tv"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="联系电话"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            />
+        <EditText
+            android:id="@+id/et_shop_telephone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="请输入联系电话"
+            android:background="@null"
+            android:inputType="number"
+            android:maxLength="11"
+            android:textColor="@color/text_color2"
+            android:textSize="14sp"
+            />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/bg_f8"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="1dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:padding="@dimen/space15"
+        android:layout_height="wrap_content">
+        <TextView
+            android:visibility="invisible"
+            style="@style/cert_pic_tv"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="门店照片"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="门店门头照"
+            android:textColor="@color/lighter_gray2"
+            android:textSize="14sp"
+            />
+        <ImageView
+            android:id="@+id/iv_photo"
+            android:layout_width="20dp"
+            style="@style/cert_et"
+            android:layout_marginLeft="@dimen/space10"
+            android:src="@drawable/group"
+            android:layout_height="18dp" />
+
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/bt_new_store"
+        style="@style/btn_style"
+        android:textSize="17sp"
+        android:text="确定开店"
+        />
+
+
+</LinearLayout>

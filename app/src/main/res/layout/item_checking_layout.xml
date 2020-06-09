@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:background="#fff">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10px"
+        android:background="#fff"
+        >
+        <ImageView
+            android:id="@+id/img_item_checking_layout"
+            android:layout_width="18px"
+            android:layout_height="18px"
+            app:layout_auto_basewidth="height"
+            android:src="@drawable/img_checking"
+            android:layout_gravity="center_vertical"/>
+
+        <ImageView
+            android:id="@+id/img_item_check_ok_layout"
+            android:layout_width="18px"
+            android:layout_height="18px"
+            app:layout_auto_basewidth="height"
+            android:src="@drawable/img_check_finish"
+            android:layout_gravity="center_vertical"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_check_content_item_checking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="手机静音检测中..."
+            android:textSize="12px"
+            android:textColor="@color/text_color2"
+            android:layout_marginLeft="19px"
+            android:layout_gravity="center_vertical"/>
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+
+</com.zhy.autolayout.AutoLinearLayout>

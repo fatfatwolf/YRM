@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.hybunion.yirongma.payment.view.TitleBar
+        android:id="@+id/titleBar_voice_setting_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titlebar_back_title="收款语音设置"></com.hybunion.yirongma.payment.view.TitleBar>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="44px"
+        android:layout_marginBottom="15px"
+        android:background="@color/white"
+        app:layout_auto_basewidth="height">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="17px"
+            android:text="收款语音开关"
+            android:textColor="@color/text_color2"
+            android:textSize="14px" />
+
+        <Switch
+            android:id="@+id/switch_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:textOff="开启"
+            android:textOn="关闭" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rv_plug_in"
+        android:layout_width="wrap_content"
+        android:layout_height="44px"
+        android:layout_marginBottom="15px"
+        android:background="@color/white"
+        app:layout_auto_basewidth="height">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="17px"
+            android:text="允许插件被扫语音播报"
+            android:textColor="@color/text_color2"
+            android:textSize="14px" />
+
+        <Switch
+            android:id="@+id/switch_chajian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:textOff="开启"
+            android:textOn="关闭" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rv_voice_detection"
+        android:layout_width="match_parent"
+        android:layout_height="45px"
+        android:background="#fff"
+        app:layout_auto_basewidth="height">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="17px"
+            android:text="语音播报检测"
+            android:textColor="@color/text_color2"
+            android:textSize="14px" />
+
+        <LinearLayout
+            android:id="@+id/check_it_now"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="9px"
+                android:text="立即检测"
+                android:textColor="@color/blue_color3"
+                android:textSize="14px" />
+            <ImageView
+                android:layout_width="16px"
+                android:layout_height="16px"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="15px"
+                android:src="@drawable/right_arrow"
+                app:layout_auto_basewidth="height" />
+
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.4dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/lmf_line" />
+
+    <RelativeLayout
+        android:id="@+id/rv_broad_ball"
+        android:layout_width="wrap_content"
+        android:layout_height="44px"
+        android:background="@color/white"
+        app:layout_auto_basewidth="height">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="17px"
+            android:text="语音播报浮球"
+            android:textColor="@color/text_color2"
+            android:textSize="14px" />
+
+        <Switch
+            android:id="@+id/voice_check_switch_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:textOff="开启"
+            android:textOn="关闭" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40px"
+        android:background="#fff"
+        app:layout_auto_basewidth="height"
+        android:layout_marginTop="15px"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="17px"
+            android:text="手机语音播放速度调节"
+            android:textColor="@color/text_color2"
+            android:textSize="14px" />
+
+        <LinearLayout
+            android:id="@+id/defaultParent"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img_default"
+                android:layout_width="16px"
+                android:layout_height="16px"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="9px"
+                android:src="@drawable/selected_img"
+                app:layout_auto_basewidth="height" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="15px"
+                android:text="默认"
+                android:textColor="@color/text_color2"
+                android:textSize="12px" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/seekBarParent"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="19px">
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="20px"
+                android:layout_height="20px"
+                app:layout_auto_basewidth="height"
+                android:layout_marginLeft="17px"
+                android:src="@drawable/laba"
+                android:layout_marginRight="5px"
+                android:layout_gravity="center_vertical"/>
+
+            <SeekBar
+                android:id="@+id/seekBar_voice_setting_activity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_auto_basewidth="height"
+                android:layout_toRightOf="@+id/img"
+                android:maxHeight="5px"
+                android:minHeight="5px"
+                android:layout_marginRight="26px"
+                android:progressDrawable="@drawable/seek_bar_drawable"
+                android:splitTrack="false"
+                android:progress="50"
+                android:layout_gravity="center_vertical"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/seekBarParent"
+            android:layout_marginLeft="45px"
+            android:layout_marginRight="30px"
+            android:layout_marginBottom="17px"
+            android:layout_marginTop="5px">
+            <TextView
+                android:id="@+id/tv_mostSlow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="最慢"
+                android:textColor="#B6BDD0"
+                android:textSize="11px"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:id="@+id/tv_moreSlow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="较慢"
+                android:textColor="#B6BDD0"
+                android:textSize="11px"
+                android:layout_weight="1"
+                />
+
+
+            <TextView
+                android:id="@+id/tv_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="适宜"
+                android:textColor="#F94B35"
+                android:textSize="11px"
+                android:layout_weight="1"
+                />
+
+            <TextView
+                android:id="@+id/tv_moreFast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="较快"
+                android:textColor="#B6BDD0"
+                android:textSize="11px"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:id="@+id/tv_mostFast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="最快"
+                android:textColor="#B6BDD0"
+                android:textSize="11px"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/setting_help_parent"
+        android:layout_width="match_parent"
+        android:layout_height="45px"
+        android:layout_marginTop="15px"
+        android:background="#fff"
+        app:layout_auto_basewidth="height">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="17px"
+            android:text="手机播报设置"
+            android:textColor="@color/text_color2"
+            android:textSize="14px" />
+
+
+            <ImageView
+                android:layout_width="16px"
+                android:layout_height="16px"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="15px"
+                android:src="@drawable/right_arrow"
+                app:layout_auto_basewidth="height"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

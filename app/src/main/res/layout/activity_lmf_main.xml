@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--ViewPager 实现滑动-->
+    <com.hybunion.yirongma.payment.view.CustomViewPager
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#f2f3f8"
+        android:visibility="gone"/>
+
+    <FrameLayout
+        android:id="@+id/fragment_parent_lmf_main_activity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+    </FrameLayout>
+
+    <!--底部分割线-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        android:background="@color/gray_text"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:baselineAligned="false"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/space_6">
+        <!--众维码-->
+        <RelativeLayout
+            android:id="@+id/rl_payment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/iv_payment"
+                android:layout_width="38dp"
+                android:layout_height="16dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/img_lmf_red"/>
+            <TextView
+                android:id="@+id/tv_payment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_payment"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="4dp"
+                android:textSize="15px"
+                android:textColor="@color/text_color"
+                android:text="首页"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_service_center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/iv_service"
+                android:layout_width="38dp"
+                android:layout_height="15dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/servicecheck"/>
+            <TextView
+                android:id="@+id/tv_message_center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_service"
+                android:layout_margin="4dp"
+                android:layout_centerHorizontal="true"
+                android:textSize="15px"
+                android:textColor="@color/text_color"
+                android:text="服务中心" />
+            <TextView
+                android:id="@+id/numDot_main_activity"
+                android:layout_width="15px"
+                android:layout_height="15px"
+                app:layout_auto_basewidth="height"
+                android:background="@drawable/bg_circle"
+                android:gravity="center"
+                android:layout_toRightOf="@+id/iv_service"
+                android:text="1"
+                android:visibility="gone"
+                android:textSize="9px"
+                android:textColor="@color/white"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_account"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            >
+
+            <ImageView
+                android:id="@+id/iv_account"
+                android:layout_width="38dp"
+                android:layout_height="16dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/navigator_coupon"/>
+
+            <TextView
+                android:id="@+id/tv_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_account"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="4dp"
+                android:textSize="15px"
+                android:textColor="@color/text_color"
+                android:text="账户"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

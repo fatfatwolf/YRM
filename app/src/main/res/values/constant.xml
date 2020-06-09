@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="MERCHANT_ORDER">0</string>
+
+    <string name="settMethod">000000</string>
+    <string name="changed">0</string>
+</resources>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_pay_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="56dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_pay_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:src="@drawable/union_success" />
+
+        <TextView
+            android:id="@+id/tv_pay_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:text="支付成功"
+            android:textColor="@color/textColor_0"
+            android:textSize="18sp" />
+        <TextView
+            android:id="@+id/tv_cause_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/textColor_6"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/btn_complete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/shape_button_ok"
+            android:text="完成"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/fl_camera"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <SurfaceView
+            android:id="@+id/sv_preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center" />
+        <com.hybunion.yirongma.payment.zxing.view.ViewfinderView
+            android:id="@+id/viewfinder_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="100dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="将二维码/条码放入框内，即可自动扫描"
+                android:textSize="14sp"
+                android:textColor="#fff"
+                android:layout_marginBottom="45dp"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:id="@+id/flashLamp_qrcode_scan_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="打开照明灯"
+                android:textSize="15sp"
+                android:textColor="#fff"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+    <include layout="@layout/hui_order_head"></include>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <Button
+        android:id="@+id/bt_code"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="生成二维码"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shape_button_bg"
+        android:layout_marginBottom="70dp"
+        android:textColor="@color/white"
+        />
+    </RelativeLayout>
+</FrameLayout>

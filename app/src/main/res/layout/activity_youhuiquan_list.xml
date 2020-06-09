@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.hybunion.yirongma.payment.view.TitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tv_right_content="制券"
+        app:titlebar_back_title="优惠券管理">
+
+    </com.hybunion.yirongma.payment.view.TitleBar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40px"
+        app:layout_auto_basewidth="height"
+        android:background="#fff">
+
+        <RelativeLayout
+            android:id="@+id/not_onLine_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:id="@+id/tv_not_onLine_youhuiquan_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="未发布"
+                android:textSize="12sp"
+                android:textColor="@color/text_color2"
+                android:layout_centerVertical="true"/>
+
+            <View
+                android:id="@+id/line_not_onLine_youhuiquan_activity"
+                android:layout_width="16px"
+                android:layout_height="2px"
+                android:background="@color/btn_back_color1"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/all_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="26px"
+            >
+
+            <TextView
+                android:id="@+id/tv_all_youhuiquan_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="全部"
+                android:textSize="12sp"
+                android:textColor="@color/btn_back_color1"
+                android:layout_centerVertical="true"/>
+
+            <View
+                android:id="@+id/line_all_youhuiquan_activity"
+                android:layout_width="16px"
+                android:layout_height="2px"
+                android:background="@color/btn_back_color1"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/onLine_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="88px"
+            >
+
+            <TextView
+                android:id="@+id/tv_onLine_youhuiquan_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已发布"
+                android:textSize="12sp"
+                android:textColor="@color/text_color2"
+                android:layout_centerVertical="true"/>
+
+            <View
+                android:id="@+id/line_onLine_youhuiquan_activity"
+                android:layout_width="16px"
+                android:layout_height="2px"
+                android:background="@color/btn_back_color1"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/offLine_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="95px"
+            android:layout_alignParentRight="true"
+            >
+
+            <TextView
+                android:id="@+id/tv_offLine_youhuiquan_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已下线"
+                android:textSize="12sp"
+                android:textColor="@color/text_color2"
+                android:layout_centerVertical="true"/>
+
+            <View
+                android:id="@+id/line_offLine_youhuiquan_activity"
+                android:layout_width="16px"
+                android:layout_height="2px"
+                android:background="@color/btn_back_color1"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/overTime_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="26px"
+            android:layout_alignParentRight="true"
+            >
+
+            <TextView
+                android:id="@+id/tv_overTime_youhuiquan_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已过期"
+                android:textSize="12sp"
+                android:textColor="@color/text_color2"
+                android:layout_centerVertical="true"/>
+
+            <View
+                android:id="@+id/line_overTime_youhuiquan_activity"
+                android:layout_width="16px"
+                android:layout_height="2px"
+                android:background="@color/btn_back_color1"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager_youhuiquan_activity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="11px">
+
+    </android.support.v4.view.ViewPager>
+
+
+</LinearLayout>

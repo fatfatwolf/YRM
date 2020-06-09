@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.hybunion.yirongma.payment.view.TitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titlebar_back_title="添加结算卡">
+
+    </com.hybunion.yirongma.payment.view.TitleBar>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30px"
+        app:layout_auto_basewidth="height"
+        android:text="请仔细核对您的结算卡信息"
+        android:textSize="13px"
+        android:textColor="#f74948"
+        android:background="#fbe9e5"
+        android:gravity="center"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44px"
+        app:layout_auto_basewidth="height"
+        android:background="#fff">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="姓名"
+            android:textColor="@color/title_text_color"
+            android:textSize="14px"
+            android:layout_marginLeft="11px"
+            android:layout_centerVertical="true"/>
+
+        <EditText
+            android:id="@+id/edt_name_add_bank_card_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13px"
+            android:hint="请输入持卡人姓名"
+            android:textColorHint="#cbd0de"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15px"
+            android:gravity="right"
+            android:singleLine="true"
+            android:maxLength="12"
+            android:background="@null"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            app:layout_auto_basewidth="height"
+            android:background="#cbd0de"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44px"
+        app:layout_auto_basewidth="height"
+        android:background="#fff">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="银行卡号"
+            android:textColor="@color/title_text_color"
+            android:textSize="14px"
+            android:layout_marginLeft="11px"
+            android:layout_centerVertical="true"/>
+
+        <EditText
+            android:id="@+id/edt_cardNum_add_bank_card_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13px"
+            android:hint="建议绑定银行一类卡"
+            android:textColorHint="#cbd0de"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15px"
+            android:gravity="right"
+            android:singleLine="true"
+            android:maxLength="25"
+            android:inputType="number"
+            android:background="@null"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            app:layout_auto_basewidth="height"
+            android:background="#cbd0de"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/kaihuhangParent_add_bank_card_activity"
+        android:layout_width="match_parent"
+        android:layout_height="44px"
+        app:layout_auto_basewidth="height"
+        android:background="#fff">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开户行"
+            android:textColor="@color/title_text_color"
+            android:textSize="14px"
+            android:layout_marginLeft="11px"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="15px"
+            android:layout_height="15px"
+            app:layout_auto_basewidth="height"
+            android:src="@drawable/right_arrow"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15px"
+            android:layout_marginLeft="2px"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/arrow"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgBank_add_bank_card_activity"
+                android:layout_width="15px"
+                android:layout_height="15px"
+                app:layout_auto_basewidth="height"
+                android:layout_gravity="center_vertical" />
+
+            <TextView
+                android:id="@+id/tvBankName_add_bank_card_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/title_text_color"
+                android:textSize="14px"
+                android:singleLine="true"
+                android:maxEms="12"
+                android:ellipsize="end"
+                android:layout_marginLeft="4px"
+                android:layout_gravity="center_vertical" />
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/add_add_bank_card_activity"
+        android:layout_width="345px"
+        android:layout_height="44px"
+        app:layout_auto_basewidth="height"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/shape_tixian_button_red"
+        android:text="确认添加"
+        android:textSize="17px"
+        android:textColor="#fff"
+        android:gravity="center"
+        android:layout_marginTop="254px"/>
+
+</LinearLayout>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/check_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="25px">
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200px"
+            app:layout_auto_basewidth="height"
+            android:background="@drawable/check_bg_top">
+
+            <TextView
+                android:id="@+id/tv_check1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="立即进行语音播报系统检测"
+                android:textColor="#fff"
+                android:textSize="13px"
+                android:layout_marginTop="83px"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/tv_no_check"
+                android:layout_width="160px"
+                android:layout_height="36px"
+                app:layout_auto_basewidth="height"
+                android:gravity="center"
+                android:text="暂不检测"
+                android:textSize="13px"
+                android:textColor="#f94b35"
+                android:background="@drawable/shape_check_bt_bg"
+                android:layout_below="@+id/tv_check1"
+                android:layout_marginTop="50px"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/tv_phone_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="手机检测已为最佳状态，请安心使用 ~"
+                android:textSize="13px"
+                android:textColor="@color/white"
+                android:layout_below="@+id/tv_check1"
+                android:layout_marginTop="50px"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"
+                />
+
+            <ListView
+                android:id="@+id/listView_check"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15px"
+                android:layout_marginBottom="15px"
+                android:layout_below="@+id/tv_check1"
+                android:divider="#ffffff"
+                android:visibility="gone">
+
+            </ListView>
+
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/check_content_parent"
+        android:layout_width="match_parent"
+        android:layout_height="259px"
+        android:layout_below="@+id/check_parent"
+        android:background="#fff"
+        android:orientation="vertical"
+        android:paddingTop="20px"
+        android:paddingLeft="20px"
+        android:visibility="gone">
+
+       <com.zhy.autolayout.AutoLinearLayout
+           android:id="@+id/checkingParent"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical">
+
+       </com.zhy.autolayout.AutoLinearLayout>
+
+        <TextView
+            android:id="@+id/tv_bottom_button"
+            android:layout_width="160px"
+            android:layout_height="36px"
+            app:layout_auto_basewidth="height"
+            android:text="停止检测"
+            android:textColor="#f94b35"
+            android:textSize="13px"
+            android:background="@drawable/shape_check_bt_bg1"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30px"
+            />
+
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/checking_parent"
+        android:layout_width="85px"
+        android:layout_height="85px"
+        app:layout_auto_basewidth="height"
+        android:layout_centerHorizontal="true">
+        <ImageView
+            android:id="@+id/img_check_click"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_auto_basewidth="height"
+            android:src="@drawable/check_click_img"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:id="@+id/img_checking"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_auto_basewidth="height"
+            android:src="@drawable/img_go_to_checking"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/img_check_click_no_problem"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_auto_basewidth="height"
+            android:src="@drawable/img_check_no_problem"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"/>
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/result_parent"
+        android:layout_width="85px"
+        android:layout_height="85px"
+        app:layout_auto_basewidth="height"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/shape_check_bg1"
+        android:visibility="gone">
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/shape_check_bg2"
+            android:layout_margin="3px"
+            >
+
+            <TextView
+                android:id="@+id/tv_problem_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="34px"
+                android:textColor="#f94b35"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="14px"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="项异常"
+                android:textSize="12px"
+                android:textColor="#f94b35"
+                android:layout_below="@+id/tv_problem_num"
+                android:layout_centerHorizontal="true"/>
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+
+
+</com.zhy.autolayout.AutoRelativeLayout>

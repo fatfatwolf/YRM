@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bg_f8"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20px"
+                android:layout_height="20px"
+                android:layout_marginLeft="15px"
+                android:background="@drawable/img_msg_history"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_shop_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textStyle="bold"
+                android:text="消息推送"
+                android:textColor="#313131"
+                android:textSize="14px"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:layout_marginRight="15px"
+                android:text="2019-7-12 11:20"
+                android:gravity="right"
+                android:textColor="#313131"
+                android:textSize="14px"
+                android:visibility="visible" />
+        </LinearLayout>
+
+
+
+
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:layout_marginTop="15px"
+                android:layout_marginLeft="40px"
+                android:text="嗨！送你一张满十元减一元的优惠券"
+                android:textColor="#313131"
+                android:textSize="12px" />
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15px"
+            android:layout_marginRight="15px"
+            android:layout_marginTop="10dp"
+            android:background="@color/bg_f8" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="15px"
+            >
+            <TextView
+                android:id="@+id/tv_toMember"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15px"
+                android:layout_marginLeft="40px"
+                android:text="推送给会员: 总计8人"
+                android:textColor="#898989"
+                android:textSize="12px" />
+            <TextView
+                android:id="@+id/tv_type"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:layout_marginTop="15px"
+                android:layout_marginRight="15px"
+                android:text="5天-7天无消费"
+                android:textColor="#898989"
+                android:textSize="12px" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

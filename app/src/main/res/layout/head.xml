@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="56dp"
+    android:background="@color/main_color2"
+    android:gravity="center_vertical"
+    >
+
+    <LinearLayout
+        android:id="@+id/ll_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="12dp"
+            android:background="@drawable/img_lmf_back"
+            android:contentDescription="@string/image" />
+    </LinearLayout>
+   <LinearLayout
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:layout_centerHorizontal="true"
+       android:layout_centerVertical="true"
+       >
+       <TextView
+           android:id="@+id/tv_head"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:maxEms="7"
+           android:layout_marginLeft="20dp"
+           android:singleLine="true"
+           android:ellipsize="end"
+           android:textColor="@android:color/white"
+           android:textSize="17sp" />
+       <Button
+           android:id="@+id/img_add"
+           android:layout_width="12dp"
+           android:layout_height="12dp"
+           android:background="@drawable/xpay_account_book_arrow"
+           android:layout_centerVertical="true"
+           android:layout_alignParentRight="true"
+           android:layout_marginRight="20dp"
+           android:layout_marginLeft="20dp"
+           android:visibility="gone"
+           />
+       <Button
+           android:id="@+id/img_donw"
+           android:layout_width="12dp"
+           android:layout_height="12dp"
+           android:background="@drawable/xpay_account_book_arrowup"
+           android:layout_centerVertical="true"
+           android:layout_alignParentRight="true"
+           android:layout_marginRight="20dp"
+           android:layout_marginLeft="20dp"
+           android:visibility="gone"/>
+   </LinearLayout>
+    <Button
+        android:id="@+id/btn_head_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@null"
+        android:paddingBottom="12dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="12dp"
+        android:text="ddddd"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/right_iv"
+        android:layout_width="@dimen/space_20"
+        android:layout_height="@dimen/space_20"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="10dp"
+        android:background="@null"
+        android:visibility="gone" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/hrt_member_manage_top_right"
+        android:visibility="gone" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:visibility="gone" />
+    <TextView
+        android:id="@+id/iv_add_clerk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="10dp"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:text=""
+        android:visibility="gone"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/wenhao"
+        android:visibility="gone"/>
+    <ImageView
+        android:id="@+id/iv_help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/img_help"
+        android:visibility="gone" />
+    <TextView
+        android:id="@+id/head_right_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/space_20"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/img_three_line"
+        android:visibility="gone"/>
+</RelativeLayout>

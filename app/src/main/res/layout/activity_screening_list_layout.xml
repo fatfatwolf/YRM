@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.hybunion.yirongma.payment.view.TitleBar
+        android:id="@+id/title_bar_screening_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titlebar_back_title="所有门店">
+
+    </com.hybunion.yirongma.payment.view.TitleBar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35px"
+        app:layout_auto_basewidth="height"
+        android:background="@color/green_white">
+
+        <View
+            android:layout_width="2px"
+            android:layout_height="10px"
+            app:layout_auto_basewidth="height"
+            android:background="@color/red_F84B33"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15px"/>
+
+        <TextView
+            android:id="@+id/tv_time_screening_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2019-07-22 00:00:00 至 2019-07-22 00:00:00"
+            android:textSize="12px"
+            android:textColor="@color/gray_898989"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5px"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65px"
+        app:layout_auto_basewidth="height"
+        android:orientation="horizontal"
+        android:background="#fff">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+            <LinearLayout
+                android:id="@+id/count_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16px"
+                android:layout_marginBottom="5px">
+                <TextView
+                    android:id="@+id/total_amt_screening_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.00"
+                    android:textSize="15px"
+                    android:textColor="@color/text_313131"
+                    android:gravity="center"
+                    />
+
+                <TextView
+                    android:id="@+id/total_count_screening_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0笔"
+                    android:textSize="11px"
+                    android:textColor="@color/gray_898989"
+                    android:layout_marginLeft="11px"
+                    />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_str_screening_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="交易金额（元）"
+                android:layout_below="@+id/count_parent"
+                android:layout_centerHorizontal="true"
+                android:textSize="12px"
+                android:textColor="@color/gray_898989"/>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/data_line_billing_list"
+            android:layout_width="1px"
+            android:layout_height="25px"
+            app:layout_auto_basewidth="height"
+            android:background="@color/gray_e1e1e1"
+            android:layout_gravity="center_vertical"/>
+
+        <RelativeLayout
+            android:id="@+id/coupon_data_parent_billing_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+            <LinearLayout
+                android:id="@+id/count_parent1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16px"
+                android:layout_marginBottom="5px">
+                <TextView
+                    android:id="@+id/total_amt1_screening_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.00"
+                    android:textSize="15px"
+                    android:textColor="@color/text_313131"
+                    android:gravity="center"
+                    />
+
+                <TextView
+                    android:id="@+id/total_count1_screening_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0笔"
+                    android:textSize="11px"
+                    android:textColor="@color/gray_898989"
+                    android:layout_marginLeft="11px"
+                    />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_str1_screening_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="退款（元）"
+                android:layout_below="@+id/count_parent1"
+                android:layout_centerHorizontal="true"
+                android:textSize="12px"
+                android:textColor="@color/gray_898989"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        app:layout_auto_basewidth="height"
+        android:background="@color/backgroundColor2"
+        />
+
+    <TextView
+        android:id="@+id/tv_noData_screening_list_activity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="暂无数据"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="220px"
+        android:visibility="gone" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/smartRefresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+       <ListView
+           android:id="@+id/list_screening_list_activity"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:headerDividersEnabled="true" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+   </LinearLayout>

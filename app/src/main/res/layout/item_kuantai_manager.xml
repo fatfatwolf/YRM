@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/toolbar_bg_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        >
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="3dp"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/background_corner"
+                    android:textSize="@dimen/text_level_1" />
+                <TextView
+                    android:id="@+id/tv_shop_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="小糖豆中关村店"
+                    android:textColor="@color/text_color2"
+                    android:textSize="14px"
+                    android:visibility="visible" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/bg_f8"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                />
+
+
+
+        <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="创建时间"
+            android:textSize="12px"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/text_color"
+            />
+        <TextView
+            android:id="@+id/tv_shop_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="12px"
+            android:textColor="@color/text_color2"
+            android:layout_marginRight="@dimen/space_20"
+            />
+    </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/bg_f8"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            />
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp"
+            >
+            <TextView
+                android:id="@+id/tv_manage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="终端管理"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textSize="13px"
+                android:textColor="@color/blue_color2"
+                />
+            <View
+                android:layout_width="2dp"
+                android:layout_height="15dp"
+                android:background="@color/bg_f8"
+                />
+            <TextView
+                android:id="@+id/tv_bind_worker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="绑定员工"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textSize="13px"
+                android:textColor="@color/blue_color2"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bg_f8"
+    android:orientation="horizontal">
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="#fff"
+      android:paddingBottom="8px"
+      android:paddingTop="8px"
+      app:layout_auto_basewidth="height">
+
+    <TextView
+        android:id="@+id/tv_type_num"
+        android:layout_width="24px"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15px"
+        android:text="1"
+        android:layout_alignParentLeft="true"
+        android:gravity="center"
+        android:textColor="#898989"
+        android:textSize="12px" />
+
+    <TextView
+        android:id="@+id/tv_phone"
+        android:layout_width="80px"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tv_type_name"
+        android:text="12345678912"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="50px"
+        android:gravity="center"
+        android:textColor="#898989"
+        android:textSize="12px" />
+
+    <TextView
+        android:id="@+id/tv_count"
+        android:layout_width="68px"
+        android:layout_height="wrap_content"
+        android:text="哈哈"
+        android:layout_marginLeft="138px"
+        android:gravity="center"
+        android:layout_alignParentLeft="true"
+        android:textColor="#898989"
+        android:textSize="12px" />
+    <TextView
+        android:id="@+id/tv_pay_count"
+        android:layout_width="68px"
+        android:layout_height="wrap_content"
+        android:text="0.02"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="86px"
+        android:gravity="center"
+        android:textColor="#898989"
+        android:textSize="12px" />
+    <TextView
+        android:id="@+id/tv_averg_price"
+        android:layout_width="68px"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15px"
+        android:text="5"
+        android:gravity="center"
+        android:textColor="#898989"
+        android:textSize="12px" />
+
+  </RelativeLayout>
+
+
+</LinearLayout>

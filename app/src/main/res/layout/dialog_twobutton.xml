@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_corner_white_dialog"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_marginBottom="10dp"
+    >
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:text="温馨提示"
+        android:textColor="#282828"
+        android:textSize="18sp" />
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="网路连接不佳"
+        android:textSize="15sp"
+        android:textColor="#383838"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.4dp"
+        android:background="#ccc"
+        android:layout_marginTop="10dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/tv_ok_left"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="30dp"
+            android:text="确定"
+            android:textSize="16sp"
+            android:focusable="true"
+            android:clickable="true"
+            android:gravity="center"
+            android:background="@android:color/transparent"
+            android:textColor="@color/main_style_color"
+            />
+
+        <View
+            android:id="@+id/view_line"
+            android:visibility="gone"
+            android:layout_width="0.4dp"
+            android:layout_height="30dp"
+            android:background="#ccc"
+            />
+        
+        <Button
+            android:id="@+id/tv_ok_right"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="30dp"
+            android:text="确定"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:focusable="true"
+            android:clickable="true"
+            android:gravity="center"
+            android:background="@android:color/transparent"
+            android:textColor="@color/main_style_color"
+            />
+    </LinearLayout>
+</LinearLayout>  

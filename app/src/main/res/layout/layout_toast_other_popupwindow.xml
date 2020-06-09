@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rv_popupwindow"
+    android:layout_width="wrap_content"
+    android:background="@color/transparent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="248px"
+        android:layout_height="66px"
+        app:layout_auto_basewidth="height"
+        android:background="@drawable/img_hui_other_toast"
+        android:orientation="vertical">
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

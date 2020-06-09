@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!--姓名-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginTop="10px"
+        android:layout_marginBottom="10px">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14px"
+            android:text="姓        名:  "
+            android:textColor="@color/text_level_one"
+            android:textSize="14px" />
+
+        <TextView
+            android:id="@+id/et_user_name"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="请输入姓名"
+            android:maxLength="10"
+
+            android:textColor="@color/text_level_two"
+            android:textColorHint="@color/dividing_line_color"
+            android:textSize="14px" />
+        <ImageView
+            android:id="@+id/iv_identify"
+            android:layout_width="20dp"
+            style="@style/cert_et"
+            android:visibility="gone"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/group"
+            android:layout_height="18dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="14px"
+        android:background="@color/line2" />
+
+    <!--身份证号-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginTop="10px"
+        android:layout_marginBottom="10px">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14px"
+            android:text="身份证号:  "
+            android:textColor="@color/text_level_one"
+            android:textSize="14px" />
+
+        <EditText
+            android:id="@+id/et_IDCard_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:digits="0123456789xX"
+            android:hint="请输入身份证号"
+            android:maxLength="18"
+            android:textColor="@color/text_level_two"
+            android:textColorHint="@color/dividing_line_color"
+            android:textSize="14px" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="14px"
+        android:background="@color/line2" />
+
+    <!--卡号-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginTop="10px"
+        android:layout_marginBottom="10px"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14px"
+            android:text="卡        号:  "
+            android:textColor="@color/text_level_one"
+            android:textSize="14px" />
+
+        <EditText
+            android:id="@+id/et_input_bankNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_weight="1"
+            android:hint="请绑定本人银行一类卡"
+            android:inputType="number"
+            android:maxLength="19"
+            android:textColor="@color/text_level_two"
+            android:textColorHint="@color/dividing_line_color"
+            android:textSize="14px" />
+        <ImageView
+            android:id="@+id/iv_card"
+            android:layout_width="20dp"
+            style="@style/cert_et"
+            android:visibility="gone"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/group"
+            android:layout_height="18dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="15px"
+        android:background="@color/line2" />
+
+    <!--开户银行-->
+    <RelativeLayout
+        android:id="@+id/rl_get_bankName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10px"
+        android:layout_marginBottom="10px"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="260px"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="14px"
+            android:text="开户银行:  "
+            android:textColor="@color/text_level_one"
+            android:textSize="14px" />
+
+        <ImageView
+            android:id="@+id/iv_row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10px"
+            android:src="@drawable/arrow_right" />
+
+        <TextView
+            android:id="@+id/tv_bankName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="50px"
+            android:layout_toLeftOf="@id/iv_row"
+            android:textColor="@color/text_level_one"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+</LinearLayout>

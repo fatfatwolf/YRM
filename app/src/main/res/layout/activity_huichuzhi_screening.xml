@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <com.hybunion.yirongma.payment.view.TitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titlebar_back_title="筛选">
+
+    </com.hybunion.yirongma.payment.view.TitleBar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40px"
+        app:layout_auto_basewidth="height"
+        android:background="#fff"
+        android:layout_marginBottom="15px">
+        <LinearLayout
+            android:id="@+id/selectStoreParent_huichuzhi_screening"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_centerInParent="true">
+            <TextView
+                android:id="@+id/tvStoreName_huichuzhi_screening"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="所有门店"
+                android:textSize="14px"
+                android:textColor="@color/title_text_color"
+                android:layout_gravity="center_vertical"/>
+            <ImageView
+                android:id="@+id/arrow_select_huichuzhi_screening"
+                android:layout_width="10px"
+                android:layout_height="10px"
+                app:layout_auto_basewidth="height"
+                android:src="@drawable/arrow_down"
+                android:layout_marginLeft="4px"
+                android:layout_gravity="center_vertical"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:background="#fff">
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="选择时间"
+           android:textSize="14px"
+           android:textColor="@color/text_color2"
+           android:layout_marginLeft="15px"
+           android:layout_marginTop="12px"
+           android:textStyle="bold"
+           />
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="14px"
+           android:layout_marginBottom="18px"
+           android:layout_marginLeft="15px">
+
+           <TextView
+               android:id="@+id/tvToday_huichuzhi_screening"
+               android:layout_width="75px"
+               android:layout_height="wrap_content"
+               android:background="@drawable/shape2_popupwindow_data_activity"
+               android:gravity="center"
+               android:paddingTop="8px"
+               android:paddingBottom="8px"
+               android:textColor="#252e44"
+               android:text="今日"/>
+
+           <TextView
+               android:id="@+id/tvYesterday_huichuzhi_screening"
+               android:layout_width="75px"
+               android:layout_height="wrap_content"
+               android:background="@drawable/shape2_popupwindow_data_activity"
+               android:gravity="center"
+               android:paddingTop="8px"
+               android:paddingBottom="8px"
+               android:layout_marginLeft="12px"
+               android:textColor="#252e44"
+               android:text="昨日"/>
+
+           <TextView
+               android:id="@+id/tvThisWeek_huichuzhi_screening"
+               android:layout_width="75px"
+               android:layout_height="wrap_content"
+               android:background="@drawable/shape2_popupwindow_data_activity"
+               android:gravity="center"
+               android:paddingTop="8px"
+               android:paddingBottom="8px"
+               android:layout_marginLeft="12px"
+               android:textColor="#252e44"
+               android:text="本周"/>
+
+           <TextView
+               android:id="@+id/tvThisMonth_huichuzhi_screening"
+               android:layout_width="75px"
+               android:layout_height="wrap_content"
+               android:background="@drawable/shape2_popupwindow_data_activity"
+               android:gravity="center"
+               android:paddingTop="8px"
+               android:paddingBottom="8px"
+               android:layout_marginLeft="12px"
+               android:textColor="#252e44"
+               android:text="本月"/>
+
+       </LinearLayout>
+
+       <View
+           android:layout_width="match_parent"
+           android:layout_height="1dp"
+           android:layout_alignParentBottom="true"
+           android:layout_marginLeft="15px"
+           android:layout_marginRight="15px"
+           android:background="#f2f3f8" />
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:layout_marginTop="15px"
+           android:layout_marginLeft="29px"
+           >
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="开始时间"/>
+
+           <RelativeLayout
+               android:id="@+id/startDateParent_huichuzhi_screening"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="17px">
+
+               <TextView
+                   android:id="@+id/startDate_huichuzhi_screening"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   tools:text="2018-07-25 00:00:00"
+                   android:textSize="14px"
+                   android:textColor="#515e81"/>
+               <View
+                   android:layout_width="match_parent"
+                   android:layout_height="2dp"
+                   android:background="#f2f3f8"
+                   android:layout_below="@+id/startDate_huichuzhi_screening"
+                   android:layout_marginTop="4px"
+                   android:layout_marginRight="20px"/>
+
+               <ImageView
+                   android:layout_width="10px"
+                   android:layout_height="10px"
+                   app:layout_auto_basewidth="height"
+                   android:src="@drawable/jiantou_shijianshaixuan"
+                   android:layout_alignParentRight="true"
+                   android:layout_centerVertical="true"
+                   android:layout_marginRight="20px"/>
+
+           </RelativeLayout>
+       </LinearLayout>
+
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:layout_marginTop="16px"
+           android:layout_marginLeft="29px"
+           >
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="结束时间"/>
+
+           <RelativeLayout
+               android:id="@+id/endDateParent_huichuzhi_screening"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="17px">
+
+               <TextView
+                   android:id="@+id/endDate_huichuzhi_screening"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   tools:text="2018-07-25 00:00:00"
+                   android:textSize="14px"
+                   android:textColor="#515e81"/>
+               <View
+                   android:layout_width="match_parent"
+                   android:layout_height="2dp"
+                   android:background="#f2f3f8"
+                   android:layout_below="@+id/endDate_huichuzhi_screening"
+                   android:layout_marginTop="4px"
+                   android:layout_marginRight="20px"/>
+
+               <ImageView
+                   android:layout_width="10px"
+                   android:layout_height="10px"
+                   app:layout_auto_basewidth="height"
+                   android:src="@drawable/jiantou_shijianshaixuan"
+                   android:layout_alignParentRight="true"
+                   android:layout_centerVertical="true"
+                   android:layout_marginRight="20px"/>
+
+           </RelativeLayout>
+       </LinearLayout>
+
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginBottom="16px"
+           android:orientation="horizontal">
+           <TextView
+               android:id="@+id/reset_huichuzhi_screening"
+               android:layout_width="140px"
+               android:layout_height="35px"
+               android:layout_marginTop="22px"
+               android:layout_marginLeft="39px"
+               android:text="重置"
+               android:textColor="#f74948"
+               android:background="@drawable/shape3_popupwindow_data_activity"
+               android:gravity="center"
+               app:layout_auto_basewidth="height"
+               />
+
+           <TextView
+               android:id="@+id/ok_huichuzhi_screening"
+               android:layout_width="140px"
+               android:layout_height="35px"
+               android:layout_marginTop="22px"
+               android:layout_marginLeft="18px"
+               android:text="确定"
+               android:textColor="#fff"
+               android:background="@drawable/shape4_popupwindow_data_activity"
+               android:gravity="center"
+               app:layout_auto_basewidth="height"
+               />
+       </LinearLayout>
+
+   </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/bg_f8"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".payment.activity.RefundRecordActivity">
+
+    <com.hybunion.yirongma.payment.view.TitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titlebar_back_title="订单明细"
+        ></com.hybunion.yirongma.payment.view.TitleBar>
+    <ListView
+        android:id="@+id/lv_refund_record"
+        android:layout_marginTop="15px"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+
+    </ListView>
+</LinearLayout>

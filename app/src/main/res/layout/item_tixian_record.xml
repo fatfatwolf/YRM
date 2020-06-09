@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#fff">
+
+    <TextView
+        android:id="@+id/date_item_tixian_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="2018-04-03\n00:00:00"
+        android:layout_marginLeft="26px"
+        android:textColor="@color/text_color"
+        android:textSize="13px"
+        android:layout_marginTop="12px"
+        android:layout_marginBottom="12px"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/amt_item_tixian_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color"
+        android:textSize="14px"
+        android:layout_centerVertical="true"
+        tools:text="12.00"
+        android:gravity="center"
+        android:layout_marginLeft="78px"
+        android:layout_toRightOf="@+id/date_item_tixian_record"/>
+
+
+    <TextView
+        android:id="@+id/state_item_tixian_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color"
+        android:textSize="13px"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        tools:text="审核中"
+        android:layout_marginRight="40px"/>
+
+
+    <ImageView
+        android:layout_width="15px"
+        android:layout_height="15px"
+        android:src="@drawable/right_arrow"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10px"/>
+
+
+</RelativeLayout>

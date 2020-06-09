@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_popup_bg"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_image"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="28dp"
+        >
+
+        <ImageView
+            android:id="@+id/iv_close_window"
+            android:layout_width="@dimen/space_30"
+            android:layout_height="@dimen/space_30"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/close2" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/elec_invoice" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_below="@+id/iv_image"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:layout_gravity="center"
+            android:textColor="@color/text_color2"
+            android:textSize="17sp"
+            android:layout_marginRight="40dp"
+            android:text="绑定云喇叭设备"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:visibility="invisible"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/background_corner2"
+            android:text="电子开票"
+            android:textSize="@dimen/text_size_14"/>
+        <EditText
+            android:id="@+id/et_cloud_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="5dp"
+            android:background="@null"
+            android:textColor="@color/text_color2"
+            android:textStyle="bold"
+            android:textColorHint="@color/lighter_gray"
+            android:hint="请输入云喇叭产品ID号"
+            android:textSize="@dimen/space_16"
+            android:layout_marginRight="40dp"
+            />
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="19dp"
+            android:background="@drawable/background_corner2"
+            android:text="快捷开票"
+            android:visibility="invisible"
+            android:textSize="@dimen/text_size_14"/>
+        <Button
+            android:id="@+id/bt_sure"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/background_corner3"
+            android:text="立即绑定"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_15"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            >
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

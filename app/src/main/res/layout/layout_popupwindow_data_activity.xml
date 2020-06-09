@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="15px"
+        android:layout_marginRight="15px"
+        android:background="#f2f3f8" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="选择时间"
+        android:textSize="14px"
+        android:textColor="@color/text_color2"
+        android:layout_marginLeft="15px"
+        android:layout_marginTop="12px"
+        android:textStyle="bold"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14px"
+        android:layout_marginBottom="18px"
+        android:layout_marginLeft="15px">
+
+        <TextView
+            android:id="@+id/tvToday_popupwindow_data_activity"
+            android:layout_width="75px"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape2_popupwindow_data_activity"
+            android:gravity="center"
+            android:paddingTop="8px"
+            android:paddingBottom="8px"
+            android:textColor="#252e44"
+            android:text="今日"/>
+
+        <TextView
+            android:id="@+id/tvYesterday_popupwindow_data_activity"
+            android:layout_width="75px"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape2_popupwindow_data_activity"
+            android:gravity="center"
+            android:paddingTop="8px"
+            android:paddingBottom="8px"
+            android:layout_marginLeft="12px"
+            android:textColor="#252e44"
+            android:text="昨日"/>
+
+        <TextView
+            android:id="@+id/tvThisWeek_popupwindow_data_activity"
+            android:layout_width="75px"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape2_popupwindow_data_activity"
+            android:gravity="center"
+            android:paddingTop="8px"
+            android:paddingBottom="8px"
+            android:layout_marginLeft="12px"
+            android:textColor="#252e44"
+            android:text="本周"/>
+
+        <TextView
+            android:id="@+id/tvThisMonth_popupwindow_data_activity"
+            android:layout_width="75px"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape2_popupwindow_data_activity"
+            android:gravity="center"
+            android:paddingTop="8px"
+            android:paddingBottom="8px"
+            android:layout_marginLeft="12px"
+            android:textColor="#252e44"
+            android:text="本月"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="15px"
+        android:layout_marginRight="15px"
+        android:background="#f2f3f8" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="自定义"
+        android:textSize="14px"
+        android:textColor="@color/text_color2"
+        android:layout_marginLeft="15px"
+        android:layout_marginTop="12px"
+        android:textStyle="bold"
+        android:visibility="gone"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15px"
+        android:layout_marginLeft="29px"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开始时间"/>
+
+        <RelativeLayout
+            android:id="@+id/startDateParent_popupwindow_data_activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17px">
+
+            <TextView
+                android:id="@+id/startDate_popupwindow_data_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="2018-07-25 00:00:00"
+                android:textSize="14px"
+                android:textColor="#515e81"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#f2f3f8"
+                android:layout_below="@+id/startDate_popupwindow_data_activity"
+                android:layout_marginTop="4px"
+                android:layout_marginRight="20px"/>
+
+            <ImageView
+                android:layout_width="10px"
+                android:layout_height="10px"
+                app:layout_auto_basewidth="height"
+                android:src="@drawable/jiantou_shijianshaixuan"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20px"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16px"
+        android:layout_marginLeft="29px"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="结束时间"/>
+
+        <RelativeLayout
+            android:id="@+id/endDateParent_popupwindow_data_activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17px">
+
+            <TextView
+                android:id="@+id/endDate_popupwindow_data_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="2018-07-25 00:00:00"
+                android:textSize="14px"
+                android:textColor="#515e81"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#f2f3f8"
+                android:layout_below="@+id/endDate_popupwindow_data_activity"
+                android:layout_marginTop="4px"
+                android:layout_marginRight="20px"/>
+
+            <ImageView
+                android:layout_width="10px"
+                android:layout_height="10px"
+                app:layout_auto_basewidth="height"
+                android:src="@drawable/jiantou_shijianshaixuan"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20px"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/settle_status_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="结算状态"
+            android:textSize="14px"
+            android:textColor="@color/text_color2"
+            android:layout_marginLeft="15px"
+            android:layout_marginTop="12px"
+            android:textStyle="bold"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="14px"
+            android:layout_marginLeft="15px">
+
+            <TextView
+                android:id="@+id/status1_popupwindow_data_activity"
+                android:layout_width="75px"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape2_popupwindow_data_activity"
+                android:gravity="center"
+                android:paddingTop="8px"
+                android:paddingBottom="8px"
+                android:textColor="#252e44"
+                android:text="待结算" />
+
+
+            <TextView
+                android:id="@+id/status2_popupwindow_data_activity"
+                android:layout_width="75px"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape2_popupwindow_data_activity"
+                android:gravity="center"
+                android:paddingTop="8px"
+                android:paddingBottom="8px"
+                android:textColor="#252e44"
+                android:text="已结算"
+                android:layout_marginLeft="12px"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16px"
+        android:orientation="horizontal"
+        android:layout_marginTop="10px">
+        <TextView
+            android:id="@+id/reset_popupwindow_data_activity"
+            android:layout_width="140px"
+            android:layout_height="35px"
+            android:layout_marginTop="22px"
+            android:layout_marginLeft="39px"
+            android:text="重置"
+            android:textColor="#f74948"
+            android:background="@drawable/shape3_popupwindow_data_activity"
+            android:gravity="center"
+            app:layout_auto_basewidth="height"
+            />
+
+        <TextView
+            android:id="@+id/ok_popupwindow_data_activity"
+            android:layout_width="140px"
+            android:layout_height="35px"
+            android:layout_marginTop="22px"
+            android:layout_marginLeft="18px"
+            android:text="确定"
+            android:textColor="#fff"
+            android:background="@drawable/shape4_popupwindow_data_activity"
+            android:gravity="center"
+            app:layout_auto_basewidth="height"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

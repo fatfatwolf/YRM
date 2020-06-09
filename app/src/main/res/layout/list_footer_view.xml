@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/bg_f8"
+    android:layout_height="match_parent">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_marginTop="10px"
+    android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="6px"
+            android:layout_marginLeft="15px"
+            android:layout_marginRight="15px"
+            android:background="#dcdcdc"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="别扯了,人家是有底线的"
+            android:textSize="12px"
+            android:background="@color/bg_f8"
+            android:layout_centerHorizontal="true"
+            android:textColor="#dcdcdc"
+            />
+</RelativeLayout>
+
+
+
+
+</RelativeLayout>

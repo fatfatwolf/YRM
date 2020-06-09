@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_progress" />
+
+    <com.hybunion.yirongma.payment.view.TitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titlebar_back_title="绑定云喇叭" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="终端品牌"
+            android:textColor="@color/text_level_one"
+            android:textSize="@dimen/text_size_14" />
+
+        <LinearLayout
+            android:id="@+id/choose_parent_bind_cloud_laba_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true">
+
+            <TextView
+                android:id="@+id/tv_brand_bind_cloud_laba_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="智联博众"
+                android:textColor="@color/text_level_one"
+                android:textSize="13px"
+                android:layout_gravity="center_vertical"/>
+
+            <ImageView
+                android:id="@+id/arrow_select_lmf_billing_da"
+                android:layout_width="10px"
+                android:layout_height="10px"
+                app:layout_auto_basewidth="height"
+                android:src="@drawable/arrow_down"
+                android:layout_marginLeft="4px"
+                android:layout_gravity="center_vertical"/>
+
+
+        </LinearLayout>
+
+
+        <!--<EditText-->
+            <!--android:id="@+id/bind_receipt_code_edit_text_name"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginRight="20dp"-->
+            <!--android:background="@null"-->
+            <!--android:gravity="right|center_vertical"-->
+            <!--android:hint="请输入云喇叭名称"-->
+            <!--android:textColor="@color/text_level_two"-->
+            <!--android:textSize="@dimen/text_size_14"-->
+            <!--android:text=""/>-->
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="终端编号"
+            android:textColor="@color/text_level_one"
+            android:textSize="@dimen/text_size_14" />
+
+        <EditText
+            android:id="@+id/et_terminal_number"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="20dp"
+            android:background="@null"
+            android:digits="@string/input_digits"
+            android:gravity="right|center_vertical"
+            android:hint="请输入云喇叭产品ID号"
+            android:textColor="@color/text_level_two"
+            android:textSize="@dimen/text_size_14"
+            android:text=""/>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="款台名称"
+            android:textColor="@color/text_level_one"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/bind_receipt_code_text_store"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/text_level_two"
+            android:textSize="@dimen/text_size_14" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/bind_receipt_code_btn_scan"
+        style="@style/btn_style"
+        android:textSize="17sp"
+        android:text="确定" />
+</LinearLayout>

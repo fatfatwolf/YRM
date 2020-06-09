@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bg_f8"
+    android:orientation="vertical"
+    tools:context=".payment.Fragment.MessageCenterFragment">
+
+    <com.hybunion.yirongma.payment.view.TitleBar
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titlebar_back_title="服务中心">
+
+    </com.hybunion.yirongma.payment.view.TitleBar>
+
+    <LinearLayout
+        android:layout_marginTop="8dp"
+        android:id="@+id/ll_notice_message"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="60px"
+        app:layout_auto_basewidth="height"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="24px"
+            android:layout_height="24px"
+            app:layout_auto_basewidth="height"
+            android:layout_marginLeft="17px"
+            android:scaleType="fitXY"
+            android:src="@drawable/notice_message"/>
+        <TextView
+            android:layout_width="16px"
+            android:layout_height="16px"
+            app:layout_auto_basewidth="height"
+            android:layout_marginTop="-13dp"
+            android:background="@drawable/bg_circle"
+            android:gravity="center"
+            android:text="80"
+            android:textSize="8px"
+            android:textColor="@color/white"
+            android:visibility="invisible"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="12px"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="公告消息"
+                    android:layout_weight="1"
+                    android:textSize="14px"
+                    android:textColor="@color/text_color2"/>
+                
+                <TextView
+                    android:id="@+id/noticeTime_message_center_fragment"
+                    android:layout_width="wrap_content"
+                    tools:text="2018-1-14"
+                    android:layout_marginRight="15px"
+                    android:textColor="@color/gray_light"
+                    android:textSize="12px"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="2px"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/noticeContent_message_center_fragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11px"
+                    android:layout_weight="1"
+                    android:layout_marginRight="10px"
+                    android:textColor="@color/text_color"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    tools:text="f减肥快到家了开发近段时间发动机萨卡了房间看到啦九分裤代理商"
+                    />
+
+                <ImageView
+                    android:src="@drawable/right_arrow"
+                    android:layout_width="12px"
+                    android:layout_height="12px"
+                    app:layout_auto_basewidth="height"
+                    android:layout_marginRight="17px"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/backgroundColor2"/>
+
+    <LinearLayout
+        android:id="@+id/ll_push_message"
+        android:layout_width="match_parent"
+        android:layout_height="60px"
+        app:layout_auto_basewidth="height"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="24px"
+            android:layout_height="24px"
+            app:layout_auto_basewidth="height"
+            android:layout_marginLeft="17px"
+            android:scaleType="fitXY"
+            android:src="@drawable/push_message"/>
+        <TextView
+            android:id="@+id/pushMsgCount_message_center_fragment"
+            android:layout_width="16px"
+            android:layout_height="16px"
+            app:layout_auto_basewidth="height"
+            android:text="8"
+            android:textSize="8px"
+            android:layout_marginTop="-13dp"
+            android:background="@drawable/bg_circle"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:visibility="invisible"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="12px"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="推送消息"
+                    android:layout_weight="1"
+                    android:textSize="14px"
+                    android:textColor="@color/text_color2"/>
+
+                <TextView
+                    android:id="@+id/pushMsgTime_message_center_fragment"
+                    android:layout_width="wrap_content"
+                    tools:text="2018-1-14"
+                    android:layout_marginRight="15px"
+                    android:textColor="@color/gray_light"
+                    android:textSize="12px"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="2px"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/pushMsgContent_message_center_fragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11px"
+                    android:layout_weight="1"
+                    android:textColor="@color/text_color"
+                    android:layout_marginRight="10px"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    tools:text="发动机斯科拉就发了看大势价啊看了发动机萨利机房的快乐撒娇发看了电视剧啊李风刀霜剑卡了"
+                    />
+
+                <ImageView
+                    android:src="@drawable/right_arrow"
+                    android:layout_width="12px"
+                    android:layout_height="12px"
+                    app:layout_auto_basewidth="height"
+                    android:layout_marginRight="17px"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="15px"
+        app:layout_auto_basewidth="height"/>
+
+    <LinearLayout
+        android:id="@+id/ll_help"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="60px"
+        app:layout_auto_basewidth="height"
+        android:gravity="center_vertical"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="24px"
+            android:layout_height="24px"
+            app:layout_auto_basewidth="height"
+            android:layout_marginLeft="16px"
+            android:scaleType="fitXY"
+            android:src="@drawable/help"/>
+        <TextView
+            android:layout_width="16px"
+            android:layout_height="16px"
+            app:layout_auto_basewidth="height"
+            android:text="8"
+            android:visibility="invisible"
+            android:background="@color/red"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_marginLeft="12px"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="帮助"
+                    android:layout_weight="1"
+                    android:textSize="14px"
+                    android:textColor="@color/text_color2"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:textSize="12sp"
+                    android:textColor="@color/gray_light"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="3dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="有问题点这里"
+                    android:textSize="11px"
+                    android:layout_weight="1"
+                    android:textColor="@color/text_color"/>
+
+                <ImageView
+                    android:src="@drawable/right_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <ImageView
+            android:src="@drawable/right_arrow"
+            android:layout_width="12px"
+            android:layout_height="12px"
+            app:layout_auto_basewidth="height"
+            android:layout_marginRight="17px"
+            />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/backgroundColor2"/>
+    <LinearLayout
+        android:id="@+id/ll_yijian"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="60px"
+        app:layout_auto_basewidth="height"
+        android:gravity="center_vertical"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="24px"
+            android:layout_height="24px"
+            app:layout_auto_basewidth="height"
+            android:layout_marginLeft="16px"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_yijian"/>
+        <TextView
+            android:layout_width="16px"
+            android:layout_height="16px"
+            app:layout_auto_basewidth="height"
+            android:text="8"
+            android:visibility="invisible"
+            android:background="@color/red"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_marginLeft="12px"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="意见反馈"
+                    android:layout_weight="1"
+                    android:textSize="14px"
+                    android:textColor="@color/text_color2"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:textSize="12sp"
+                    android:textColor="@color/gray_light"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="3dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="帮助我们为您提供更好的服务"
+                    android:textSize="11px"
+                    android:layout_weight="1"
+                    android:textColor="@color/text_color"/>
+
+                <ImageView
+                    android:src="@drawable/right_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <ImageView
+            android:src="@drawable/right_arrow"
+            android:layout_width="12px"
+            android:layout_height="12px"
+            app:layout_auto_basewidth="height"
+            android:layout_marginRight="17px"
+            />
+    </LinearLayout>
+
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="15px"
+        app:layout_auto_basewidth="height"/>
+
+    <LinearLayout
+        android:id="@+id/ll_kefu"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="60px"
+        app:layout_auto_basewidth="height"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="24px"
+            android:layout_height="24px"
+            app:layout_auto_basewidth="height"
+            android:layout_marginLeft="16px"
+            android:scaleType="fitXY"
+            android:src="@drawable/kefu_icon"/>
+        <TextView
+            android:layout_width="16px"
+            android:layout_height="16px"
+            app:layout_auto_basewidth="height"
+            android:text="8"
+            android:visibility="invisible"
+            android:background="@color/red"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="8dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="在线客服"
+                    android:layout_weight="1"
+                    android:textSize="14px"
+                    android:textColor="@color/text_color2"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:textSize="12sp"
+                    android:textColor="@color/gray_light"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="3dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="24小时竭诚为您服务"
+                    android:textSize="11px"
+                    android:layout_weight="1"
+                    android:textColor="@color/text_color"/>
+
+                <ImageView
+                    android:src="@drawable/right_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView
+            android:src="@drawable/right_arrow"
+            android:layout_width="12px"
+            android:layout_height="12px"
+            app:layout_auto_basewidth="height"
+            android:layout_marginRight="17px"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="55px">
+
+        <TextView
+            android:id="@+id/tv_kefu_tele"
+            android:layout_width="120px"
+            android:layout_height="35px"
+            app:layout_auto_basewidth="height"
+            android:layout_gravity="center"
+            android:background="@drawable/img_telservice"
+            android:orientation="horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:text="24小时竭诚为您服务"
+            android:textColor="@color/text_color"
+            android:textSize="14px" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5px"
+            android:text="400-010-5670"
+            android:textColor="@color/text_color"
+            android:textSize="14px" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

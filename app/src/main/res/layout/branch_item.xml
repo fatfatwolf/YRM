@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+           >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+         <TextView
+             android:id="@+id/tv_branch"
+             android:layout_width="match_parent"
+             android:layout_height="50dp"
+             android:text="15645858"
+             android:gravity="center"
+             />
+        <ImageView
+             android:id="@+id/img_right"
+             android:layout_width="wrap_content"
+             android:layout_height="15dp"
+             android:button="@drawable/branch_checkbox"
+             android:layout_marginRight="24dp"
+             android:background="@drawable/right"
+             android:layout_alignParentRight="true"
+              android:layout_marginTop="15dp"
+              />
+    </RelativeLayout>
+</LinearLayout>

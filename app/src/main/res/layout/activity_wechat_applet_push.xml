@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:orientation="vertical">
+
+
+        <com.hybunion.yirongma.payment.view.TitleBar
+            android:id="@+id/titleBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tv_right_content="历史消息"
+            app:titlebar_back_title="小程序消息推送">
+
+        </com.hybunion.yirongma.payment.view.TitleBar>
+
+
+        <TextView
+            android:id="@+id/tv_notice_applet_push_activity"
+            android:layout_width="match_parent"
+            android:layout_height="40px"
+            app:layout_auto_basewidth="height"
+            android:gravity="center"
+            android:text="很遗憾，您当前没有可推送的优惠券信息"
+            android:textColor="#ffa025"
+            android:textSize="12px"
+            android:background="#fffeed"
+            android:visibility="gone"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40px"
+            android:background="#fff"
+            app:layout_auto_basewidth="height">
+
+            <LinearLayout
+                android:id="@+id/selectStoreParent_applet_push_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvStoreName_applet_push_activity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="暂无加入商圈门店"
+                    android:textColor="@color/title_text_color"
+                    android:textSize="14px" />
+
+                <ImageView
+                    android:id="@+id/arrow_select_applet_push_activity"
+                    android:layout_width="10px"
+                    android:layout_height="10px"
+                    android:visibility="gone"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="4px"
+                    android:src="@drawable/arrow_down"
+                    app:layout_auto_basewidth="height" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="15px"
+            android:layout_marginRight="15px"
+            android:background="@color/lighter_gray"
+            app:layout_auto_basewidth="height" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15px"
+            android:layout_marginRight="15px">
+
+            <TextView
+                android:id="@+id/tv_sendType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15px"
+                android:layout_marginTop="15px"
+                android:text="推送给全部人员"
+                android:textColor="@color/text_313131"
+                android:textSize="16px" />
+
+            <LinearLayout
+                android:id="@+id/push_people_parent_applet_push_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="30px"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal"
+                app:layout_auto_basewidth="height">
+
+                <TextView
+                    android:id="@+id/tv_people_num_applet_push_activity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="总计 0人"
+                    android:textSize="12px"
+                    android:textColor="@color/gray_898989" />
+
+                <ImageView
+                    android:id="@+id/img_people_num"
+                    android:layout_width="12px"
+                    android:layout_height="12px"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5px"
+                    android:src="@drawable/img_arrow_right"
+                    app:layout_auto_basewidth="height" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15px"
+            android:layout_marginLeft="15px"
+            android:layout_marginRight="15px"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/push_factor1_applet_push_activity"
+                android:layout_width="match_parent"
+                android:layout_height="35px"
+                android:layout_marginRight="15px"
+                android:layout_weight="1"
+                android:background="@drawable/img_unselected_bg_push"
+                android:gravity="center"
+                android:text="2天~4天无消费"
+                android:textColor="@color/gray_898989"
+                android:textSize="14px"
+                app:layout_auto_basewidth="height" />
+
+            <TextView
+                android:id="@+id/push_factor2_applet_push_activity"
+                android:layout_width="match_parent"
+                android:layout_height="35px"
+                android:layout_weight="1"
+                android:background="@drawable/img_selected_bg_push"
+                android:gravity="center"
+                android:text="5天~7天无消费"
+                android:textColor="@color/red_55940"
+                android:textSize="14px"
+                app:layout_auto_basewidth="height" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="45px"
+            android:layout_marginRight="15px"
+            android:background="@color/lighter_gray"
+            app:layout_auto_basewidth="height" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15px"
+            android:layout_marginTop="15px"
+            android:text="选择推送内容"
+            android:textColor="@color/text_313131"
+            android:textSize="16px" />
+
+
+        <RelativeLayout
+            android:id="@+id/null_push_content_applet_push_activity"
+            android:layout_width="match_parent"
+            android:layout_height="135px"
+            app:layout_auto_basewidth="height">
+
+            <ImageView
+                android:layout_width="95px"
+                android:layout_height="95px"
+                android:layout_centerInParent="true"
+                android:src="@drawable/img_null_push"
+                app:layout_auto_basewidth="height" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/coupon_parent_item_girdview_applet_push"
+            android:layout_width="160px"
+            android:layout_height="60px"
+            app:layout_auto_basewidth="height"
+            android:background="@drawable/img_selected_bg_push_big"
+            android:layout_marginLeft="15px"
+            android:layout_marginTop="15px"
+            android:layout_marginBottom="15px"
+            android:visibility="gone"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_auto_basewidth="height"
+                android:orientation="vertical"
+                android:layout_centerInParent="true"
+                >
+
+                <TextView
+                    android:id="@+id/name_item_girdview_applet_push"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/red_55940"
+                    android:textSize="12px"
+                    android:text=""
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/price_item_girdview_applet_push"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/red_55940"
+                    android:textSize="12px"
+                    android:text=""
+                    android:layout_gravity="center_horizontal"
+                    />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/bt_push_wechat_applet_push"
+        android:layout_width="match_parent"
+        android:layout_height="45px"
+        android:layout_marginLeft="15px"
+        android:layout_marginRight="15px"
+        android:layout_marginTop="25px"
+        android:background="@drawable/shape_applet_push_button_gray"
+        android:gravity="center"
+        android:text="立即发送"
+        android:textColor="#e1e1e1"
+        android:textSize="18px"
+        app:layout_auto_basewidth="height" />
+
+</LinearLayout>

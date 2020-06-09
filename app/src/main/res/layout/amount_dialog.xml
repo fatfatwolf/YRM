@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_popup_bg"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/tv_invoice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="设置成功"
+        android:textStyle="bold"
+        android:textColor="@color/text_color2"
+        android:textSize="17px"
+        />
+
+    <TextView
+        android:id="@+id/tv_amount"
+        android:layout_width="match_parent"
+        android:layout_height="31px"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:text="固定收款金额设置成功,30分钟内即可效"
+        android:gravity="center"
+        android:layout_below="@+id/tv_invoice"
+        android:textColor="@color/text_color2"
+        android:textSize="14px"
+        />
+
+
+
+    <Button
+        android:id="@+id/bt_sure"
+        android:layout_width="match_parent"
+        android:layout_height="44px"
+        android:layout_marginTop="72px"
+        android:layout_marginRight="35px"
+        android:layout_marginLeft="35px"
+        android:layout_marginBottom="15px"
+        android:layout_below="@+id/tv_amount"
+        android:background="@drawable/background_corner3"
+        android:text="知道了"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="15px" />
+</RelativeLayout>

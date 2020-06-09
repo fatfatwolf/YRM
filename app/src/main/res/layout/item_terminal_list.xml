@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:background="@color/bg_f8"
+        android:layout_margin="7px"
+        android:layout_gravity="center_vertical"
+        app:layout_auto_basewidth="height"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/iv_table_card"
+            app:layout_auto_basewidth="height"
+            android:src="@drawable/img_table_card"
+            android:layout_width="50px"
+            android:layout_height="53px" />
+    </RelativeLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10px"
+            android:layout_weight="1"
+            app:layout_auto_basewidth="height"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_equip_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="收款码一号"
+                android:layout_marginTop="12px"
+                android:textSize="14px"
+                app:layout_auto_basewidth="height"
+                android:textColor="@color/text_color2"
+                />
+            <TextView
+                android:id="@+id/tv_equip_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3px"
+                android:text="设备编号:YRM9874343543"
+                android:textColor="@color/text_color"
+                android:textSize="12px"
+                app:layout_auto_basewidth="height" />
+            <TextView
+                android:id="@+id/tv_equip_pwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="款台密钥:YRM9874343543"
+                android:layout_marginTop="3px"
+                android:textSize="12px"
+                app:layout_auto_basewidth="height"
+                android:layout_marginBottom="10px"
+                android:textColor="@color/text_color"
+                />
+        </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/iv_right_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/right_arrow"
+        android:layout_marginRight="20px"
+        />
+
+</LinearLayout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".payment.activity.ClerkWorkActivity">
+    <include layout="@layout/head"></include>
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40px"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="15px"
+        android:layout_marginLeft="29px"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14px"
+            android:textColor="@color/text_color2"
+            android:text="开始时间"/>
+
+        <RelativeLayout
+            android:id="@+id/startDateParent_popupwindow_data_activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17px">
+
+            <TextView
+                android:id="@+id/startDate_popupwindow_data_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="14px"
+                android:textColor="#5280FA"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#f2f3f8"
+                android:layout_below="@+id/startDate_popupwindow_data_activity"
+                android:layout_marginTop="4px"
+                android:layout_marginRight="20px"/>
+
+            <ImageView
+                android:layout_width="10px"
+                android:layout_height="10px"
+                app:layout_auto_basewidth="height"
+                android:src="@drawable/jiantou_shijianshaixuan"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20px"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40px"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16px"
+        android:layout_marginLeft="29px"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color2"
+            android:textSize="14px"
+            android:text="结束时间"/>
+
+        <RelativeLayout
+            android:id="@+id/endDateParent_popupwindow_data_activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17px">
+
+            <TextView
+                android:id="@+id/endDate_popupwindow_data_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="14px"
+                android:textColor="#5280FA"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#f2f3f8"
+                android:layout_below="@+id/endDate_popupwindow_data_activity"
+                android:layout_marginTop="4px"
+                android:layout_marginRight="20px"/>
+
+            <ImageView
+                android:layout_width="10px"
+                android:layout_height="10px"
+                app:layout_auto_basewidth="height"
+                android:src="@drawable/jiantou_shijianshaixuan"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20px"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_clerk_end"
+        android:layout_width="match_parent"
+        android:layout_height="44px"
+        android:layout_marginLeft="14px"
+        android:background="#F74948"
+        android:text="班结"
+        android:layout_marginBottom="53px"
+        android:layout_marginTop="192px"
+        android:textColor="@color/white"
+        android:layout_marginRight="14px"
+        />
+    </LinearLayout>
+</LinearLayout>

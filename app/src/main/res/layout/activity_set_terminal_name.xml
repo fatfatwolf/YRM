@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+
+    <com.hybunion.yirongma.payment.view.TitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titlebar_back_title="终端详情" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45px"
+        app:layout_auto_basewidth="height"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="终端名称"
+            android:textColor="@color/text_level_one"
+            android:textSize="14px" />
+
+        <EditText
+            android:id="@+id/et_codeName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="20dp"
+            android:background="@null"
+            android:gravity="right|center_vertical"
+            android:hint="@string/input_code_hint"
+            android:textColor="@color/text_level_two"
+            android:textSize="14px" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45px"
+        app:layout_auto_basewidth="height"
+        android:layout_marginTop="1px"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="门店名称"
+            android:textColor="@color/text_level_one"
+            android:textSize="14px" />
+
+        <TextView
+            android:id="@+id/tv_storeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/text_level_two"
+            android:textSize="@dimen/text_size_14" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/bt_save"
+        style="@style/btn_style"
+        android:textSize="17sp"
+        android:text="保存" />
+</LinearLayout>

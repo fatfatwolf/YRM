@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.daimajia.swipe.SwipeLayout
+    android:id="@+id/swipe_item_admin_setting"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/delete_parent_item_admin_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/red"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        android:weightSum="1">
+        <TextView
+            android:id="@+id/delete"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:background="#FFFF0000"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:layout_marginBottom="1dp"
+            android:textColor="@android:color/white"
+            android:paddingRight="20dp"
+            android:text="删除" />
+    </LinearLayout>
+
+
+    <!--surfaceView Start-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:background="#fff">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:id="@+id/tv_name_item_admin_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="邵婷"
+                android:textSize="12sp"
+                android:textColor="@color/text_color2"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="管理员"
+                android:textSize="10sp"
+                android:textColor="#fff"
+                android:background="@drawable/shape_admin_setting"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:layout_marginLeft="5dp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_phone_item_admin_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="18315624487"
+            android:textColor="#210033"
+            android:textSize="12sp"
+            android:layout_marginTop="3dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_store_name_item_admin_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="小糖豆记得你"
+            android:textSize="12sp"
+            android:layout_marginTop="3dp"
+            android:textColor="@color/text_color2"
+            android:layout_marginBottom="7dp"
+            />
+
+    </LinearLayout>
+
+
+
+
+</com.daimajia.swipe.SwipeLayout>

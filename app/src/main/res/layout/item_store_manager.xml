@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/toolbar_bg_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="3dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/background_corner"
+                android:textSize="@dimen/text_level_1"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_shop_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="小糖豆中关村店"
+                android:textColor="@color/text_color2"
+                android:textSize="14px"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/bg_f8" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="门店地址  "
+                android:textColor="@color/text_color"
+                android:textSize="12px" />
+
+            <TextView
+                android:id="@+id/tv_shop_address"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:layout_marginRight="@dimen/space_20"
+                android:text="北京海淀区中关村大街"
+                android:textColor="@color/text_color2"
+                android:textSize="12px" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:text="联系电话"
+                android:textColor="@color/text_color"
+                android:textSize="12px" />
+
+            <TextView
+                android:id="@+id/tv_shop_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/space_20"
+                android:text="13366829095"
+                android:textColor="@color/text_color2"
+                android:textSize="12px" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:text="创建时间"
+                android:textColor="@color/text_color"
+                android:textSize="12px" />
+
+            <TextView
+                android:id="@+id/tv_shop_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/space_20"
+                android:text="2018-8-30  18:26:38"
+                android:textColor="@color/text_color2"
+                android:textSize="12px" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/bg_f8" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40px"
+            android:orientation="horizontal"
+            app:layout_auto_basewidth="height">
+
+            <TextView
+                android:id="@+id/tv_terminal_manage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="终端管理"
+                android:textColor="@color/blue_color2"
+                android:textSize="13px" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="30px"
+                android:layout_gravity="center_vertical"
+                app:layout_auto_basewidth="height"
+                android:background="@color/bg_f8" />
+
+            <TextView
+                android:id="@+id/tv_bind_worker"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="员工管理"
+                android:textColor="@color/blue_color2"
+                android:textSize="13px" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="30px"
+                android:layout_gravity="center_vertical"
+                app:layout_auto_basewidth="height"
+                android:background="@color/bg_f8" />
+
+            <TextView
+                android:id="@+id/tv_kuantai_manage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="款台管理"
+                android:textColor="@color/blue_color2"
+                android:textSize="13px" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

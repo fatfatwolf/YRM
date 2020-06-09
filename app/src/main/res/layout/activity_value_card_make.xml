@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0f0f0"
+    android:orientation="vertical">
+
+    <include layout="@layout/head"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/margin_left_right"
+                android:paddingRight="@dimen/margin_left_right">
+
+                <RelativeLayout
+                    style="@style/ValueCardMake_Rel">
+
+                    <TextView
+                        android:id="@+id/tv_CardName"
+                        style="@style/ValueCardMake_TvLeft"
+                        android:text="卡名称"/>
+
+                    <EditText
+                        android:id="@+id/et_CardName"
+                        style="@style/ValueCardMake_TvRight"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@id/tv_CardName"
+                        android:background="@null"
+                        android:hint="请输入卡名称"
+                        android:maxLength="21"
+                        android:singleLine="true"/>
+
+                </RelativeLayout>
+
+                <include layout="@layout/layout_line"/>
+
+                <RelativeLayout
+                    style="@style/ValueCardMake_Rel"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/ValueCardMake_TvLeft"
+                        android:text="卡种类"/>
+
+                    <TextView
+                        android:id="@+id/tv_CardKind"
+                        style="@style/ValueCardMake_TvRight"
+                        android:hint="选择卡种类"/>
+
+                </RelativeLayout>
+
+                <include
+                    layout="@layout/layout_line"
+                    android:visibility="gone"/>
+
+                <RelativeLayout
+                    style="@style/ValueCardMake_Rel">
+
+                    <TextView
+                        style="@style/ValueCardMake_TvLeft"
+                        android:text="卡类型"/>
+
+                    <TextView
+                        android:id="@+id/tv_CardType"
+                        style="@style/ValueCardMake_TvRight"
+                        android:hint="选择卡类型"/>
+
+                </RelativeLayout>
+
+                <include layout="@layout/layout_line"/>
+
+                <!--<RelativeLayout-->
+                <!--style="@style/ValueCardMake_Rel">-->
+
+                <!--<TextView-->
+                <!--style="@style/ValueCardMake_TvLeft"-->
+                <!--android:text="卡属性"/>-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_CardProperty"-->
+                <!--style="@style/ValueCardMake_TvRight"-->
+                <!--android:hint="选择卡属性"/>-->
+
+                <!--</RelativeLayout>-->
+
+                <!--<include layout="@layout/layout_line"/>-->
+
+                <RelativeLayout
+                    style="@style/ValueCardMake_Rel">
+
+                    <TextView
+                        android:id="@+id/card_num_marker"
+                        style="@style/ValueCardMake_TvLeft"
+                        android:text="卡数量（张）"/>
+
+                    <EditText
+                        android:id="@+id/et_CardNumber"
+                        style="@style/ValueCardMake_TvRight"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@id/card_num_marker"
+                        android:background="@null"
+                        android:hint="输入储值卡数量"
+                        android:inputType="number"
+                        android:maxLength="5"/>
+                </RelativeLayout>
+
+                <include layout="@layout/layout_line"/>
+
+                <RelativeLayout
+                    style="@style/ValueCardMake_Rel">
+
+                    <TextView
+                        style="@style/ValueCardMake_TvLeft"
+                        android:text="截止日期"/>
+
+                    <TextView
+                        android:id="@+id/tv_CardTime"
+                        style="@style/ValueCardMake_TvRight"
+                        android:background="@null"
+                        android:hint="选择截止日期"/>
+
+                </RelativeLayout>
+
+                <!--<include layout="@layout/layout_line"/>-->
+
+                <RelativeLayout
+                    style="@style/ValueCardMake_Rel"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/ValueCardMake_TvLeft"
+                        android:text="需要密码"/>
+
+                    <ImageView
+                        android:id="@+id/Btn_openPass"
+                        android:layout_width="42dp"
+                        android:layout_height="23dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/valuecardmake_off"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <include layout="@layout/layout_line"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <include layout="@layout/layout_line"/>
+
+                <RelativeLayout
+                    style="@style/ValueCardMake_Rel">
+
+                    <TextView
+                        style="@style/ValueCardMake_TvLeft"
+                        android:layout_marginLeft="@dimen/margin_left_right"
+                        android:text="卡规则设置"/>
+
+                </RelativeLayout>
+
+                <include layout="@layout/layout_line"/>
+
+                <TextView
+                    android:id="@+id/card_any"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/space_10"
+                    android:visibility="gone"
+                    android:text="@string/value_card_make_card_any"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                    <com.hybunion.yirongma.valuecard.view.ExpandList
+                        android:id="@+id/list_rule"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:divider="@null"
+                        android:paddingLeft="@dimen/margin_left_right"
+                        android:paddingRight="@dimen/margin_left_right"
+                        android:scrollbars="none"/>
+
+                    <LinearLayout
+                        android:id="@+id/lin_edittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@id/list_rule"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/space_6"
+                        android:paddingBottom="@dimen/space_6"
+                        android:paddingLeft="@dimen/margin_left_right"
+                        android:paddingRight="@dimen/margin_left_right"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="8dp"
+                            android:text="充值（元）"
+                            android:textColor="@color/textColor_2"
+                            android:textSize="14sp"/>
+
+                        <EditText
+                            android:id="@+id/et_rechargeMoney"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.4"
+                            android:background="@drawable/bg_border_round2"
+                            android:clickable="true"
+                            android:focusable="false"
+                            android:gravity="center"
+                            android:hint="充值金额"
+                            android:inputType="number"
+                            android:padding="@dimen/space_6"
+                            android:singleLine="true"
+                            android:textColor="@color/textColor_2"
+                            android:textColorHint="@color/textColor_9"
+                            android:textSize="@dimen/text_size_12"/>
+
+
+                        <TextView
+                            android:id="@+id/tv_song"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:text="送（元）"
+                            android:textColor="@color/textColor_2"
+                            android:textSize="14sp"/>
+
+                        <EditText
+                            android:id="@+id/et_getMoney"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.4"
+                            android:background="@drawable/bg_border_round2"
+                            android:focusableInTouchMode="true"
+                            android:gravity="center"
+                            android:hint="赠送金额"
+                            android:inputType="number"
+                            android:padding="@dimen/space_6"
+                            android:singleLine="true"
+                            android:textColor="@color/textColor_2"
+                            android:textColorHint="@color/textColor_9"
+                            android:textSize="@dimen/text_size_12"/>
+
+
+                        <ImageView
+                            android:id="@+id/imgv_plus"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="8dp"
+                            android:clickable="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/itemcardmake_plus"/>
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

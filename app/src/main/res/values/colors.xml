@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <color name="red">#FF0000</color>
+    <color name="gray">#ffc3c3c3</color>
+    <color name="qian_gray">#777777</color>
+    <color name="luck_top_bg_color">#c0bebc</color>
+    <color name="transparent">#00000000</color>
+    <color name="transparent2">#00ffffff</color>
+    <color name="text_black">#666666</color>
+    <color name="title_bar_bg">#EAEAEF</color>
+    <color name="main_bg">#EFEFEF</color>
+    <color name="text_light_blue">#00adcb</color>
+    <color name="general_orange">#FF6633</color>
+    <color name="background_color">#F6F6F6</color>
+    <color name="title_text_color">#333333</color>
+    <color name="address_child">#f4f4f4</color>
+    <color name="white">#ffffff</color>
+    <color name="main_color2">#F94B35</color>
+    <color name="line_color">#e5e5e5</color>
+    <color name="text_color2">#252E44</color>
+    <color name="text_color">#515E81</color>
+    <color name="blue_color2">#5280FA</color>
+    <color name="blue_color3">#4A95FF</color>
+    <color name="green">#32CD32</color>
+    <color name="black">#323232</color>
+    <color name="grey">#CBD0DE</color>
+    <color name="green_white">#f2f3f5</color>
+    <color name="text_gray">#cccccc</color>
+    <color name="gray_text_color">#999999</color>
+    <color name="app_white">#FFFFFFFF</color>
+    <color name="app_black">#FF000000</color>
+    <color name="btn_back_color">#FB794F</color>
+    <color name="btn_back_color1">#F74948</color>
+    <color name="lmf_main_color">#fe4f3e</color>
+    <color name="red_f74948">#f74948</color>
+    <!--toolbar 背景颜色-->
+    <color name="toolbar_bg_color">#f0f0f0</color>
+    <color name="lmf_line">#e3e4e5</color>
+    <!--时间选择框背景灰-->
+    <color name="date_picker_bg">#f7f7f7</color>
+    <!--时间选择框边框色-->
+    <color name="date_picker_frame_color">#dddddd</color>
+    <!--新标准提示文字-->
+    <color name="gray_text">#b3b3b3</color>
+    <color name="main_body_color">#ff5614</color>
+    <color name="gray_line">#e5e5e5</color>
+    <!--网络错误界面按钮颜色-->
+    <color name="lightGrey">#d3d3d3</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <!--折线图-->
+    <color name="text_black_color">#323232</color>
+    <!--自定义 AlertDialog-->
+    <color name="colorLine">#d1d1cc</color>
+    <color name="colorText">#1E90FF</color><![CDATA[
+     
+    ]]>
+    <color name="app_main_bg_gray">#EFEFEF</color>
+    <color name="subscribe_item_drag_stroke">#ffd2d2d2</color>
+    <color name="textColor_0">#000000</color>
+    <color name="textColor_2">#222222</color>
+    <color name="textColor_6">#666666</color>
+    <color name="textColor_9">#999999</color>
+    <color name="bg_gray">#efeff4</color>
+
+    <!--标准颜色值-->
+    <!--扫一扫-->
+    <color name="viewfinder_frame">#ff000000</color>
+    <color name="viewfinder_laser">#ffff0000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="result_view">#b0000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="lightgreen">#99CC33</color>
+
+    <!--银联二维码收款-->
+    // payment导入
+    <color name="main_color">#F2F2F2</color>
+    <color name="text_level_one">#333333</color>
+    <color name="text_level_two">#666666</color>
+    <color name="view_line_horizontal">#DDDDDD</color>
+    <!--pull -->
+    <color name="colorGray">#EEEEEE</color>
+    <!--审批通过-->
+    <!--待审批-->
+    <!--退回-->
+    <color name="dividing_line_color">#CCCCCC</color>
+    <color name="touming">#00000000</color>
+    <color name="lighter_gray">#e5e5e5</color>
+    <color name="lighter_gray2">#B6BDD0</color>
+
+    <color name="main_style_color">#459CFC</color>
+    <color name="blue_0076ff">#0076ff</color>
+    <!--<color name="main_style_color">#00baff</color>-->
+    <color name="black_font_title">#333333</color>
+    <color name="background">#F2F3F8</color>
+    <color name="financial_item_content2">#666666</color>
+    <color name="line">#00BAFF</color>
+    <color name="line2">#e3e4e5</color>
+    <color name="take_photo_text">#999999</color>
+    <color name="bg_f8">#f2f3f8</color>
+    <color name = "edt_hint_color">#b6bdd0</color>
+
+    <color name="red_dark">#cc0000</color>
+    <color name="ci_card">#7b7979</color>
+    <color name="ci_card_num">#a3a1a1</color>
+    <color name="zhekou_card">#846728</color>
+    <color name="zhekou_card_num">#a18846</color>
+    <color name="line_color1">#CBD0DE</color>
+    <color name="gray_light">#babfcc</color>
+    <color name="backgroundColor2">#F2F3F8</color>
+    <color name="yellow_text">#FCAD0B</color>
+    <color name="blue_4E69E2">#4E69E2</color>
+
+    <color name="gray_898989">#898989</color>
+    <color name="text_313131">#313131</color>
+    <color name="red_55940">#e55940</color>
+
+    <color name="gray_e1e1e1">#e1e1e1</color>
+    <color name="gray_f5f5f5">#f5f5f5</color>
+    <color name="red_F84B33">#F84B33</color>
+    <color name="gray_ffece9">#ffece9</color>
+
+</resources>

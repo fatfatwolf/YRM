@@ -1,0 +1,764 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.hybunion.yirongma">
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="false"
+        android:xlargeScreens="true" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <!-- 扫描二维码 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <!--自动对焦-->
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <!-- 震动 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+<!--    <uses-permission-->
+<!--        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"-->
+<!--        tools:ignore="ProtectedPermissions" />-->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission
+        android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+<!--    <uses-permission-->
+<!--        android:name="android.permission.CHANGE_CONFIGURATION"-->
+<!--        tools:ignore="ProtectedPermissions" />-->
+<!--    <uses-permission android:name="android.permission.USE_CREDENTIALS" />-->
+<!--    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />-->
+    <!--允许修改声音设置-->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+<!--    <uses-permission android:name="android.permission.READ_SMS" />-->
+
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于读取手机当前的状态 -->
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+    <!-- 访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+<!--    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />-->
+<!--    <uses-permission android:name="android.permission.ACCESS_FIND_LOCATION" />-->
+<!--    <uses-permission android:name="android.permission.READ_OWNER_DATA" />-->
+<!--    <uses-permission android:name="android.permission.WRITE_OWNER_DATA" />-->
+<!--    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />-->
+
+    <!-- receiver 弹出对话框权限 -->
+<!--    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />-->
+    <!-- 桌面图标角标的数字提醒 -->
+    <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS" />
+    <!-- ZUK -->
+    <uses-permission android:name="android.permission.READ_APP_BADGE" />
+    <!-- for Samsung -->
+    <uses-permission android:name="com.sec.android.provider.badge.permission.READ" />
+    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" />
+    <!-- for htc -->
+    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT" />
+    <!-- for sony -->
+    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" />
+    <uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE" />
+    <!-- for apex -->
+    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT" />
+    <!-- for solid -->
+    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE" />
+    <!-- for huawei -->
+    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
+    <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS" />
+    <!-- 电池优化用 -->
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+
+    <application
+        android:name=".HRTApplication"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:resizeableActivity="true"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon,android:theme,android:label,android:name">
+        <provider
+            android:name=".payment.utils.ImageFileProvider"
+            android:authorities="${applicationId}.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_path"
+                tools:replace="android:resource" />
+        </provider>
+        <!-- 阿里百川 HotFix 热修复框架 APPSECRET 和 RSASECRET -->
+        <!-- <meta-data -->
+        <!-- android:name="com.taobao.android.hotfix.APPSECRET" -->
+        <!-- android:value="17f6edfa7a0a96c63c52b8d30e000a23" /> -->
+        <!-- <meta-data -->
+        <!-- android:name="com.taobao.android.hotfix.RSASECRET" -->
+        <!-- android:value="MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC7CBJyahovCZrUthwJpDntIvfOuIufnFdg7lukRjmcZZ5cTGoBq7n4PjYEd+tSe1sgM1gQc4pQJ0BVJPFZQ2UoYvP2eChHOTZhORBq/SHoNYH0akijqe4r14p7MTo94OtC8iURSnfcBgow2hF+pHqXoUh3uhLA1DUWXlfnZ2ElRF0sCQhCsIE6QC+uaacDnUvkH3n8M1Bb7BRfTgnVhz0MW+jTkcOhhLSMhar28KFpPoIEzGl5FJwiFrid0I7iB6rS3Y576DmmgW9m49e/C+I8Lbl4DCVpTt5WXZjsxVRAvEOzr9y0vahOcMOJ5azq6Tw72z0SZTzxickGqD7xfXyzAgMBAAECggEBALXlBtPBPs/KPotqxN/XmQJ4hJrGPfwvt4csqXGdXoAtEBNhuaMAWTAFiNFVs0YXdCtf4+C0DasgUV+9Ov/+HI5nli5482s5SBrLvZzfrC9Cgq2rBBQvutNmn2ZqHON7MDJ+fvBPBTy1nwmdu2/4FMYM9AaEr6Jbf3nOrRz/HKp5JZrMTjeiFj+m4WsMlC7DnKED1zL6pfjAGEyf0fVLfOZUPUdjWun92Nf9B53JcLk7SaBIIjLKdGQOo9W+iGrX1DV8XMg3nnj9WCGGKv2FcsvViOFl9BxH5mRc/VwK4QVsvHWf/q+/bAvGP2Pae3dN8WKZo6Nv+1TvOM2aRZ9jHIECgYEA3oUgrHOepIbSyMNwPaefMVpvCZIxt20mW2lYeyFnnGg9XrziS+Mauac2n1uEqRtrDWa1wWOLwuOqnDWDU1YBRxkCkA8PfoiuXk/OdHxYg9ffmriD9yROK/yYGAGfDuKPjxFZKsrFCjcpXavUrdUh7n/tFZ8gSZJLWTRXxRS6ufMCgYEA1ywF5VzET9jcVF+65dJJm74GwtA8JWyoSxo6T0Q2wPZv4A4tCNe6GhrJ/wUm6odZsA410JARRsm271QiIoXLW9gnVqhOKrBFYUnLdC/2Pwu+cFXxVbb2hjEw80Ki1KCaxj21Ec4WkMBXKHRli+2/ltUS0d/SKO2v4Uncf5+WIkECgYBpHbx8mrWzhRkny+NGzNtP5ieT/uLLgp1fC1nH+NTINxnemh3QuXzTfOE50HLPq+sbTozHyW2paAEdf84E3RkHbBIg2Wx5Wrn8RXkC4Aa0aZLwtP9qDVV8Q/vZQ1LPJkmozQoxQ85m7/3ziQuT/p3j27y0vRH0j05W2non2I4I7wKBgQCDRqiSNvbOgFBsabttW87s5hLZ6JHJg3Fp4KaSlduR/shiukNfkb5JDu8OV+ZWUB23+/N5O2xO8+JYQcxRo69eaZIWnLiT8tdhc9RdHqXt8QxPHSAQW4AsfvaOc6lEcHf9WsiOBF5gEfkbBWiu5m5tZ7IDubpOnjUgDiAo/QRsAQKBgDVMKiIJnyhl+Br8xJrrD5nuE1U88RpADpg6xIDaZMU2CazRbPW4591KNAB9FIogm1nqPRj5MZUELOMbYsdc3eXEKRzBXwD1Nss/gxA+MbmT6hFiOMJ0XDJ+GvVsDacxV5Cp6sxKaXkt1wPFlYcXGP2GcYgsIuwMl6SjbpgUsdXO" /> -->
+        <!-- android:alwaysRetainTaskState="true" -->
+        <activity
+            android:name=".payment.activity.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- &lt;!&ndash; 更换图片的服务 &ndash;&gt; -->
+        <!-- <service android:name=".member.service.UpdatePicService" /> -->
+        <activity
+            android:name=".payment.activity.OpenAnimActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.SweepOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LMFMainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.LoginActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.GuideActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 已激活储值卡详情界面 -->
+        <activity
+            android:name=".valuecard.activity.ValueCardActivateDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".valuecard.activity.ValueCardActivateActivity"
+            android:screenOrientation="portrait" />
+        <!-- 储值卡激活界面 -->
+        <activity
+            android:name=".valuecard.activity.WeekRechargeFormActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".valuecard.activity.TimeRechargeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".valuecard.activity.BalanceDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.NoticeDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.MoreNoticeActivity"
+            android:screenOrientation="portrait" />
+        <!-- 在百度开发者中心查询应用的API Key -->
+        <meta-data
+            android:name="api_key"
+            android:value="aFzSfD9u9WGXboD4FDBcqEvI" />
+        <!-- android:value="OV6WrfKahMNIpAl6w7TyAX07" /> 重庆众维码 -->
+        <!-- android:value="aFzSfD9u9WGXboD4FDBcqEvI" /> -->
+        <!-- 百度推送：结束 -->
+        <!-- <service -->
+        <!-- android:name="com.baidu.location.f" -->
+        <!-- android:enabled="true" -->
+        <!-- android:process=":remote"></service> -->
+        <!-- <meta-data -->
+        <!-- android:name="com.baidu.lbsapi.API_KEY" -->
+        <!-- android:value="4jiH0TK9Ewer1DI9c1pSKOMo" /> -->
+
+
+        <!-- 对账activity -->
+
+        <activity
+            android:name=".payment.activity.AboutUsActivity"
+            android:screenOrientation="portrait" />
+
+        <!--
+            <activity
+            android:name=".valuecard.activity.ValueCardgiveActivity"
+            android:screenOrientation="portrait" />
+        -->
+        <activity
+            android:name=".valuecard.activity.ValueCardMakeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".valuecard.activity.ValueCardManageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".valuecard.activity.ValueCardRuleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.DialogActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyle" />
+        <!-- 高德地图配置 -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="${gaodeKey}" />
+        <!-- android:value="35abc4837817b097038471f5f646ca2c" /> 重庆众维码 -->
+        <!-- android:value="115e351a23cf18039b69a838c3a22bb7" /> -->
+        <!-- 定位需要的服务 -->
+        <service android:name="com.amap.api.location.APSService" />
+        <!-- 高德地图配置结束 -->
+
+        <activity
+            android:name=".payment.zxing.activity.CaptureActivity2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".common.util.jpush.AlertDialogActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".common.util.jpush.AlertDialogAT"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".payment.activity.SuccessfulReceipt"
+            android:screenOrientation="portrait" />
+
+        <!-- 唤醒屏幕 -->
+        <activity
+            android:name=".common.util.jpush.WakeUpActivity"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- #############极光推送####################### -->
+        <!-- Required SDK核心功能 -->
+
+        <service
+            android:name=".payment.service.VMForegroundService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":foreground" />
+
+        <!-- 下载更新的服务 -->
+        <service android:name=".payment.service.UpdataService" />
+        <!-- Required SDK核心功能 -->
+
+
+        <!-- 自定义极光推送的 receiver ,用来接收极光发出的广播信息，按需要进行处理 -->
+        <receiver
+            android:name=".common.util.jpush.JPushReceiver"
+            android:enabled="true"
+            android:exported="false">
+
+            <!-- 相关具体含义参考极光开发者文档（http://docs.jiguang.cn/client/android_api/#receiver） -->
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <action android:name="cn.jpush.android.intent.UNREGISTRATION" />
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" />
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+
+                <category android:name="${applicationId}" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 华为透传 -->
+        <meta-data
+            android:name="com.huawei.hms.client.appid"
+            android:value="appid=${huaweiKey}" />
+
+        <activity
+            android:name="com.huawei.hms.activity.BridgeActivity"
+            android:configChanges="orientation|locale|screenSize|layoutDirection|fontScale"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:hardwareAccelerated="true"
+            android:theme="@android:style/Theme.Translucent">
+            <meta-data
+                android:name="hwc-theme"
+                android:value="androidhwext:style/Theme.Emui.Translucent" />
+        </activity>
+        <activity
+            android:name="com.huawei.updatesdk.service.otaupdate.AppUpdateActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:theme="@style/upsdkDlDialog">
+            <meta-data
+                android:name="hwc-theme"
+                android:value="androidhwext:style/Theme.Emui.Translucent.NoTitleBar" />
+        </activity>
+        <activity
+            android:name="com.huawei.updatesdk.support.pm.PackageInstallerActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:theme="@style/upsdkDlDialog">
+            <meta-data
+                android:name="hwc-theme"
+                android:value="androidhwext:style/Theme.Emui.Translucent" />
+        </activity>
+
+        <provider
+            android:name="com.huawei.hms.update.provider.UpdateProvider"
+            android:authorities="${applicationId}.hms.update.provider"
+            android:exported="false"
+            android:grantUriPermissions="true" />
+        <provider
+            android:name="com.huawei.updatesdk.fileprovider.UpdateSdkFileProvider"
+            android:authorities="${applicationId}.updateSdk.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true" />
+
+        <service
+            android:name="com.huawei.updatesdk.service.deamon.download.DownloadService"
+            android:exported="false" />
+
+        <receiver android:name=".common.util.jpush.HuaweiPushRevicer">
+            <intent-filter>
+
+                <!-- 必须,用于接收token | Must， for receiving token -->
+                <action android:name="com.huawei.android.push.intent.REGISTRATION" />
+                <!-- 必须，用于接收消息 | Must， used to receive messages -->
+                <action android:name="com.huawei.android.push.intent.RECEIVE" />
+                <!-- 可选，用于点击通知栏或通知栏上的按钮后触发onEvent回调 | Optional, click the button on the notification bar or the notification bar to trigger the onevent callback -->
+                <action android:name="com.huawei.android.push.intent.CLICK" />
+                <!-- 可选，查看push通道是否连接，不查看则不需要 | Optional, query whether the push channel is connected or not -->
+                <action android:name="com.huawei.intent.action.PUSH_STATE" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.huawei.hms.support.api.push.PushEventReceiver">
+            <intent-filter>
+
+                <!-- 接收通道发来的通知栏消息 -->
+                <action android:name="com.huawei.intent.action.PUSH" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".common.util.huawei.common.HMSAgentActivity"
+            android:configChanges="orientation|locale|screenSize|layoutDirection|fontScale"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:hardwareAccelerated="true"
+            android:theme="@android:style/Theme.Translucent">
+            <meta-data
+                android:name="hwc-theme"
+                android:value="androidhwext:style/Theme.Emui.Translucent" />
+        </activity>
+
+        <!-- 华为透传结束 -->
+
+        <!-- 储值卡汇总 -->
+        <activity
+            android:name=".valuecard.activity.ValueCardSummaryActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 卡管理界面 -->
+        <activity
+            android:name=".valuecard.activity.VCManageActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 初始化极光服务 -->
+        <service
+            android:name=".payment.view.engine.PushStartService"
+            android:enabled="true" />
+
+
+        <!-- 聚合支付模块组价 -->
+        <!-- 配置AutoLayout的屏幕值 -->
+        <meta-data
+            android:name="design_width"
+            android:value="375" />
+        <meta-data
+            android:name="design_height"
+            android:value="667" />
+
+        <!-- <activity android:name=".activity.FavorableMerchantActivity" /> -->
+        <activity android:name=".payment.activity.ItemNoticeActivity" />
+
+        <activity
+            android:name=".payment.activity.AllBankActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.NoticeDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.TransFlowDetailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.SignInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.MyBalanceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.CashWithDrawRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.ScreeningActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.CollectionCodeDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.BankCardInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.CollectionCodeManagerAty"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.CollectionCodeManagerAty1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".valuecard.activity.ReFundSuccessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.BindReceiptCodeActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".payment.activity.BindReceiptCodeActivity1"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".payment.activity.ModifyBankCardInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.BankCardChangeRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.PosPayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.HelpWebViewActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- zxing 默认扫描activity -->
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:screenOrientation="portrait"
+            tools:replace="screenOrientation" />
+        <activity
+            android:name=".payment.zxing.activity.CaptureActivity"
+            android:screenOrientation="portrait" />
+        <!-- 聚合支付账本 -->
+        <activity
+            android:name=".payment.activity.HandWrittenSignActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".payment.activity.ClerkSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.ClerkSettingActivity1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.ClerkSettingActivity2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.AddClerkActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.LMFSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.ValueCardBillingDetailsAt"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".valuecard.activity.LMFValueCardBalanceAT"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.LMFRedRainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".valuecard.activity.LMFValueCardBalanceDaAT"
+            android:screenOrientation="portrait" />
+        <!-- 商户信息 -->
+        <activity
+            android:name=".payment.activity.LMFMerchantInformationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.LMFMerchantInformationActivity2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".valuecard.activity.VcBillingDetailsAt"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".valuecard.activity.ValueCardsListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".valuecard.activity.ValueCardsDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".valuecard.activity.VCConsumptionSuccessAT"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.UserScanActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.MainMassageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.MainMessageDetailAC"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.NewFeedBackActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.zxing.activity.CaptureActivity1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.TiXianRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.TiXianActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.ChooseBankCardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.AddBankCardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.AllBankListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.NoMerchantManageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.VerificationCodeActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".payment.activity.UserAgreementActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.BussinessInformationActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.StoreManageActivity2"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.OpenNewStoreActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.ManageStoreActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.ChangePasswordActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.RefundDetailsActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.ClerkWorkActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.ClerkWorkDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.ClerkRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.CheckEquipManagerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.KuanTaiActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.AddKuanTaiActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.SetPassWordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.MerchantManageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.TiXianResultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.MyWalletActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.KuanTaiDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.TerminalManageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.TerminalDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.MyNewWalletActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.BindCloudLaBaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.SetTerminalNameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.TiXianNewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.BindChaJianActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.BindQR65Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.TiXianNewRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.SetMinAccountActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.SetFixAmountActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.StoreListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.ManageTerminalActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.ForgetPwdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.ForgetPwdVerifyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.ResetPwdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.TiXianRecordDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.RewardListActivity"
+            android:screenOrientation="portrait" />
+
+        <receiver
+            android:name=".payment.receiver.HeadSetReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver
+            android:name=".payment.receiver.HeadSetPlugReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".payment.activity.RefundRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.RefundSecondActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.RefundItemActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.AgentTiXianResultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.VoiceSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.ScreeningListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.ValueCardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.BillingListActivityOld"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.YouHuiQuanListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.YouHuiQuanDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.BussinessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.GaodeGuideActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.MakeNoteActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.NoUseTimeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.CustomizeTimeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.AdminSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.MemberManageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.MemberListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.SendMsgResultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.MessageHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.WechatAppletPushActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.HuiValueCardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.HuiValueSuccessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.ModifyRulersBossActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.ModifyRulersShopActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.NewBillingListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.HuiChuZhiScreeningActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.HuiChuZhiScreeningListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.activity.HuiChuZhiDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".payment.activity.JingFuCardDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".payment.activity.SettlementActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".payment.activity.WebViewActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".payment.activity.SummaryActivity"
+            android:screenOrientation="portrait"/>
+
+    </application>
+
+</manifest>

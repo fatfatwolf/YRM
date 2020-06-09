@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rv_popupwindow"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/swipeParent_popupwindow_store"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="58px"
+        android:layout_above="@+id/bt_sure"
+        android:orientation="vertical">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:orientation="horizontal"
+           android:layout_height="wrap_content">
+
+           <TextView
+               android:id="@+id/tv_title_store_popwindow"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="门店/款台"
+               android:textSize="17px"
+               android:layout_weight="1"
+               android:textStyle="bold"
+               android:layout_marginLeft="14px"
+               android:layout_marginTop="12px"
+               android:textColor="@color/text_color2"
+               />
+           <ImageView
+               android:id="@+id/iv_close"
+               android:layout_width="18px"
+               android:layout_height="18px"
+               android:layout_marginTop="12px"
+               android:src="@drawable/img_close"
+               android:layout_marginRight="14px"
+               />
+       </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_store_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请选择"
+                    android:layout_marginTop="19px"
+                    android:textSize="13px"
+                    android:layout_marginLeft="14px"
+                    android:textColor="@color/btn_back_color1"
+                    />
+                <View
+                    android:id="@+id/view_line_store"
+                    android:layout_width="38px"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="14px"
+                    android:layout_marginTop="8px"
+                    android:background="@color/btn_back_color1"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_kuantai"
+                android:layout_marginLeft="37px"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_kuantai_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请选择"
+                    android:layout_marginTop="19px"
+                    android:textSize="13px"
+                    android:layout_marginLeft="14px"
+                    android:textColor="@color/btn_back_color1"
+                    />
+                <View
+                    android:id="@+id/line_kuantai"
+                    android:layout_width="38px"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="14px"
+                    android:layout_marginTop="8px"
+                    android:background="@color/btn_back_color1"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/lighter_gray"
+            android:layout_height="1px"/>
+        
+        <TextView
+            android:id="@+id/tv_null"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="暂无数据"
+            android:textColor="@color/text_color"
+            android:gravity="center"
+            android:textSize="14px"
+            android:visibility="gone"/>
+        <com.hybunion.yirongma.payment.view.CustomViewPager
+            android:id="@+id/mViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></com.hybunion.yirongma.payment.view.CustomViewPager>
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:background="#f4f4f4"
+        android:layout_marginTop="10px"
+        android:layout_below="@+id/swipeParent_popupwindow_store"
+        android:layout_height="1px"/>
+
+
+        <Button
+            android:id="@+id/bt_sure"
+            android:layout_width="match_parent"
+            android:layout_height="36px"
+            android:layout_marginTop="20px"
+            android:layout_marginBottom="24px"
+            android:layout_marginLeft="88px"
+            android:layout_marginRight="87px"
+            android:layout_weight="1"
+            android:background="@drawable/shape_sure_red"
+            android:text="确定"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/btn_back_color1"
+            android:textSize="14px" />
+
+
+</RelativeLayout>

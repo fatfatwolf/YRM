@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--儲值卡管理界面-->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--头布局-->
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/head"/>
+
+    <!--TabLayout tab 列表-->
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/tool_bar"
+        android:padding="@dimen/space_8"
+        android:background="@color/app_white"
+        app:tabIndicatorColor="@color/viewfinder_laser"
+        app:tabIndicatorHeight="0dp"
+        app:tabSelectedTextColor="@color/app_white"
+        app:tabTextAppearance="@style/TabIndicator_Title"
+        app:tabBackground="@drawable/selector_flow_layout_selected"
+        app:tabTextColor="@color/black"/>
+
+    <!--ViewPager-->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager_container"
+        android:layout_below="@id/tabLayout"
+        android:layout_marginTop="@dimen/space_10"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:background="@color/date_picker_frame_color"/>
+
+</RelativeLayout>

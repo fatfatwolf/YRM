@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff">
+
+    <com.hybunion.yirongma.payment.view.TitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titlebar_back_title="身份验证">
+
+    </com.hybunion.yirongma.payment.view.TitleBar>
+
+
+    <TextView
+        android:id="@+id/phoneNum_verification_code_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="验证码已发送至"
+        android:textSize="15px"
+        android:layout_marginTop="41px"
+        android:layout_marginLeft="44px"
+        android:textColor="@color/ci_card"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="输入短信验证码"
+        android:textSize="18px"
+        android:layout_marginTop="10px"
+        android:layout_marginLeft="44px"
+        android:textColor="@color/text_color2"
+        />
+
+
+    <com.hybunion.yirongma.payment.view.SeparatedEditText
+        android:id="@+id/separatedEdt_verification_code_activity"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="30px"
+        android:layout_marginLeft="44px"
+        android:layout_marginRight="44px"
+        android:inputType="number"
+        app:blockSpacing="10px"
+        app:borderColor="#b6bdd0"
+        app:borderWidth="5px"
+        app:separateType="3"
+        app:textColor="@color/text_color2"
+         />
+    <TextView
+        android:id="@+id/tv_error_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="验证码不匹配"
+        android:textSize="13px"
+        android:visibility="invisible"
+        android:layout_marginLeft="48px"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/btn_back_color1"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="74px"
+        app:layout_auto_basewidth="height"
+        android:gravity="center"
+        >
+        <TextView
+            android:id="@+id/tv_sms_verification_code_activity"
+            android:text="重新发送"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingBottom="13px"
+            android:textSize="13px"
+            android:layout_marginLeft="100px"
+            android:textColor="#b6bdd0"/>
+
+        <TextView
+            android:id="@+id/tv_voice_verification_code_activity"
+            android:text="语音验证"
+            android:layout_marginLeft="203px"
+            android:textSize="13px"
+            android:textColor="#5280fa"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+    <TextView
+        android:id="@+id/bt_set_password_verification_code_activity"
+        android:layout_width="288px"
+        android:layout_height="44px"
+        app:layout_auto_basewidth="height"
+        android:background="@drawable/background_corner3"
+        android:layout_gravity="center_horizontal"
+        android:text="下一步:设置商户管理密码"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="17px" />
+
+
+</LinearLayout>

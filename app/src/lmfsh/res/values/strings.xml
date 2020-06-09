@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">立码富商户</string>
+    <string name="AGENT_ID">1</string>
+    <string name="company_name">北京会员宝移动网络有限公司</string>
+    <string name="help_string">快速了解产品</string>
+    <string name="about_us_url">http://www.hybunion.com/aboutus/hyb.html</string>
+    <string name="register_url">http://www.hybunion.com/aggrement.html</string>
+    <string name="vm_background_service">立码富为您服务</string>
+    <string name="appType">0</string>
+    <string name="BuglyId"></string>
+    <string name="photo">lmf_photo</string>
+    <string name="bussiness_act_url">https://merch.hybunion.cn/JHAdminConsole/h5/friendAd.html</string>
+    <string name="merchant_activety_url">https://lmfmobile.hybunion.cn/JHAdminConsole/HrtAppHtml/merchantActivety.html</string>
+
+</resources>

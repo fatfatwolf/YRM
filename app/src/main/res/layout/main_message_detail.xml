@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.hybunion.yirongma.payment.view.TitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titlebar_back_title="消息详情"
+        ></com.hybunion.yirongma.payment.view.TitleBar>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tv_title_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="标题"
+            android:textColor="@color/text_color2"
+            android:textSize="14px"
+            android:gravity="center"
+            android:layout_marginTop="20px"
+            />
+
+        <WebView
+            android:id="@+id/webView_notice_details_activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20px"
+            app:layout_auto_basewidth="height"
+            >
+
+        </WebView>
+
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="2019-09-505 17:41:14"
+            android:textSize="14px"
+            android:layout_marginTop="10px"
+            android:layout_marginRight="10px"
+            android:textColor="@color/text_color2"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/bg_f8"
+            android:layout_marginTop="20px"
+            android:layout_marginRight="15px"
+            android:layout_marginLeft="15px"
+            />
+        <LinearLayout
+            android:id="@+id/ll_save_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/radius10_white_padding5_background"
+            app:layout_auto_basewidth="height"
+            android:layout_marginTop="30px"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_collection_qr_code"
+                android:layout_width="150px"
+                android:layout_height="150px"
+                />
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/btn_save_image"
+            android:layout_width="match_parent"
+            android:layout_marginTop="25px"
+            android:background="@color/main_color2"
+            android:layout_marginLeft="15px"
+            android:layout_marginRight="15px"
+            android:text="保存相册"
+            android:textColor="@color/white"
+            android:textSize="14px"
+            android:layout_marginBottom="20px"
+            android:layout_height="44px" />
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

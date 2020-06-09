@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="13dp"
+    android:paddingRight="13dp"
+    android:paddingBottom="15dp"
+    android:paddingTop="15dp">
+
+    <TextView
+        android:id="@+id/name_kuantai_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="收银台1"
+        android:textColor="@color/text_color2"
+        android:textSize="13sp"
+        android:singleLine="true"
+        android:ellipsize="end"
+
+        />
+
+    <TextView
+        android:id="@+id/code_kuantai_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color"
+        android:textSize="13sp"
+        android:layout_marginTop="3dp"
+        tools:text="款台编号：22135546"/>
+
+    <TextView
+        android:id="@+id/pwd_kuantai_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color"
+        android:textSize="13sp"
+        android:layout_marginTop="3dp"
+        tools:text="款台密钥：22135546"/>
+
+
+</LinearLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.hybunion.yirongma.payment.view.TitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titlebar_back_title="自定义时间">
+
+    </com.hybunion.yirongma.payment.view.TitleBar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44px"
+        app:layout_auto_basewidth="height"
+        android:background="#fff">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开始时间"
+            android:textColor="@color/text_color"
+            android:layout_marginLeft="15px"
+            android:layout_centerVertical="true"
+            android:textSize="14px"/>
+
+        <ImageView
+            android:id="@+id/img_start_time_customize_time_activity"
+            android:layout_width="16px"
+            android:layout_height="match_parent"
+            app:layout_auto_basewidth="height"
+            android:src="@drawable/img_caldener"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15px"
+            />
+
+        <TextView
+            android:id="@+id/tv_start_time_customize_time_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:hint="请选择时间"
+            android:textColor="@color/text_color2"
+            android:textSize="14px"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/img_start_time_customize_time_activity"
+            android:layout_marginRight="10px"/>
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        app:layout_auto_basewidth="height"
+        android:background="@color/background"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44px"
+        app:layout_auto_basewidth="height"
+        android:background="#fff">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="截止时间"
+            android:textColor="@color/text_color"
+            android:layout_marginLeft="15px"
+            android:layout_centerVertical="true"
+            android:textSize="14px"/>
+
+        <ImageView
+            android:id="@+id/img_end_time_customize_time_activity"
+            android:layout_width="16px"
+            android:layout_height="match_parent"
+            app:layout_auto_basewidth="height"
+            android:src="@drawable/img_caldener"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15px"
+            />
+
+        <TextView
+            android:id="@+id/tv_end_time_customize_time_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:hint="请选择时间"
+            android:textColor="@color/text_color2"
+            android:textSize="14px"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/img_end_time_customize_time_activity"
+            android:layout_marginRight="10px"/>
+
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/bt_save_customize_time_activity"
+        android:layout_width="match_parent"
+        android:layout_height="44px"
+        android:background="@drawable/radius3_button"
+        android:layout_marginLeft="15px"
+        android:layout_marginRight="15px"
+        android:text="保存"
+        android:gravity="center"
+        android:layout_marginTop="103px"
+        android:textColor="@color/white"
+        android:layout_marginBottom="44px"
+        />
+
+
+
+</LinearLayout>

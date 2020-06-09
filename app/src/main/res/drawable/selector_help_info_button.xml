@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--帮助信息提示窗按钮部分-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <corners
+                android:bottomRightRadius="@dimen/space_8"
+                android:bottomLeftRadius="@dimen/space_8"/>
+            <solid android:color="@color/app_main_bg_gray"/>
+        </shape>
+    </item>
+    <item android:state_pressed="false">
+        <shape android:shape="rectangle">
+            <corners
+                android:bottomRightRadius="@dimen/space_8"
+                android:bottomLeftRadius="@dimen/space_8"/>
+            <solid android:color="@color/app_white"/>
+        </shape>
+    </item>
+
+</selector>

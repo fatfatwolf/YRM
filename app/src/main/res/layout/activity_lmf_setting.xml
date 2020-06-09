@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.hybunion.yirongma.payment.view.TitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titlebar_back_title="设置">
+
+    </com.hybunion.yirongma.payment.view.TitleBar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="#fff"
+                android:padding="13px"
+                app:layout_auto_basewidth="height"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="登录账号"
+                    android:textColor="@color/black"
+                    android:textSize="14px" />
+
+                <TextView
+                    android:id="@+id/loginName_setting_fragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10px"
+                    android:text=""
+                    android:textColor="@color/gray_text_color"
+                    android:textSize="14px" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_voice_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="13px"
+                app:layout_auto_basewidth="height">
+
+                <TextView
+                    android:id="@+id/voice_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="收款语音设置"
+                    android:textColor="@color/black"
+                    android:textSize="14px"
+                    android:background="#fff"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/right_arrow" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.4dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/lmf_line" />
+
+            <LinearLayout
+                android:id="@+id/ll_change_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="13px"
+                app:layout_auto_basewidth="height"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="修改登录密码"
+                    android:textColor="@color/black"
+                    android:textSize="14px" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/right_arrow" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.4dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/lmf_line" />
+
+            <LinearLayout
+                android:id="@+id/merManagePwd_setting_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="13px"
+                app:layout_auto_basewidth="height"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="商户管理密码"
+                    android:textColor="@color/black"
+                    android:textSize="14px"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/right_arrow" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="0.4dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/lmf_line" />
+
+            <RelativeLayout
+                android:id="@+id/rv_remark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="13px"
+                app:layout_auto_basewidth="height"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="强制添加备注"
+                    android:textColor="@color/black"
+                    android:textSize="14px"
+                    android:layout_centerVertical="true"/>
+
+                <Switch
+                    android:id="@+id/switch_remark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_auto_basewidth="height"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textOff="开启"
+                    android:textOn="关闭" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.4dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/lmf_line" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="13px"
+                app:layout_auto_basewidth="height"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="订单实时刷新"
+                    android:textColor="@color/black"
+                    android:textSize="14px"
+                    android:layout_centerVertical="true"/>
+
+                <Switch
+                    android:id="@+id/refresh_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_auto_basewidth="height"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textOff="开启"
+                    android:textOn="关闭" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.4dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/lmf_line" />
+
+            <LinearLayout
+                android:id="@+id/admin_setting_activity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="13px"
+                app:layout_auto_basewidth="height"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="管理员设置"
+                    android:textColor="@color/black"
+                    android:textSize="14px"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/right_arrow" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="13px"
+                app:layout_auto_basewidth="height"
+                android:background="@color/background"/>
+
+            <LinearLayout
+                android:id="@+id/ll_fix_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_auto_basewidth="height"
+                android:padding="13px"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="设置固定收款金额"
+                    android:textColor="@color/black"
+                    android:textSize="14px"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/right_arrow" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="0.4dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/lmf_line" />
+
+            <LinearLayout
+                android:id="@+id/ll_min_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="13px"
+                app:layout_auto_basewidth="height"
+                android:layout_marginBottom="13px"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="设置最低收款金额"
+                    android:textColor="@color/black"
+                    android:textSize="14px"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/right_arrow" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_feedback1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="13px"
+                app:layout_auto_basewidth="height"
+                android:layout_marginBottom="10dp"
+                android:background="@color/white"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="@string/set_feedback"
+                    android:textColor="@color/text_color"
+                    android:textSize="14px"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/right_arrow" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.4dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/lmf_line"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/ll_agreement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="13px"
+                app:layout_auto_basewidth="height"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="用户服务协议"
+                    android:textColor="@color/black"
+                    android:textSize="14px"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/right_arrow" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.4dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/lmf_line" />
+            <LinearLayout
+                android:id="@+id/ll_hide_agreement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="13px"
+                app:layout_auto_basewidth="height"
+                android:layout_marginBottom="13px"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="隐私政策"
+                    android:textColor="@color/black"
+                    android:textSize="14px"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/right_arrow" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_about_us"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="13px"
+                app:layout_auto_basewidth="height"
+                android:layout_marginBottom="13px"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="@string/about_us"
+                    android:textColor="@color/black"
+                    android:textSize="14px"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/right_arrow" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/clear_all_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="13px"
+                app:layout_auto_basewidth="height"
+                android:layout_marginBottom="13px"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="清理缓存"
+                    android:textColor="@color/black"
+                    android:textSize="14px"/>
+
+                <TextView
+                    android:id="@+id/tv_cache_setting_activity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0KB"
+                    android:textSize="12px"
+                    android:textColor="@color/text_color"
+                    android:layout_marginRight="5px"
+                    android:layout_gravity="center_vertical"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/right_arrow" />
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/ll_quit_app"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="13px"
+                android:layout_marginBottom="10px"
+                app:layout_auto_basewidth="height"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="退出登录"
+                    android:textColor="@color/lmf_main_color"
+                    android:textSize="14px" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/v_top_line"
+        android:layout_width="1dp"
+        android:layout_height="20px"
+        android:layout_marginLeft="30px"
+        android:background="@color/line"
+        app:layout_auto_basewidth="height"/>
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="20px"
+        android:layout_height="20px"
+        android:layout_below="@id/v_top_line"
+        android:layout_marginLeft="20px"
+        android:src="@drawable/item_circle_icon"
+        app:layout_auto_basewidth="height"/>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="100px"
+        android:layout_below="@id/iv_icon"
+        android:layout_marginLeft="30px"
+        android:background="@color/line"
+        app:layout_auto_basewidth="height"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20px"
+        android:layout_marginBottom="20px"
+        android:layout_marginLeft="10px"
+        android:layout_marginRight="15px"
+        android:layout_toRightOf="@+id/iv_icon"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_approve_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_level_two"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/text_level_two"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_bankCardNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/text_level_two"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_approve_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/text_level_two"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_sendBack_reason"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/text_level_two"
+            android:textSize="13sp" />
+    </LinearLayout>
+    <View
+        style="@style/view_horizontal_line"
+        android:layout_alignParentBottom="true">
+
+    </View>
+
+</RelativeLayout>

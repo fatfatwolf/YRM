@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#fff">
+
+    <ImageView
+        android:id="@+id/img_close_my_wallet_dialog"
+        android:layout_width="50px"
+        android:layout_height="50px"
+        app:layout_auto_basewidth="height"
+        android:src="@drawable/close2"
+        android:padding="14px"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"/>
+    
+    <TextView
+        android:id="@+id/tv_account_my_wallet_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text=""
+        android:textSize="17px"
+        android:textColor="@color/title_text_color"
+        android:layout_centerHorizontal="true"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:layout_marginTop="60px" />
+
+    <TextView
+        android:id="@+id/tv_content_my_wallet_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_auto_basewidth="height"
+        android:text=""
+        android:textColor="@color/text_color"
+        android:layout_marginTop="20px"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:lineSpacingExtra="15px"
+        android:textSize="15px"
+        android:layout_marginBottom="30px"
+        android:layout_below="@+id/tv_account_my_wallet_dialog" />
+
+    <TextView
+        android:id="@+id/ok_button_my_wallet_dialog"
+        android:layout_width="250px"
+        android:layout_height="44px"
+        android:layout_marginBottom="46px"
+        android:layout_marginTop="10px"
+       android:layout_centerHorizontal="true"
+        app:layout_auto_basewidth="height"
+        android:text="知道了"
+        android:textColor="#fff"
+        android:textSize="15px"
+        android:gravity="center"
+        android:background="@drawable/shape_button_my_wallet_fragment"
+        android:layout_below="@+id/tv_content_my_wallet_dialog"/>
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

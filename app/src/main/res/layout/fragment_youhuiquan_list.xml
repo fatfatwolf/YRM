@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    
+    <RelativeLayout
+        android:id="@+id/null_parent_youhuiquan_list_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:visibility="gone">
+        
+        <ImageView
+            android:id="@+id/img_null_youhuiquan_list"
+            android:layout_width="200px"
+            android:layout_height="200px"
+            app:layout_auto_basewidth="height"
+            android:layout_marginTop="76px"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/img_youhuiquan_list_null"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14px"
+            android:text="暂无任何优惠券信息"
+            android:textColor="@color/lighter_gray2"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/img_null_youhuiquan_list"
+            android:layout_marginTop="26px"/>
+
+    </RelativeLayout>
+    
+    
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/smartRefresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/listView_youhuiquan_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:divider="@null">
+        </ListView>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+</LinearLayout>

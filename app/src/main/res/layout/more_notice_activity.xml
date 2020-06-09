@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+     <com.hybunion.yirongma.payment.view.TitleBar
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         app:titlebar_back_title="公告消息"
+         ></com.hybunion.yirongma.payment.view.TitleBar>
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/notice_smart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+        <ListView
+            android:id="@+id/notice_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/bg_gray" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    <TextView
+        android:id="@+id/tv_nodata"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="暂无数据"
+        android:visibility="gone"/>
+</LinearLayout>

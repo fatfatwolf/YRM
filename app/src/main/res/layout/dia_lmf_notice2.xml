@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#80000000"
+    android:orientation="vertical">
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="320px"
+        android:layout_height="wrap_content"
+        app:layout_auto_basewidth="height"
+        android:background="@null"
+        android:layout_centerInParent="true"
+        >
+        <ImageView
+            android:id="@+id/iv_yrm"
+            android:layout_width="match_parent"
+            android:layout_height="201px"
+            android:src="@drawable/first_notice"
+            app:layout_auto_basewidth="height"/>
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/rel_notice"
+            android:layout_width="320px"
+            android:layout_height="wrap_content"
+            app:layout_auto_basewidth="height"
+            android:background="@color/white"
+            android:layout_below="@+id/iv_yrm"
+            android:layout_centerInParent="true"
+            >
+
+            <TextView
+                android:id="@+id/tv_notice_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26px"
+                android:layout_below="@+id/tv_notice_title"
+                android:text="尊敬的伙伴:"
+                android:layout_marginLeft="20px"
+                android:textStyle="bold"
+                android:textColor="#252E44"
+                android:textSize="15px"/>
+
+            <TextView
+                android:id="@+id/tv_notice_content2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_notice_content"
+                android:layout_marginLeft="20px"
+                android:layout_marginRight="20px"
+                android:layout_marginTop="5px"
+                android:lineSpacingExtra="7dp"
+                android:textColor="#130000"
+                android:text="       您的商户已创建成功，请点击“确定”按钮开始使用。"
+                android:textSize="14px"/>
+            <Button
+                android:id="@+id/bt_notice2_sure"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/tv_notice_content2"
+                android:background="@drawable/background_corner3"
+                android:layout_height="40px"
+                android:layout_marginLeft="35px"
+                android:layout_marginRight="35px"
+                android:layout_marginTop="26px"
+                android:text="确定"
+                app:layout_auto_basewidth="height"
+                android:textSize="15px"
+                android:textColor="@color/white"
+                android:gravity="center"
+                />
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="40px"
+                android:orientation="horizontal"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="28px"
+                android:layout_marginBottom="44px"
+                android:layout_below="@+id/bt_notice2_sure"
+                >
+                <ImageView
+                    android:id="@+id/iv_agree"
+                    android:layout_width="16px"
+                    android:layout_height="16px"
+                    app:layout_auto_basewidth="height"
+                    android:background="@drawable/symbolsyes"
+                    android:layout_gravity="center_vertical"
+                    />
+                <TextView
+                    android:id="@+id/tv_read"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="阅读并同意"
+                    android:textColor="#515E81"
+                    android:paddingLeft="10dp"
+                    android:textSize="12dp"
+                    />
+                <TextView
+                    android:id="@+id/tv_procotol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:textSize="12dp"
+                    android:text="《特约商户支付受理业务协议书》"
+                    android:textColor="@color/blue_color2"
+                    />
+            </com.zhy.autolayout.AutoLinearLayout>
+
+
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+
+</com.zhy.autolayout.AutoRelativeLayout>

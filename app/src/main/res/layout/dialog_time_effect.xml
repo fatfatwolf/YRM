@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="使用时效描述"
+        android:gravity="center"
+        android:layout_marginTop="20px"
+        android:textColor="@color/text_color2"
+        android:textStyle="bold"
+        />
+
+
+        <TextView
+            android:id="@+id/tv_content1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_text1"
+            android:text="相对时效:"
+            android:textSize="14px"
+            android:layout_marginTop="26px"
+            android:layout_marginLeft="25px"
+            android:layout_marginRight="24px"
+            android:textColor="@color/text_color2"
+            />
+
+    <TextView
+        android:id="@+id/tv_content2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_content1"
+        android:layout_marginLeft="25px"
+        android:layout_marginRight="24px"
+        android:text="例子:"
+        android:textColor="@color/text_color2"
+        android:textSize="14px" />
+
+
+        <TextView
+            android:id="@+id/tv_content3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="绝对时效:"
+            android:textSize="14px"
+            android:layout_marginTop="20px"
+            android:layout_marginLeft="25px"
+            android:layout_marginRight="24px"
+            android:layout_below="@+id/tv_content2"
+            android:textColor="@color/text_color2"
+            />
+
+
+
+        <TextView
+            android:id="@+id/tv_content4"
+            android:layout_below="@+id/tv_content3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="例子:"
+            android:textSize="14px"
+            android:layout_marginLeft="25px"
+            android:layout_marginRight="24px"
+            android:textColor="@color/text_color2"
+            />
+
+
+
+    <Button
+        android:layout_below="@+id/tv_content4"
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="44px"
+        android:layout_marginTop="26px"
+        android:layout_marginLeft="35px"
+        android:layout_marginRight="35px"
+        android:layout_marginBottom="32px"
+        android:background="@drawable/radius22_button"
+        android:text="知道了"
+        android:textColor="#FFFFFF"
+        android:textSize="15px" />
+
+</RelativeLayout>

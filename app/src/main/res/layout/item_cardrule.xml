@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:text="充值（元）"
+            android:textColor="@color/textColor_2"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tv_rechargeMoney2"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1.4"
+            android:gravity="center"
+            android:textColor="@color/textColor_2"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tv_song"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:text="送（元）"
+            android:textColor="@color/textColor_2"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tv_getMoney2"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.8"
+            android:gravity="center"
+            android:textColor="@color/textColor_2"
+            android:textSize="14sp"/>
+
+        <ImageView
+            android:id="@+id/imgv_minus"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="8dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/itemcardmake_minus"/>
+
+    </LinearLayout>
+</RelativeLayout>

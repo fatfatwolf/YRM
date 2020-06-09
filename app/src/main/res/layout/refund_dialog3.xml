@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_popup_bg"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        >
+
+        <ImageView
+            android:id="@+id/iv_close_window"
+            android:layout_width="20px"
+            android:layout_height="20px"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/close2" />
+        <TextView
+            android:id="@+id/tv_manage_pwd"
+            android:layout_width="match_parent"
+            android:textColor="@color/text_color2"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_close_window"
+            android:gravity="center"
+            android:text="商户管理密码"
+            android:textSize="17px"
+            />
+        <TextView
+            android:id="@+id/tv_amount"
+            android:layout_width="match_parent"
+            android:textColor="@color/text_color2"
+            android:layout_marginTop="10px"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_manage_pwd"
+            android:gravity="center"
+            android:text="退款金额"
+            android:textSize="13px"
+            />
+
+        <TextView
+            android:id="@+id/tv_refund_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_amount"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/space_20"
+            android:layout_marginTop="5px"
+            android:text=""
+            android:textColor="#F94B35"
+            android:textSize="30px" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="#F94B35"
+                android:layout_toRightOf="@+id/tv_refund_amount"
+                android:layout_below="@+id/tv_amount"
+                android:layout_marginTop="20px"
+                android:layout_height="wrap_content"
+                android:text="元"
+                android:textSize="14px"
+                />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_below="@+id/rl_image"
+        android:orientation="vertical">
+        <com.hybunion.yirongma.payment.view.SeparatedEditText
+            android:id="@+id/set_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="49px"
+            android:background="#f2f3f8"
+            android:layout_marginLeft="16px"
+            android:layout_marginRight="16px"
+            />
+        <TextView
+            android:id="@+id/tv_merchant_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:layout_gravity="center"
+            android:textColor="#5280FA"
+            android:textSize="14px"
+            android:layout_marginRight="40dp"
+            android:text="忘记管理密码"
+            />
+
+
+        <Button
+            android:id="@+id/bt_sure"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/background_corner3"
+            android:text="确定"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_15"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            >
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

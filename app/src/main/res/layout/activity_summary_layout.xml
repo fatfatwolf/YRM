@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.hybunion.yirongma.payment.view.TitleBar
+        android:id="@+id/titleBar_summary_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titlebar_back_title="数据汇总" />
+
+    <RelativeLayout
+        android:id="@+id/tab_parent_summary_activity"
+        android:layout_width="match_parent"
+        android:layout_height="40px"
+        android:background="@color/main_color2"
+        app:layout_auto_basewidth="height">
+
+        <RelativeLayout
+            android:id="@+id/pay_code_parent_summary_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="120px">
+
+            <TextView
+                android:id="@+id/pay_code_str_summary_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="收款"
+                android:textColor="#fff"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/line1_summary_activity"
+                android:layout_width="35px"
+                android:layout_height="2px"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5px"
+                android:background="#fff"
+                app:layout_auto_basewidth="height" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/huichuzhi_parent_summary_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="110px">
+
+            <TextView
+                android:id="@+id/huiChuZhi_str_summary_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="惠储值"
+                android:textColor="@color/gray_ffece9"
+                android:textSize="13sp" />
+
+            <View
+                android:id="@+id/line2_summary_activity"
+                android:layout_width="35px"
+                android:layout_height="2px"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5px"
+                android:background="#fff"
+                android:visibility="gone"
+                app:layout_auto_basewidth="height" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/seleted_parent_summary_activity"
+            android:layout_width="match_parent"
+            android:layout_height="35px"
+            android:background="@color/background"
+            app:layout_auto_basewidth="height">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/selectedParent_summary_activity"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="2px"
+                    android:layout_height="10px"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="16px"
+                    android:background="@drawable/shape_data_activity_title"
+                    app:layout_auto_basewidth="height" />
+
+                <TextView
+                    android:id="@+id/tv_select_time_summary_activity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="6px"
+                    android:text="2019-11-01 00:00:00 至 2019-11-13 23:59:59"
+                    android:textColor="@color/gray_898989"
+                    android:textSize="12px" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/selectedParent_summary_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:paddingRight="15px">
+
+                <TextView
+                    android:id="@+id/tv_date_str_summary_activity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:singleLine="true"
+                    android:text="今日"
+                    android:textColor="@color/text_color2"
+                    android:textSize="12px" />
+
+                <ImageView
+                    android:id="@+id/img_select_arrow_summary_activity"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:src="@drawable/arrow_down"
+                    app:layout_auto_basewidth="height" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+<!--    惠储值-->
+
+    <LinearLayout
+        android:id="@+id/huichuzhi_parent1_summary_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_10"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="充值订单"
+                android:textColor="@color/text_color2"
+                android:textSize="12px" />
+
+            <TextView
+                android:id="@+id/tv_recharge_amt_summary_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/text_color2"
+                android:textSize="18px"
+                tools:text="4800.00 元" />
+
+            <TextView
+                android:id="@+id/tv_recharge_count_summary_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/gray_898989"
+                android:textSize="12px"
+                tools:text="15 笔" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20px"
+            android:layout_marginBottom="20px"
+            android:background="@color/background_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_10"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="消费订单"
+                android:textColor="@color/text_color2"
+                android:textSize="12px" />
+
+            <TextView
+                android:id="@+id/tv_trans_amt_summary_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/text_color2"
+                android:textSize="18px"
+                tools:text="320 元" />
+
+            <TextView
+                android:id="@+id/tv_trans_count_summary_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/gray_898989"
+                android:textSize="12px"
+                tools:text="11 笔" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pay_god_summary_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="15px"
+                android:layout_marginBottom="15px"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_text1_summary_activity"
+                    android:layout_width="100px"
+                    android:layout_height="30px"
+                    android:background="@drawable/shape_summary_bt_bg_left"
+                    android:gravity="center"
+                    android:text="门店"
+                    android:textColor="#fff"
+                    app:layout_auto_basewidth="height" />
+
+                <TextView
+                    android:id="@+id/tv_text2_summary_activity"
+                    android:layout_width="100px"
+                    android:layout_height="30px"
+                    android:background="@drawable/shape_summary_bt_bg_stroke_right"
+                    android:gravity="center"
+                    android:text="收款方式"
+                    android:textColor="@color/blue_0076ff"
+                    app:layout_auto_basewidth="height" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/background"
+            app:layout_auto_basewidth="height" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_10"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="总收款金额（元）"
+                    android:textColor="@color/text_color2"
+                    android:textSize="12px" />
+
+                <TextView
+                    android:id="@+id/tv_total_amt_summary_activity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/text_color2"
+                    android:textSize="18px"
+                    tools:text="4800.00" />
+
+                <TextView
+                    android:id="@+id/tv_total_refund_amt_summary_activity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/gray_898989"
+                    android:textSize="12px"
+                    tools:text="含退款：" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20px"
+                android:layout_marginBottom="20px"
+                android:background="@color/background_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_10"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="收款笔数（笔）"
+                    android:textColor="@color/text_color2"
+                    android:textSize="12px" />
+
+                <TextView
+                    android:id="@+id/tv_total_count_summary_activity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/text_color2"
+                    android:textSize="18px"
+                    tools:text="320" />
+
+                <TextView
+                    android:id="@+id/tv_total_refund_count_summary_activity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/gray_898989"
+                    android:textSize="12px"
+                    tools:text="含退款：" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/store_list_parent_summary_activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10px"
+                android:background="#fff"
+                android:paddingTop="15px"
+                android:paddingBottom="8px"
+                app:layout_auto_basewidth="height">
+
+                <TextView
+                    android:id="@+id/tv_type_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="61px"
+                    android:text="门店名称"
+                    android:textColor="@color/text_color2"
+                    android:textSize="13px" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="45px"
+                    android:layout_toRightOf="@+id/tv_type_name"
+                    android:text="订单笔数(笔)"
+                    android:textColor="@color/text_color2"
+                    android:textSize="13px" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15px"
+                    android:text="订单金额(元)"
+                    android:textColor="@color/text_color2"
+                    android:textSize="13px" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/space_20"
+                android:layout_marginRight="@dimen/space_20"
+                android:background="#f2f3f8" />
+
+            <ListView
+                android:id="@+id/lv_store_summary_activity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/background"
+                android:dividerHeight="@dimen/space_1">
+
+            </ListView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pay_type_parent_summary_activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12px"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ListView
+                android:id="@+id/lv_pay_type_summary_activity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/background"
+                android:dividerHeight="@dimen/space_1" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

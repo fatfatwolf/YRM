@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/head"/>
+
+    <com.hybunion.yirongma.common.view.MySwipe
+        android:id="@+id/myswipe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title">
+
+        <ListView
+            android:id="@+id/listcard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:background="@android:color/white"
+            android:divider="@null"
+            android:scrollbars="none">
+        </ListView>
+
+    </com.hybunion.yirongma.common.view.MySwipe>
+
+    <TextView
+        android:id="@+id/tv_nodata"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/no_data"
+        android:textColor="@color/textColor_9"
+        android:textSize="22sp"
+        android:visibility="gone"/>
+</RelativeLayout>

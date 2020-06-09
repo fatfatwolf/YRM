@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_popup_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="389dp"
+        android:background="@drawable/open_shop">
+        <ImageView
+            android:id="@+id/iv_close_window"
+            android:layout_width="@dimen/space_20"
+            android:layout_height="@dimen/space_20"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/close2"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/btn_open_shop_person"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="160dp"
+            android:background="@drawable/background_corner"
+            android:text="对私入账开店"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_14"/>
+        <Button
+            android:id="@+id/btn_open_shop_company"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/background_corner"
+            android:text="对公入账开店"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_14"/>
+
+        <Button
+            android:id="@+id/btn_personal_user"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/background_corner"
+            android:text="个人用户开店（入账到个人银行卡）"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            android:textSize="@dimen/text_size_14"/>
+
+        <Button
+            android:id="@+id/btn_business_user"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/background_corner"
+            android:text="个体工商用户开店"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_14"/>
+
+        <Button
+            android:id="@+id/btn_company_user"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/background_corner"
+            android:text="企业用户开店（入账到对公账户）"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            android:textSize="@dimen/text_size_14"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="13dp"
+            >
+            <Button
+                android:id="@+id/btn_bind_pos"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:text="绑定智能POS"
+                android:layout_marginRight="40dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/btn_back_color1"
+                android:textSize="@dimen/text_size_14"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:visibility="gone"
+        android:layout_marginTop="400dp"
+        android:layout_marginBottom="@dimen/space_5"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/close"
+        />
+</RelativeLayout>

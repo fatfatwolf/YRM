@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+  <LinearLayout
+      android:id="@+id/ll_shop_name"
+      android:layout_width="match_parent"
+      android:orientation="horizontal"
+      android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tv_shop_name"
+        android:padding="@dimen/space_15"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="小糖豆-中关村店"
+        android:textColor="@color/text_color2"
+        android:textSize="14sp"
+        />
+    <ImageView
+        android:layout_marginRight="@dimen/space_20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/right_arrow"
+        android:layout_gravity="center"
+        />
+  </LinearLayout>
+
+
+    <View style="@style/view_horizontal" />
+</LinearLayout>

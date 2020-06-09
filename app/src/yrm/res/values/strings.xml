@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">众维码</string>
+    <string name="AGENT_ID">0</string>
+    <string name="company_name">北京众维码科技有限公司</string>
+    <string name="about_us_url">http://www.hybunion.com/aboutus/hybYRM.html</string>
+    <string name="vm_background_service">众维码为您服务</string>
+    <string name="appType">1</string>
+    <string name="photo">yrm_photo</string>
+    <string name="bussiness_act_url">https://agent.yrmpay.com/JHAdminConsole/h5_yirongma/friendAd.html</string>
+    <string name="merchant_activety_url">https://mobile.yrmpay.com/JHAdminConsole/HrtAppHtml/merchantActivety.html</string>
+</resources>

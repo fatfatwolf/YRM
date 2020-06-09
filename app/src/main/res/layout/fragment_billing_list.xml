@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65px"
+        app:layout_auto_basewidth="height"
+        android:orientation="horizontal"
+        android:background="#fff">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+            <LinearLayout
+                android:id="@+id/count_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16px"
+                android:layout_marginBottom="5px">
+                <TextView
+                    android:id="@+id/total_amt_billing_list_fragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.00"
+                    android:textSize="15px"
+                    android:textColor="@color/text_313131"
+                    android:gravity="center"
+                    />
+
+                <TextView
+                    android:id="@+id/total_count_billing_list_fragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0笔"
+                    android:textSize="11px"
+                    android:textColor="@color/gray_898989"
+                    android:layout_marginLeft="11px"
+                    />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_str_billing_list_fragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="交易金额（元）"
+                android:layout_below="@+id/count_parent"
+                android:layout_centerHorizontal="true"
+                android:textSize="12px"
+                android:textColor="@color/gray_898989"/>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/data_line_billing_list"
+            android:layout_width="1px"
+            android:layout_height="25px"
+            app:layout_auto_basewidth="height"
+            android:background="@color/gray_e1e1e1"
+            android:layout_gravity="center_vertical"/>
+
+        <RelativeLayout
+            android:id="@+id/coupon_data_parent_billing_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+            <LinearLayout
+                android:id="@+id/count_parent1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16px"
+                android:layout_marginBottom="5px">
+                <TextView
+                    android:id="@+id/total_amt1_billing_list_fragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.00"
+                    android:textSize="15px"
+                    android:textColor="@color/text_313131"
+                    android:gravity="center"
+                    />
+
+                <TextView
+                    android:id="@+id/total_count1_billing_list_fragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0笔"
+                    android:textSize="11px"
+                    android:textColor="@color/gray_898989"
+                    android:layout_marginLeft="11px"
+                    />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_str1_billing_list_fragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="退款（元）"
+                android:layout_below="@+id/count_parent1"
+                android:layout_centerHorizontal="true"
+                android:textSize="12px"
+                android:textColor="@color/gray_898989"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        app:layout_auto_basewidth="height"
+        android:background="@color/backgroundColor2"
+        />
+
+    <TextView
+        android:id="@+id/tv_no_data_billing_list_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="暂无数据"
+        android:visibility="gone" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/smartRefresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ListView
+            android:id="@+id/lv_billing_list_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:headerDividersEnabled="true"
+            android:divider="@null"/>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

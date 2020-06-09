@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.hybunion.yirongma.payment.view.TitleBar
+        android:id="@+id/titleBar_reward_list_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titlebar_back_title="奖励详情"
+        app:tv_right_content="筛选"
+        app:tv_right_content_fontColor="#fff"
+        app:tv_right_content_fontsize="14dp">
+
+
+    </com.hybunion.yirongma.payment.view.TitleBar>
+
+
+    <TextView
+        android:id="@+id/tv_null_reward_list_activity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="暂无任何数据"
+        android:gravity="center"
+        android:textColor="@color/text_gray"
+        android:visibility="gone"/>
+
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/smartRefresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/listView_reward_list_activity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@drawable/list_item_divider"
+            android:dividerHeight="1dp">
+
+        </ListView>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+
+
+
+</LinearLayout>

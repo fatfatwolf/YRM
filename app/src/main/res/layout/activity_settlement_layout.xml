@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.hybunion.yirongma.payment.view.TitleBar
+        android:id="@+id/titleBar_settlement_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titlebar_back_title="账单"
+        app:tv_right_content="筛选"/>
+
+    <RelativeLayout
+        android:id="@+id/tab_parent_settlement_activity"
+        android:layout_width="match_parent"
+        android:layout_height="40px"
+        app:layout_auto_basewidth="height"
+        android:background="@color/main_color2">
+
+        <RelativeLayout
+            android:id="@+id/pay_code_parent_settlement_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="120px">
+
+            <TextView
+                android:id="@+id/tv_pay_code_str_settlement_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="#fff"
+                android:textSize="16sp"
+                android:text="收款码"/>
+
+            <View
+                android:id="@+id/line1_settlement_activity"
+                android:layout_width="35px"
+                android:layout_height="2px"
+                app:layout_auto_basewidth="height"
+                android:background="#fff"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5px"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/jingFu_card_parent_settlement_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="110px">
+
+            <TextView
+                android:id="@+id/tv_jingFu_card_str_settlement_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textSize="13sp"
+                android:textColor="@color/gray_ffece9"
+                android:text="和卡"/>
+
+            <View
+                android:id="@+id/line2_settlement_activity"
+                android:layout_width="35px"
+                android:layout_height="2px"
+                app:layout_auto_basewidth="height"
+                android:background="#fff"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:visibility="gone"
+                android:layout_marginBottom="5px"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_parent_settlement_activity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

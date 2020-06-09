@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!--<item android:state_checked="true"   -->
+        <!--android:drawable="@drawable/hrt_check_selected_on" />&lt;!&ndash;选中时效果&ndash;&gt;  -->
+    <!--<item android:state_checked="false"   -->
+        <!--android:drawable="@drawable/hrt_check_selected_off" />&lt;!&ndash;未选中时效果&ndash;&gt;  -->
+  <!-- 修改成你自己的图片就可以了 -->
+    <item android:state_checked="true"
+        android:drawable="@drawable/hrt_check_selected_on" /><!--选中时效果-->
+    <item android:state_checked="false"
+        android:drawable="@drawable/hrt_check_selected_off" /><!--未选中时效果-->
+</selector>

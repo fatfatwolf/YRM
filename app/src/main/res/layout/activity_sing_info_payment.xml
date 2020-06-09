@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.hybunion.yirongma.payment.view.TitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titlebar_back_title="签约信息" />
+
+    <View
+        style="@style/view_horizontal"
+        android:layout_marginTop="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_info_1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="单笔限制金额"
+                android:textColor="@color/text_level_one"
+                android:textSize="@dimen/text_level_1" />
+
+            <TextView
+                android:id="@+id/info_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/text_level_two"
+                android:textSize="@dimen/text_level_2" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view1"
+            style="@style/view_divider"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_info_2"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="单日限制金额"
+                android:textColor="@color/text_level_one"
+                android:textSize="@dimen/text_level_1" />
+
+            <TextView
+                android:id="@+id/info_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/text_level_two"
+                android:textSize="@dimen/text_level_2" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view2"
+            style="@style/view_divider"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_info_3"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="结算方式"
+                android:textColor="@color/text_level_one"
+                android:textSize="@dimen/text_level_1" />
+
+            <TextView
+                android:id="@+id/info_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/text_level_two"
+                android:textSize="@dimen/text_level_2" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view3"
+            style="@style/view_divider"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_info_4"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="结算周期"
+                android:textColor="@color/text_level_one"
+                android:textSize="@dimen/text_level_1" />
+
+            <TextView
+                android:id="@+id/info_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/text_level_two"
+                android:textSize="@dimen/text_level_2" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view4"
+            style="@style/view_divider"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_info_5"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="提现手续费"
+                android:textColor="@color/text_level_one"
+                android:textSize="@dimen/text_level_1" />
+
+            <TextView
+                android:id="@+id/info_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/text_level_two"
+                android:textSize="@dimen/text_level_2" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view5"
+            style="@style/view_divider"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_info_6"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="定时结算时间"
+                android:textColor="@color/text_level_one"
+                android:textSize="@dimen/text_level_1" />
+
+            <TextView
+                android:id="@+id/info_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/text_level_two"
+                android:textSize="@dimen/text_level_2" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view6"
+            style="@style/view_divider"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_info_7"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="定额结算金额"
+                android:textColor="@color/text_level_one"
+                android:textSize="@dimen/text_level_1" />
+
+            <TextView
+                android:id="@+id/info_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/text_level_two"
+                android:textSize="@dimen/text_level_2" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view7"
+            style="@style/view_divider"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--圆角为15px-->
+    <corners android:radius="15px"/>
+    <!--颜色为白色-->
+    <solid android:color="@color/white"/>
+</shape>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:orientation="vertical">
+
+    <com.hybunion.yirongma.payment.view.TitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titlebar_back_title="交易详情"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:layout_marginTop="33px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¥"
+                android:textSize="30px"
+                android:textColor="@color/text_level_one"
+                />
+
+            <TextView
+                android:id="@+id/tv_amt_jingfu_card_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="133"
+                android:textColor="@color/text_level_one"
+                android:textSize="30px" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10px"
+            app:layout_auto_basewidth="height"
+            android:layout_marginTop="30px"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="支付方式"
+                android:textColor="@color/text_level_two"
+                android:textSize="13px" />
+
+            <TextView
+                android:id="@+id/tv_pay_channel_jingfu_card_details"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:textColor="@color/text_level_one"
+                android:textSize="13px"
+                android:text="和卡"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10px"
+            app:layout_auto_basewidth="height"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="付款时间"
+                android:textColor="@color/text_level_two"
+                android:textSize="13px" />
+
+            <TextView
+                android:id="@+id/tv_trans_time_jingfu_card_details"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:textColor="@color/text_level_one"
+                android:textSize="13px"
+                tools:text="2019/11/20 14:33:12"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10px"
+            app:layout_auto_basewidth="height"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="消费门店"
+                android:textColor="@color/text_level_two"
+                android:textSize="13px" />
+
+            <TextView
+                android:id="@+id/tv_store_jingfu_card_details"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:textColor="@color/text_level_one"
+                android:textSize="13px"
+                tools:text="小糖豆（朝阳店）"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10px"
+            app:layout_auto_basewidth="height"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="订单编号"
+                android:textColor="@color/text_level_two"
+                android:textSize="13px" />
+
+            <TextView
+                android:id="@+id/tv_order_no_jingfu_card_details"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:textColor="@color/text_level_one"
+                android:textSize="13px"
+                tools:text="JFK20191120143312987763"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10px"
+            app:layout_auto_basewidth="height"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="收款码编号"
+                android:textColor="@color/text_level_two"
+                android:textSize="13px" />
+
+            <TextView
+                android:id="@+id/tv_code_no_jingfu_card_details"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:textColor="@color/text_level_one"
+                android:textSize="13px"
+                tools:text="135781012"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

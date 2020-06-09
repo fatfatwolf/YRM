@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.hybunion.yirongma.payment.view.TitleBar
+        android:id="@+id/titleBar_choose_bank_card_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titlebar_back_title="选择结算卡"
+        app:right_image_src="@drawable/add_white"
+        app:right_image_with="17dp"
+        app:right_image_height="17dp">
+
+
+    </com.hybunion.yirongma.payment.view.TitleBar>
+
+    <TextView
+        android:id="@+id/tvNull_choose_bank_card_activity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="暂无数据"
+        android:textColor="@color/title_text_color"
+        android:textSize="15px"
+        android:gravity="center"
+        android:visibility="gone"/>
+
+
+    <ListView
+        android:id="@+id/listView_bank_card_choose_bank_card_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ListView>
+    
+    
+
+</LinearLayout>
